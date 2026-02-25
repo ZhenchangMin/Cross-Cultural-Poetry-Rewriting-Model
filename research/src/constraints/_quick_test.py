@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import annotations
 
-from constraints.scorer import score_qijue7, as_dict
+from src.constraints.scorer import score_qijue7, as_dict
 
 # ✅ 合规示例（4句、每句7字、2/4句同韵：光/霜 这里不一定同韵，仅做示例，你可以换成“乡/霜”这种更可能同韵的末字）
 poem_ok = """春风拂柳入新塘，

@@ -1,2 +1,4 @@
-# Cross-Cultural-Poetry-Rewriting-Model
-This repo is for our project Cross-Cultural Style Control in Generative AI: Rewriting Poetry Across Cultures.
+# 生成式AI的文化风格可控性研究：跨文化诗歌重写模型
+本项目为参加南京大学大学生创新训练项目计划作品。
+
+传统翻译方法在处理文化特定元素时常常面临挑战，导致翻译结果缺乏文化适应性和风格一致性。为了解决这一问题，我们提出了一种基于生成式人工智能的跨文化诗歌重写模型，通过提取文化风格向量，提升翻译文本的文化风格可控性。

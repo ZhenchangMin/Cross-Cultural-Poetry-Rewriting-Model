@@ -19,7 +19,7 @@ class ScoreResult:
 
 def score_qijue7(text: str, w_meter: float = 0.7, w_rhyme: float = 0.3) -> ScoreResult:
     meter = check_qijue7(text)
-    rhyme = check_qijue7_rhyme(text)
+    rhyme = check_qijue7_rhyme(text, mode = rhyme_mode)
 
     total = w_meter * meter.score + w_rhyme * rhyme.score
     ok = (meter.ok and rhyme.ok)

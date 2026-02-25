@@ -28,9 +28,9 @@ tests = [
 
 if __name__ == "__main__":
     for name, text in tests:
-        res = score_qijue7(text)
+        res = score_qijue7(text, rhyme_mode="strict")
+        res2 = score_qijue7(text, rhyme_mode="loose")
         d = as_dict(res)
-        print("=" * 60)
-        print(name)
-        print(text)
-        print("RESULT:", d)
+        d2 = as_dict(res2)
+        print("STRICT:", d)
+        print("LOOSE :", d2)

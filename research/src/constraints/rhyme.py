@@ -3,11 +3,10 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from typing import List, Dict, Any, Optional, Tuple
+from typing import Dict, Any, Optional
 
 from pypinyin import pinyin, Style
 
-# 去标点用（要和 meter 一致）
 _PUNCT_RE = re.compile(r"[，。！？；：、,.!?;:\s\"'“”‘’（）()\[\]{}《》<>…—\-]+")
 
 
@@ -23,16 +22,35 @@ def _last_char(clean_line: str) -> Optional[str]:
 
 
 def _finals_of_char(ch: str) -> Optional[str]:
-    """
-    取单字拼音韵母（简化）。
-    多音字默认取 pypinyin 的第一个读音。
-    """
     if not ch:
         return None
     py = pinyin(ch, style=Style.FINALS, strict=False)
     if not py or not py[0] or not py[0][0]:
         return None
     return py[0][0]
+
+
+def _normalize_finals(finals: str, mode: str = "strict") -> str:
+    """
+    mode:
+      - strict: no normalization
+      - loose: light normalization to approximate rhyme groups
+    """
+    finals = finals.strip().lower()
+    if mode == "strict":
+        return finals
+
+    # loose normalization (heuristic):
+    # - merge uang -> ang (霜/光/乡 often rhyme-ish in modern ear)
+    # - merge iang -> ang (强/香/凉 may rhyme-ish with ang group)
+    # - merge eng/ing/ong? 先不乱合并，避免过宽
+    mapping = {
+        "uang": "ang",
+        "iang": "ang",
+        # 你也可以逐步扩展：
+        # "iong": "ong",
+    }
+    return mapping.get(finals, finals)
 
 
 @dataclass
@@ -46,11 +64,7 @@ class RhymeResult:
     details: str
 
 
-def check_qijue7_rhyme(text: str) -> RhymeResult:
-    """
-    七言绝句（简化押韵）：
-    - 第 2 句、 第 4 句句末字韵母一致视为押韵
-    """
+def check_qijue7_rhyme(text: str, mode: str = "strict") -> RhymeResult:
     lines_raw = [ln.strip() for ln in text.splitlines() if ln.strip()]
     lines_clean = [_clean_line(ln) for ln in lines_raw]
 
@@ -65,10 +79,8 @@ def check_qijue7_rhyme(text: str) -> RhymeResult:
             details=f"Need >=4 lines for rhyme check, got {len(lines_clean)}",
         )
 
-    line2 = lines_clean[1]
-    line4 = lines_clean[3]
-    last2 = _last_char(line2)
-    last4 = _last_char(line4)
+    last2 = _last_char(lines_clean[1])
+    last4 = _last_char(lines_clean[3])
 
     if not last2 or not last4:
         return RhymeResult(
@@ -95,15 +107,19 @@ def check_qijue7_rhyme(text: str) -> RhymeResult:
             details="Failed to get finals for last chars",
         )
 
-    ok = (f2 == f4)
+    nf2 = _normalize_finals(f2, mode=mode)
+    nf4 = _normalize_finals(f4, mode=mode)
+
+    ok = (nf2 == nf4)
+
     return RhymeResult(
         ok=ok,
         score=1.0 if ok else 0.0,
-        finals_2=f2,
-        finals_4=f4,
+        finals_2=f"{f2}->{nf2}" if mode != "strict" else f2,
+        finals_4=f"{f4}->{nf4}" if mode != "strict" else f4,
         last_2=last2,
         last_4=last4,
-        details="OK" if ok else f"Rhyme mismatch: line2({last2}:{f2}) vs line4({last4}:{f4})",
+        details="OK" if ok else f"Rhyme mismatch: line2({last2}:{nf2}) vs line4({last4}:{nf4})",
     )
 
 

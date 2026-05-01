@@ -9,7 +9,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/translate")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://localhost:8082"})
 public class PoemController {
 
     @Autowired

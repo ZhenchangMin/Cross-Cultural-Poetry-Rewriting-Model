@@ -38,7 +38,7 @@
         v-model:style="style"
         v-model:sourceLang="sourceLang"
         v-model:targetLang="targetLang"
-        v-model:emotion="emotion"
+        v-model:intensity="intensity"
         @generate="handleGenerate"
       />
     </footer>
@@ -56,7 +56,7 @@ const result = ref('')
 const style = ref('modern')
 const sourceLang = ref('RU')
 const targetLang = ref('ZH')
-const emotion = ref('neutral')
+const intensity = ref(3)
 const loading = ref(false)
 
 const handleGenerate = async () => {
@@ -71,7 +71,7 @@ const handleGenerate = async () => {
         style: style.value,
         sourceLang: sourceLang.value,
         targetLang: targetLang.value,
-        emotion: emotion.value
+        intensity: intensity.value
       })
     })
     if (!res.ok) throw new Error(`HTTP ${res.status}`)

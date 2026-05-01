@@ -2,6 +2,7 @@
   <div class="control-panel">
     <div class="param-row">
 
+      <!-- 输入语言 -->
       <div class="param-group">
         <span class="param-label">输入语言</span>
         <div class="pill-bar">
@@ -18,12 +19,15 @@
 
       <div class="arrow-sep">→</div>
 
+      <!-- 输出语言（与输入相同的选项禁用） -->
       <div class="param-group">
         <span class="param-label">输出语言</span>
         <div class="pill-bar">
           <button
             v-for="opt in langs" :key="opt.value"
-            class="pill" :class="{ active: targetLangVal === opt.value }"
+            class="pill"
+            :class="{ active: targetLangVal === opt.value, disabled: opt.value === sourceLangVal }"
+            :disabled="opt.value === sourceLangVal"
             @click="targetLangVal = opt.value"
           >
             <span class="pill-zh">{{ opt.zh }}</span>
@@ -32,6 +36,7 @@
         </div>
       </div>
 
+      <!-- 诗歌风格 -->
       <div class="param-group">
         <span class="param-label">诗歌风格</span>
         <div class="pill-bar">
@@ -46,17 +51,25 @@
         </div>
       </div>
 
-      <div class="param-group">
-        <span class="param-label">情感基调</span>
-        <div class="pill-bar">
-          <button
-            v-for="opt in emotions" :key="opt.value"
-            class="pill" :class="{ active: emotionVal === opt.value }"
-            @click="emotionVal = opt.value"
-          >
-            <span class="pill-zh">{{ opt.zh }}</span>
-            <span class="pill-en">{{ opt.en }}</span>
-          </button>
+      <!-- 文化适配强度 -->
+      <div class="param-group intensity-group">
+        <span class="param-label">文化适配强度</span>
+        <div class="intensity-wrap">
+          <span class="intensity-pole">异化</span>
+          <div class="slider-track-wrap">
+            <input
+              type="range" min="1" max="5" step="1"
+              v-model.number="intensityVal"
+              class="intensity-slider"
+            />
+            <div class="tick-row">
+              <span
+                v-for="n in 5" :key="n"
+                class="tick" :class="{ active: intensityVal === n }"
+              >{{ n }}</span>
+            </div>
+          </div>
+          <span class="intensity-pole">归化</span>
         </div>
       </div>
 
@@ -70,10 +83,10 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 
-const props = defineProps(['style', 'sourceLang', 'targetLang', 'emotion'])
-const emit = defineEmits(['update:style', 'update:sourceLang', 'update:targetLang', 'update:emotion', 'generate'])
+const props = defineProps(['style', 'sourceLang', 'targetLang', 'intensity'])
+const emit = defineEmits(['update:style', 'update:sourceLang', 'update:targetLang', 'update:intensity', 'generate'])
 
 const langs = [
   { value: 'ZH', zh: '中文', en: 'ZH' },
@@ -84,16 +97,19 @@ const styles = [
   { value: 'classical', zh: '古典', en: 'Classical' },
   { value: 'modern',    zh: '现代', en: 'Modern'    },
 ]
-const emotions = [
-  { value: 'neutral',    zh: '中性', en: 'Neutral'    },
-  { value: 'melancholy', zh: '忧郁', en: 'Melancholy' },
-  { value: 'joyful',     zh: '欢快', en: 'Joyful'     },
-]
 
 const sourceLangVal = computed({ get: () => props.sourceLang, set: v => emit('update:sourceLang', v) })
 const targetLangVal = computed({ get: () => props.targetLang, set: v => emit('update:targetLang', v) })
 const styleVal      = computed({ get: () => props.style,      set: v => emit('update:style', v) })
-const emotionVal    = computed({ get: () => props.emotion,    set: v => emit('update:emotion', v) })
+const intensityVal  = computed({ get: () => props.intensity,  set: v => emit('update:intensity', v) })
+
+// 当输入语言切换到与输出语言相同时，自动切到第一个不同的选项
+watch(sourceLangVal, (newVal) => {
+  if (newVal === targetLangVal.value) {
+    const other = langs.find(l => l.value !== newVal)
+    if (other) targetLangVal.value = other.value
+  }
+})
 </script>
 
 <style scoped>
@@ -126,7 +142,6 @@ const emotionVal    = computed({ get: () => props.emotion,    set: v => emit('up
   color: var(--text-faded);
 }
 
-/* Arrow separator between source and target */
 .arrow-sep {
   font-family: 'Cinzel', serif;
   font-size: 18px;
@@ -154,14 +169,19 @@ const emotionVal    = computed({ get: () => props.emotion,    set: v => emit('up
   flex-direction: column;
   align-items: center;
   gap: 2px;
-  transition: background 0.2s;
+  transition: background 0.2s, opacity 0.2s;
 }
 
-.pill:hover { background: var(--ink-surface); }
+.pill:hover:not(.disabled) { background: var(--ink-surface); }
 
 .pill.active {
   background: var(--red-ghost);
   box-shadow: inset 0 0 0 1px var(--red-border);
+}
+
+.pill.disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
 }
 
 .pill-zh {
@@ -183,7 +203,85 @@ const emotionVal    = computed({ get: () => props.emotion,    set: v => emit('up
 .pill.active .pill-zh { color: var(--red); }
 .pill.active .pill-en  { color: var(--red-dim); opacity: 0.6; }
 
-/* ── Generate button ── */
+/* ── 文化适配强度滑块 ── */
+.intensity-group { min-width: 200px; }
+
+.intensity-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ink-raised);
+  border: 1px solid var(--border);
+  padding: 3px 12px; /* 与 pill-bar 外层 padding 一致 */
+  box-shadow: inset 0 1px 3px rgba(120, 80, 20, 0.06);
+}
+
+.intensity-pole {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 10px;
+  color: var(--text-faded);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.slider-track-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 7px 0; /* 与 pill 内层 padding 一致，撑起相同高度 */
+}
+
+.intensity-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold-dim), var(--red));
+  border-radius: 1px;
+  outline: none;
+  cursor: pointer;
+}
+
+.intensity-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 1.5px solid var(--ink-surface);
+  box-shadow: 0 0 6px rgba(192, 56, 40, 0.35);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.intensity-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 10px rgba(192, 56, 40, 0.55);
+}
+
+.tick-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2px;
+}
+
+.tick {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  color: var(--text-faded);
+  opacity: 0.4;
+  transition: opacity 0.2s, color 0.2s;
+  line-height: 1;
+}
+
+.tick.active {
+  color: var(--red);
+  opacity: 0.8;
+}
+
+/* ── 生成按钮 ── */
 .gen-btn {
   background: var(--red-ghost);
   border: 1px solid var(--red-border);

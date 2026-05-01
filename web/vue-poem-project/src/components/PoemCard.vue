@@ -6,12 +6,13 @@
       <span class="label-en">Generated Poem</span>
     </div>
 
-    <div class="result-wrap" :class="{ 'has-result': result && !loading }">
+    <div class="result-wrap" :class="{ 'has-result': parsed && !loading }">
       <div class="corner tl"></div>
       <div class="corner tr"></div>
       <div class="corner bl"></div>
       <div class="corner br"></div>
 
+      <!-- 加载动画 -->
       <div v-if="loading" class="state-loading">
         <div class="ink-drop">
           <span
@@ -20,14 +21,26 @@
             :style="{ animationDelay: i * 0.12 + 's' }"
           >{{ c }}</span>
         </div>
-        <p class="loading-label">正在生成…</p>
+        <p class="loading-label">正在转写…</p>
       </div>
 
-      <div v-else-if="result" class="result-body">
-        <div class="result-seal">生</div>
-        <p class="result-text">{{ result }}</p>
+      <!-- 结构化结果 -->
+      <div v-else-if="parsed" class="result-body">
+        <div class="result-seal">转</div>
+
+        <p class="result-text">{{ parsed.poem }}</p>
+
+        <div v-if="parsed.analysis" class="analysis-block">
+          <div class="analysis-divider">
+            <div class="analysis-rule"></div>
+            <span class="analysis-label">转写思路</span>
+            <div class="analysis-rule"></div>
+          </div>
+          <p class="analysis-text">{{ parsed.analysis }}</p>
+        </div>
       </div>
 
+      <!-- 空状态 -->
       <div v-else class="state-empty">
         <span class="empty-glyph">詩</span>
         <p class="empty-hint">生成的诗歌将显示于此</p>
@@ -37,8 +50,20 @@
 </template>
 
 <script setup>
-defineProps(['result', 'loading'])
-const inkChars = ['春','风','又','绿','江','南','岸','明','月','何','时','照']
+import { computed } from 'vue'
+
+const props = defineProps(['result', 'loading'])
+
+const inkChars = ['春','风','又','绿','江','南','岸','明','月','何','时','照','我','还']
+
+const parsed = computed(() => {
+  if (!props.result) return null
+  const poemMatch    = props.result.match(/【转写结果】\s*([\s\S]*?)(?=【转写思路】|$)/)
+  const analysisMatch = props.result.match(/【转写思路】\s*([\s\S]*)$/)
+  const poem = poemMatch ? poemMatch[1].trim() : props.result.trim()
+  const analysis = analysisMatch ? analysisMatch[1].trim() : null
+  return { poem, analysis }
+})
 </script>
 
 <style scoped>
@@ -91,6 +116,7 @@ const inkChars = ['春','风','又','绿','江','南','岸','明','月','何','�
   justify-content: center;
   min-height: 360px;
   transition: border-color 0.4s, box-shadow 0.4s;
+  overflow: hidden; /* 防止 corner -1px 偏移触发滚动条 */
 }
 
 .result-wrap.has-result {
@@ -106,13 +132,14 @@ const inkChars = ['春','风','又','绿','江','南','岸','明','月','何','�
   width: 9px;
   height: 9px;
   z-index: 2;
+  pointer-events: none;
 }
 .tl { top: -1px;    left: -1px;  border-top:    1px solid var(--gold-dim); border-left:   1px solid var(--gold-dim); }
 .tr { top: -1px;    right: -1px; border-top:    1px solid var(--gold-dim); border-right:  1px solid var(--gold-dim); }
 .bl { bottom: -1px; left: -1px;  border-bottom: 1px solid var(--gold-dim); border-left:   1px solid var(--gold-dim); }
 .br { bottom: -1px; right: -1px; border-bottom: 1px solid var(--gold-dim); border-right:  1px solid var(--gold-dim); }
 
-/* ── Loading ── */
+/* ── 加载动画 ── */
 .state-loading {
   display: flex;
   flex-direction: column;
@@ -142,12 +169,14 @@ const inkChars = ['春','风','又','绿','江','南','岸','明','月','何','�
   color: var(--text-faded);
 }
 
-/* ── Result ── */
+/* ── 转写结果 ── */
 .result-body {
   padding: 22px 24px;
   width: 100%;
   animation: reveal 0.5s ease;
   position: relative;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 @keyframes reveal {
@@ -155,7 +184,6 @@ const inkChars = ['春','风','又','绿','江','南','岸','明','月','何','�
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Red seal stamp decoration */
 .result-seal {
   position: absolute;
   top: 16px;
@@ -170,7 +198,6 @@ const inkChars = ['春','风','又','绿','江','南','岸','明','月','何','�
   align-items: center;
   justify-content: center;
   opacity: 0.45;
-  letter-spacing: 0;
 }
 
 .result-text {
@@ -179,9 +206,44 @@ const inkChars = ['春','风','又','绿','江','南','岸','明','月','何','�
   line-height: 2;
   color: var(--text-parchment);
   white-space: pre-wrap;
+  padding-right: 36px; /* 避免与印章重叠 */
 }
 
-/* ── Empty ── */
+/* ── 转写思路 ── */
+.analysis-block {
+  margin-top: 20px;
+}
+
+.analysis-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.analysis-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border-bright), transparent);
+}
+
+.analysis-label {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  color: var(--text-faded);
+  white-space: nowrap;
+}
+
+.analysis-text {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--text-faded);
+  white-space: pre-wrap;
+}
+
+/* ── 空状态 ── */
 .state-empty {
   display: flex;
   flex-direction: column;

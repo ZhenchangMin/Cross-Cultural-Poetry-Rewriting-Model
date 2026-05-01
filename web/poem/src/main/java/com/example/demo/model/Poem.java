@@ -5,7 +5,7 @@ public class Poem {
     private String style;
     private String sourceLang;
     private String targetLang;
-    private String emotion;
+    private Integer intensity;  // 1=异化 … 5=归化，null 时默认 3
 
     public String getText() { return text; }
     public void setText(String text) { this.text = text; }
@@ -19,6 +19,6 @@ public class Poem {
     public String getTargetLang() { return targetLang; }
     public void setTargetLang(String targetLang) { this.targetLang = targetLang; }
 
-    public String getEmotion() { return emotion; }
-    public void setEmotion(String emotion) { this.emotion = emotion; }
+    public Integer getIntensity() { return intensity; }
+    public void setIntensity(Integer intensity) { this.intensity = intensity; }
 }

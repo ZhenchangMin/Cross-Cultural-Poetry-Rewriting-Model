@@ -3,12 +3,28 @@
     <div class="param-row">
 
       <div class="param-group">
-        <span class="param-label">文化语境</span>
+        <span class="param-label">输入语言</span>
         <div class="pill-bar">
           <button
-            v-for="opt in cultures" :key="opt.value"
-            class="pill" :class="{ active: cultureVal === opt.value }"
-            @click="cultureVal = opt.value"
+            v-for="opt in langs" :key="opt.value"
+            class="pill" :class="{ active: sourceLangVal === opt.value }"
+            @click="sourceLangVal = opt.value"
+          >
+            <span class="pill-zh">{{ opt.zh }}</span>
+            <span class="pill-en">{{ opt.en }}</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="arrow-sep">→</div>
+
+      <div class="param-group">
+        <span class="param-label">输出语言</span>
+        <div class="pill-bar">
+          <button
+            v-for="opt in langs" :key="opt.value"
+            class="pill" :class="{ active: targetLangVal === opt.value }"
+            @click="targetLangVal = opt.value"
           >
             <span class="pill-zh">{{ opt.zh }}</span>
             <span class="pill-en">{{ opt.en }}</span>
@@ -56,13 +72,13 @@
 <script setup>
 import { computed } from 'vue'
 
-const props = defineProps(['style', 'culture', 'emotion'])
-const emit = defineEmits(['update:style', 'update:culture', 'update:emotion', 'generate'])
+const props = defineProps(['style', 'sourceLang', 'targetLang', 'emotion'])
+const emit = defineEmits(['update:style', 'update:sourceLang', 'update:targetLang', 'update:emotion', 'generate'])
 
-const cultures = [
-  { value: 'Chinese', zh: '中文', en: 'ZH' },
-  { value: 'Korean',  zh: '韩语', en: 'KO' },
-  { value: 'Russian', zh: '俄语', en: 'RU' },
+const langs = [
+  { value: 'ZH', zh: '中文', en: 'ZH' },
+  { value: 'KO', zh: '韩语', en: 'KO' },
+  { value: 'RU', zh: '俄语', en: 'RU' },
 ]
 const styles = [
   { value: 'classical', zh: '古典', en: 'Classical' },
@@ -74,9 +90,10 @@ const emotions = [
   { value: 'joyful',     zh: '欢快', en: 'Joyful'     },
 ]
 
-const styleVal   = computed({ get: () => props.style,   set: v => emit('update:style', v) })
-const cultureVal = computed({ get: () => props.culture, set: v => emit('update:culture', v) })
-const emotionVal = computed({ get: () => props.emotion, set: v => emit('update:emotion', v) })
+const sourceLangVal = computed({ get: () => props.sourceLang, set: v => emit('update:sourceLang', v) })
+const targetLangVal = computed({ get: () => props.targetLang, set: v => emit('update:targetLang', v) })
+const styleVal      = computed({ get: () => props.style,      set: v => emit('update:style', v) })
+const emotionVal    = computed({ get: () => props.emotion,    set: v => emit('update:emotion', v) })
 </script>
 
 <style scoped>
@@ -90,7 +107,8 @@ const emotionVal = computed({ get: () => props.emotion, set: v => emit('update:e
 
 .param-row {
   display: flex;
-  gap: 32px;
+  align-items: flex-end;
+  gap: 20px;
   flex: 1;
   flex-wrap: wrap;
 }
@@ -106,6 +124,16 @@ const emotionVal = computed({ get: () => props.emotion, set: v => emit('update:e
   font-size: 10px;
   letter-spacing: 0.28em;
   color: var(--text-faded);
+}
+
+/* Arrow separator between source and target */
+.arrow-sep {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  color: var(--gold-dim);
+  opacity: 0.5;
+  padding-bottom: 6px;
+  flex-shrink: 0;
 }
 
 .pill-bar {
@@ -155,7 +183,7 @@ const emotionVal = computed({ get: () => props.emotion, set: v => emit('update:e
 .pill.active .pill-zh { color: var(--red); }
 .pill.active .pill-en  { color: var(--red-dim); opacity: 0.6; }
 
-/* ── Generate button (朱砂 red) ── */
+/* ── Generate button ── */
 .gen-btn {
   background: var(--red-ghost);
   border: 1px solid var(--red-border);
@@ -168,6 +196,7 @@ const emotionVal = computed({ get: () => props.emotion, set: v => emit('update:e
   position: relative;
   overflow: hidden;
   transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+  flex-shrink: 0;
 }
 
 .gen-btn::after {

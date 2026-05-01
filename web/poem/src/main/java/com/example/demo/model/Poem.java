@@ -3,7 +3,8 @@ package com.example.demo.model;
 public class Poem {
     private String text;
     private String style;
-    private String targetCulture;
+    private String sourceLang;
+    private String targetLang;
     private String emotion;
 
     public String getText() { return text; }
@@ -12,8 +13,11 @@ public class Poem {
     public String getStyle() { return style; }
     public void setStyle(String style) { this.style = style; }
 
-    public String getTargetCulture() { return targetCulture; }
-    public void setTargetCulture(String targetCulture) { this.targetCulture = targetCulture; }
+    public String getSourceLang() { return sourceLang; }
+    public void setSourceLang(String sourceLang) { this.sourceLang = sourceLang; }
+
+    public String getTargetLang() { return targetLang; }
+    public void setTargetLang(String targetLang) { this.targetLang = targetLang; }
 
     public String getEmotion() { return emotion; }
     public void setEmotion(String emotion) { this.emotion = emotion; }

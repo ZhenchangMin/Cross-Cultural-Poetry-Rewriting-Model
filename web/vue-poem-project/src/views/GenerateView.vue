@@ -36,7 +36,8 @@
       <div class="footer-rule"></div>
       <ControlPanel
         v-model:style="style"
-        v-model:culture="culture"
+        v-model:sourceLang="sourceLang"
+        v-model:targetLang="targetLang"
         v-model:emotion="emotion"
         @generate="handleGenerate"
       />
@@ -50,18 +51,11 @@ import InputBox from '../components/InputBox.vue'
 import ControlPanel from '../components/ControlPanel.vue'
 import PoemCard from '../components/PoemCard.vue'
 
-const mockAPI = (data) => new Promise((resolve) => {
-  setTimeout(() => {
-    resolve({
-      result: `【${data.targetCulture} · ${data.style} · ${data.emotion}】\n\n${data.text}\n\n（AI 改写示例）`
-    })
-  }, 1500)
-})
-
 const text = ref('')
 const result = ref('')
 const style = ref('modern')
-const culture = ref('Chinese')
+const sourceLang = ref('RU')
+const targetLang = ref('ZH')
 const emotion = ref('neutral')
 const loading = ref(false)
 
@@ -69,10 +63,22 @@ const handleGenerate = async () => {
   if (!text.value.trim()) return
   loading.value = true
   try {
-    const res = await mockAPI({ text: text.value, style: style.value, targetCulture: culture.value, emotion: emotion.value })
-    result.value = res.result
-  } catch {
-    result.value = '生成失败，请稍后重试'
+    const res = await fetch('http://localhost:8081/translate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        text: text.value,
+        style: style.value,
+        sourceLang: sourceLang.value,
+        targetLang: targetLang.value,
+        emotion: emotion.value
+      })
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const data = await res.json()
+    result.value = data.result
+  } catch (e) {
+    result.value = '生成失败：' + e.message
   } finally {
     loading.value = false
   }

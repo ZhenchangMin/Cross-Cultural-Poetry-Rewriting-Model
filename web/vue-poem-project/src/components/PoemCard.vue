@@ -54,7 +54,7 @@ import { computed } from 'vue'
 
 const props = defineProps(['result', 'loading'])
 
-const inkChars = ['春','风','又','绿','江','南','岸','明','月','何','时','照','我','还']
+const inkChars = ['春','风','又','绿','江','南','岸','，','明','月','何','时','照','我','还']
 
 const parsed = computed(() => {
   if (!props.result) return null

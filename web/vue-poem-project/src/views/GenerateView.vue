@@ -63,7 +63,7 @@ const handleGenerate = async () => {
   if (!text.value.trim()) return
   loading.value = true
   try {
-    const res = await fetch('http://localhost:8081/translate', {
+    const res = await fetch('/translate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

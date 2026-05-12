@@ -3,6 +3,29 @@
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
 
+    <nav class="navbar">
+      <div class="nav-brand">
+        <span class="brand-mark">詩</span>
+        <div class="brand-text-wrap">
+          <span class="brand-zh">诗渡</span>
+          <span class="brand-en">Poem&nbsp;Bridge</span>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li v-for="item in navItems" :key="item.key">
+          <button
+            type="button"
+            class="nav-link"
+            :class="{ active: activeNav === item.key }"
+            @click="activeNav = item.key"
+          >
+            <span class="nav-link-zh">{{ item.zh }}</span>
+            <span class="nav-link-en">{{ item.en }}</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
     <header class="header">
       <div class="header-rule"></div>
       <div class="header-body">
@@ -59,6 +82,13 @@ const targetLang = ref('ZH')
 const intensity = ref(3)
 const loading = ref(false)
 
+const navItems = [
+  { key: 'about',     zh: '关于我们', en: 'About' },
+  { key: 'changelog', zh: '更新日志', en: 'Changelog' },
+  { key: 'history',   zh: '重写历史', en: 'History' }
+]
+const activeNav = ref('')
+
 const handleGenerate = async () => {
   if (!text.value.trim()) return
   loading.value = true
@@ -112,6 +142,136 @@ const handleGenerate = async () => {
   width: 600px; height: 600px;
   bottom: -200px; right: -140px;
   background: radial-gradient(circle, rgba(160, 104, 24, 0.08) 0%, transparent 65%);
+}
+
+/* ── Navbar ── */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 4px 14px;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+}
+
+.brand-mark {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--red);
+  line-height: 1;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--red-border);
+  border-radius: 4px;
+  background: var(--red-ghost);
+  box-shadow: 0 0 0 4px rgba(192, 56, 40, 0.04);
+}
+
+.brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.1;
+}
+
+.brand-zh {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--text-parchment);
+}
+
+.brand-en {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  color: var(--text-faded);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text-aged);
+  transition: color 0.25s ease;
+}
+
+.nav-link-zh {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  line-height: 1.1;
+}
+
+.nav-link-en {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  color: var(--text-faded);
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--red);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--red);
+}
+.nav-link:hover .nav-link-en {
+  color: var(--red);
+  opacity: 0.7;
+}
+.nav-link:hover::after {
+  width: 60%;
+}
+
+.nav-link.active {
+  color: var(--red);
+}
+.nav-link.active .nav-link-en {
+  color: var(--red);
+  opacity: 0.7;
+}
+.nav-link.active::after {
+  width: 60%;
 }
 
 /* ── Header ── */

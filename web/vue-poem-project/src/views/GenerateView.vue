@@ -77,7 +77,7 @@ import PoemCard from '../components/PoemCard.vue'
 const text = ref('')
 const result = ref('')
 const style = ref('modern')
-const sourceLang = ref('RU')
+const sourceLang = ref('KO')
 const targetLang = ref('ZH')
 const intensity = ref(3)
 const loading = ref(false)

@@ -229,8 +229,9 @@ watch(sourceLangVal, (newVal) => {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 2px;
-  padding: 7px 0; /* 与 pill 内层 padding 一致，撑起相同高度 */
+  padding: 20px 0 8px; /* 总高与 pill-bar 一致，红色滑轨偏下 */
 }
 
 .intensity-slider {

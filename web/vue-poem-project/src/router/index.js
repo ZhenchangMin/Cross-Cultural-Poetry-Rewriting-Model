@@ -3,13 +3,25 @@
 
 import { createRouter, createWebHistory } from 'vue-router'
 import GenerateView from '../views/GenerateView.vue'
+import AboutView from '../views/AboutView.vue'
+import ChangelogView from '../views/ChangelogView.vue'
 
 const routes = [
-{
+  {
     path: '/',
     name: 'home',
     component: GenerateView
-}
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: AboutView
+  },
+  {
+    path: '/changelog',
+    name: 'changelog',
+    component: ChangelogView
+  }
 ]
 
 const router = createRouter({

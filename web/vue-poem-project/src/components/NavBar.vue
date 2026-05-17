@@ -36,9 +36,9 @@
 
 <script setup>
 const navItems = [
-  { key: 'about',     zh: '关于我们', en: 'About',     to: '/about' },
-  { key: 'changelog', zh: '更新日志', en: 'Changelog', to: '/changelog' },
-  { key: 'history',   zh: '重写历史', en: 'History' }
+  { key: 'about',       zh: '关于我们', en: 'About',      to: '/about' },
+  { key: 'changelog',   zh: '更新日志', en: 'Changelog',  to: '/changelog' },
+  { key: 'disclaimer',  zh: '免责声明', en: 'Disclaimer', to: '/disclaimer' }
 ]
 </script>
 

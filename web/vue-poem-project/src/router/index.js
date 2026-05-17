@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import GenerateView from '../views/GenerateView.vue'
 import AboutView from '../views/AboutView.vue'
 import ChangelogView from '../views/ChangelogView.vue'
+import DisclaimerView from '../views/DisclaimerView.vue'
 
 const routes = [
   {
@@ -21,6 +22,11 @@ const routes = [
     path: '/changelog',
     name: 'changelog',
     component: ChangelogView
+  },
+  {
+    path: '/disclaimer',
+    name: 'disclaimer',
+    component: DisclaimerView
   }
 ]
 

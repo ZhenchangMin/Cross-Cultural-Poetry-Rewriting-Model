@@ -131,10 +131,10 @@ watch(sourceLangVal, (newVal) => {
   }
 })
 
-// 切换目标语言时，如当前形式不在新列表中，自动重置为该语言下第一个形式
+// 切换目标语言时，始终回到该语言下的第一个诗歌形式（即第一个按钮）
 watch(targetLangVal, () => {
   const list = currentStyles.value
-  if (!list.some(s => s.value === styleVal.value)) {
+  if (list.length > 0) {
     styleVal.value = list[0].value
   }
 }, { immediate: true })

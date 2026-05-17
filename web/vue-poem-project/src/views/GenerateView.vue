@@ -56,7 +56,7 @@ import NavBar from '../components/NavBar.vue'
 
 const text = ref('')
 const result = ref('')
-const style = ref('modern')
+const style = ref('jueju')
 const sourceLang = ref('KO')
 const targetLang = ref('ZH')
 const intensity = ref(3)

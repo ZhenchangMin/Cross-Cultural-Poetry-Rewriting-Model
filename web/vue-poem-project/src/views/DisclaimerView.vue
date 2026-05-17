@@ -481,5 +481,13 @@ import NavBar from '../components/NavBar.vue'
   }
   .stamp-en { margin-top: 0; }
   .contact-grid { grid-template-columns: 1fr; }
+
+  /* 窄屏放开 contact-value 的 nowrap，让长 repo 路径换行展示完整 */
+  .contact-value {
+    white-space: normal;
+    word-break: break-all;
+    font-size: 12px;
+    line-height: 1.5;
+  }
 }
 </style>

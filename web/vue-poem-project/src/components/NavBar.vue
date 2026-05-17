@@ -36,9 +36,9 @@
 
 <script setup>
 const navItems = [
-  { key: 'about',     zh: '关于我们', en: 'About',     to: '/about' },
-  { key: 'changelog', zh: '更新日志', en: 'Changelog', to: '/changelog' },
-  { key: 'history',   zh: '重写历史', en: 'History' }
+  { key: 'about',       zh: '关于我们', en: 'About',      to: '/about' },
+  { key: 'changelog',   zh: '更新日志', en: 'Changelog',  to: '/changelog' },
+  { key: 'disclaimer',  zh: '免责声明', en: 'Disclaimer', to: '/disclaimer' }
 ]
 </script>
 
@@ -184,4 +184,52 @@ const navItems = [
   cursor: not-allowed;
 }
 .nav-link--soon:hover { color: var(--text-aged); }
+
+/* ── Responsive (mobile) ── */
+@media (max-width: 820px) {
+  .navbar {
+    padding: 10px 0 8px;
+    gap: 8px;
+  }
+
+  .nav-brand { gap: 8px; }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+    box-shadow: 0 0 0 2px rgba(192, 56, 40, 0.04);
+  }
+
+  .brand-zh {
+    font-size: 15px;
+    letter-spacing: 0.16em;
+  }
+  .brand-en {
+    font-size: 9px;
+    letter-spacing: 0.24em;
+  }
+
+  .nav-links { gap: 0; }
+
+  .nav-link {
+    padding: 6px 8px;
+    gap: 1px;
+  }
+  .nav-link-zh {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+  .nav-link-en {
+    font-size: 7px;
+    letter-spacing: 0.2em;
+  }
+}
+
+@media (max-width: 420px) {
+  /* 极窄屏：隐藏英文行，只保留中文，避免溢出 */
+  .brand-en { display: none; }
+  .nav-link-en { display: none; }
+  .brand-zh { font-size: 14px; }
+}
 </style>

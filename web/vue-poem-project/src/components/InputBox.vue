@@ -124,4 +124,38 @@ const inputValue = computed({
 .tr { top: -1px;    right: -1px; border-top:    1px solid var(--gold-dim); border-right:  1px solid var(--gold-dim); }
 .bl { bottom: -1px; left: -1px;  border-bottom: 1px solid var(--gold-dim); border-left:   1px solid var(--gold-dim); }
 .br { bottom: -1px; right: -1px; border-bottom: 1px solid var(--gold-dim); border-right:  1px solid var(--gold-dim); }
+
+/* ── Responsive (mobile) ── */
+@media (max-width: 820px) {
+  .input-pane { gap: 8px; }
+  .pane-label { height: auto; gap: 8px; }
+  .label-zh { font-size: 13px; letter-spacing: 0.18em; }
+
+  /* 强化框体视觉闭合：移动端用更深的边框 + 阴影，让框在浅色背景上有清晰边界 */
+  .field-wrap {
+    border-color: var(--border-bright);
+    box-shadow: 0 1px 8px rgba(80, 50, 15, 0.06), inset 0 0 0 1px rgba(160, 104, 24, 0.04);
+    min-height: 220px;
+  }
+
+  /* 边角标识放大、加深、增厚，确保用户能看到四个角 */
+  .corner {
+    width: 14px;
+    height: 14px;
+  }
+  .tl, .tr, .bl, .br { border-width: 1.5px; }
+
+  .poem-field {
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  /* placeholder 加深，避免在手机小屏上「看不清」 */
+  .poem-field::placeholder {
+    color: var(--text-aged);
+    opacity: 0.5;
+    line-height: 1.9;
+  }
+}
 </style>

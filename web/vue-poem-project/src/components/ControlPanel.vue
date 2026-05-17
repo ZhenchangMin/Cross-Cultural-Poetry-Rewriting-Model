@@ -131,10 +131,10 @@ watch(sourceLangVal, (newVal) => {
   }
 })
 
-// 切换目标语言时，如当前形式不在新列表中，自动重置为该语言下第一个形式
+// 切换目标语言时，始终回到该语言下的第一个诗歌形式（即第一个按钮）
 watch(targetLangVal, () => {
   const list = currentStyles.value
-  if (!list.some(s => s.value === styleVal.value)) {
+  if (list.length > 0) {
     styleVal.value = list[0].value
   }
 }, { immediate: true })
@@ -362,5 +362,62 @@ watch(targetLangVal, () => {
   text-transform: uppercase;
   position: relative;
   z-index: 1;
+}
+
+/* ── Responsive (mobile) ── */
+@media (max-width: 820px) {
+  .control-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px 0 4px;
+  }
+
+  .param-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    flex: none;
+  }
+
+  .param-group {
+    gap: 6px;
+  }
+
+  .arrow-sep {
+    display: none;
+  }
+
+  .pill-bar {
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    flex: 1 1 auto;
+    padding: 6px 10px;
+  }
+
+  .pill-zh { font-size: 12px; }
+
+  /* 文化适配强度滑块 */
+  .intensity-group { min-width: 0; }
+
+  .intensity-wrap {
+    padding: 3px 10px;
+  }
+
+  .slider-track-wrap {
+    padding: 18px 0 6px;
+  }
+
+  /* 生成按钮：占满整行，作为页面的主要触发器 */
+  .gen-btn {
+    align-self: stretch;
+    width: 100%;
+    padding: 12px;
+    margin-top: 4px;
+  }
+
+  .gen-zh { font-size: 16px; letter-spacing: 0.3em; }
 }
 </style>

@@ -10,17 +10,21 @@
 [![Transformers](https://img.shields.io/badge/Transformers-4.44+-FFAE00?logo=huggingface&logoColor=white)](https://huggingface.co/docs/transformers)
 [![Vue](https://img.shields.io/badge/Vue-3.x-4FC08D?logo=vue.js&logoColor=white)](https://vuejs.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![License](https://img.shields.io/badge/Use-%E6%95%99%E5%AD%A6%20%C2%B7%20%E7%A7%91%E7%A0%94-blue.svg)](#license)
 
-[项目简介](#-项目简介) ·
-[模型架构](#-模型架构三位一体) ·
-[快速开始](#-快速开始) ·
-[目录结构](#-目录结构) ·
-[示例](#-示例) ·
-[致谢](#-致谢)
+[项目简介](#intro) ·
+[模型架构](#arch) ·
+[快速开始](#quickstart) ·
+[目录结构](#structure) ·
+[示例](#example) ·
+[许可声明](#license) ·
+[致谢](#credits)
 
 </div>
 
 ---
+
+<a id="intro"></a>
 
 ## 项目简介
 
@@ -35,6 +39,8 @@
 **MVP 阶段**支持 俄语 → 七律 与 韩语 → 七律，未来可扩展至更多语言与诗体。
 
 ---
+
+<a id="arch"></a>
 
 ## 模型架构（三位一体）
 
@@ -82,6 +88,8 @@
 | `scorer_qilu` | 平仄韵脚打分，候选重排 | — | 规则 |
 
 ---
+
+<a id="quickstart"></a>
 
 ## 快速开始
 
@@ -151,6 +159,8 @@ npm run serve
 
 ---
 
+<a id="structure"></a>
+
 ## 目录结构
 
 ```
@@ -208,6 +218,8 @@ Cross-Cultural-Poetry-Rewriting-Model/
 
 ---
 
+<a id="example"></a>
+
 ## 示例
 
 <table>
@@ -247,6 +259,8 @@ Cross-Cultural-Poetry-Rewriting-Model/
 
 ---
 
+<a id="license"></a>
+
 ## 许可声明
 
 本项目为**南京大学大学生创新训练计划**学生作品，仅限**教学与科研用途**：
@@ -259,6 +273,8 @@ Cross-Cultural-Poetry-Rewriting-Model/
 如需合作或其他用途，请通过 Issue 或邮件联系作者。
 
 ---
+
+<a id="credits"></a>
 
 ## 致谢
 

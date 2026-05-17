@@ -3,6 +3,8 @@
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
 
+    <NavBar />
+
     <header class="header">
       <div class="header-rule"></div>
       <div class="header-body">
@@ -50,11 +52,12 @@ import { ref } from 'vue'
 import InputBox from '../components/InputBox.vue'
 import ControlPanel from '../components/ControlPanel.vue'
 import PoemCard from '../components/PoemCard.vue'
+import NavBar from '../components/NavBar.vue'
 
 const text = ref('')
 const result = ref('')
 const style = ref('modern')
-const sourceLang = ref('RU')
+const sourceLang = ref('KO')
 const targetLang = ref('ZH')
 const intensity = ref(3)
 const loading = ref(false)

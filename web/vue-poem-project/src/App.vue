@@ -3,8 +3,16 @@
     <div class="paper-texture"></div>
     <div class="bg-watermark">詩</div>
     <router-view />
+    <SplashScreen v-if="showSplash" @done="showSplash = false" />
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+import SplashScreen from './components/SplashScreen.vue'
+
+const showSplash = ref(true)
+</script>
 
 <style>
 *, *::before, *::after {

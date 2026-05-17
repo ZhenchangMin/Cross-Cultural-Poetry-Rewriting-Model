@@ -153,8 +153,9 @@ const parsed = computed(() => {
   font-family: 'Noto Serif SC', serif;
   font-size: 18px;
   color: var(--red);
-  opacity: 0;
+  opacity: 0.15;
   animation: char-wave 1.6s ease-in-out infinite;
+  animation-fill-mode: backwards;
 }
 
 @keyframes char-wave {
@@ -265,5 +266,43 @@ const parsed = computed(() => {
   font-size: 11px;
   letter-spacing: 0.18em;
   color: var(--text-faded);
+}
+
+/* ── Responsive (mobile) ── */
+@media (max-width: 820px) {
+  .output-pane { gap: 8px; }
+  .pane-label { height: auto; gap: 8px; }
+  .label-zh { font-size: 13px; letter-spacing: 0.18em; }
+
+  /* 与输入框保持一致的视觉强度：加深边框 + 阴影 + 边角标识放大 */
+  .result-wrap {
+    min-height: 240px;
+    border-color: var(--border-bright);
+    box-shadow: 0 1px 8px rgba(80, 50, 15, 0.06), inset 0 0 0 1px rgba(160, 104, 24, 0.04);
+  }
+
+  .corner { width: 14px; height: 14px; }
+  .tl, .tr, .bl, .br { border-width: 1.5px; }
+
+  .result-body { padding: 16px 18px; }
+
+  .result-seal {
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+
+  .result-text {
+    font-size: 14px;
+    line-height: 1.9;
+    padding-right: 30px;
+  }
+
+  .analysis-text { font-size: 12px; line-height: 1.8; }
+
+  .ink-char { font-size: 16px; }
+  .empty-glyph { font-size: 40px; }
 }
 </style>

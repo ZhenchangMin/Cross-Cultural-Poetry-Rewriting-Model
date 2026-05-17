@@ -3,6 +3,8 @@
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
 
+    <NavBar />
+
     <header class="header">
       <div class="header-rule"></div>
       <div class="header-body">
@@ -50,11 +52,12 @@ import { ref } from 'vue'
 import InputBox from '../components/InputBox.vue'
 import ControlPanel from '../components/ControlPanel.vue'
 import PoemCard from '../components/PoemCard.vue'
+import NavBar from '../components/NavBar.vue'
 
 const text = ref('')
 const result = ref('')
-const style = ref('modern')
-const sourceLang = ref('RU')
+const style = ref('jueju')
+const sourceLang = ref('KO')
 const targetLang = ref('ZH')
 const intensity = ref(3)
 const loading = ref(false)
@@ -214,5 +217,51 @@ const handleGenerate = async () => {
   height: 1px;
   background: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent);
   margin-bottom: 24px;
+}
+
+/* ── Responsive (mobile) ── */
+@media (max-width: 820px) {
+  .page {
+    padding: 0 16px 24px;
+    /* 桌面端用 hidden 控制 orb 溢出；移动端必须放开纵向滚动，否则下方内容会被截断 */
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .orb-1 { width: 300px; height: 300px; top: -100px; left: -80px; }
+  .orb-2 { width: 360px; height: 360px; bottom: -120px; right: -80px; }
+
+  .header {
+    padding: 20px 0 16px;
+    gap: 10px;
+  }
+  .header-body { gap: 16px; }
+  .rune { font-size: 12px; }
+  .title-zh { font-size: 20px; letter-spacing: 0.14em; }
+  .title-en { font-size: 9px; letter-spacing: 0.26em; }
+
+  .workspace {
+    flex-direction: column;
+    gap: 18px;
+    min-height: 0;
+    flex: none; /* 解除 flex:1 强行平分，让两栏自然按 min-height 撑开 */
+  }
+  .pane { min-height: 280px; }
+
+  /* 把竖直分隔条改为水平分隔条 */
+  .divider {
+    flex-direction: row;
+    padding: 4px 0;
+    gap: 10px;
+  }
+  .divider-rail {
+    width: auto;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-bright) 20%, var(--border-bright) 80%, transparent);
+  }
+  .divider-mark { font-size: 12px; }
+
+  .footer { margin-top: 18px; }
+  .footer-rule { margin-bottom: 16px; }
 }
 </style>

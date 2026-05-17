@@ -56,9 +56,9 @@ public class PoemService {
     private String buildPrompt(Poem poem) {
         String sourceName  = langDisplayName(poem.getSourceLang());
         String targetName  = langDisplayName(poem.getTargetLang());
-        String styleName   = "classical".equals(poem.getStyle()) ? "古典" : "现代";
+        String styleName   = styleDisplayName(poem.getStyle());
         int    intensity   = poem.getIntensity() != null ? poem.getIntensity() : 3;
-        String outputForm  = outputFormName(poem.getTargetLang(), styleName);
+        String outputForm  = outputFormName(poem.getTargetLang(), poem.getStyle());
 
         return String.format("""
                 你是一位精通中、俄、韩三国诗学的文学转写专家。
@@ -104,10 +104,29 @@ public class PoemService {
                 """,
                 sourceName,
                 poem.getText(),
-                targetName + styleName + "诗",
+                targetName + styleName,
                 outputForm,
                 intensity
         );
+    }
+
+    private String styleDisplayName(String styleCode) {
+        if (styleCode == null) return "现代诗";
+        return switch (styleCode) {
+            case "jueju"  -> "绝句";
+            case "lvshi"  -> "律诗";
+            case "ci"     -> "宋词";
+            case "qu"     -> "元曲";
+            case "sijo"   -> "时调";
+            case "gasa"   -> "歌辞";
+            case "sonnet" -> "十四行诗";
+            case "ode"    -> "颂诗";
+            case "lyric"  -> "抒情诗";
+            case "modern" -> "现代诗";
+            // 兼容旧值
+            case "classical" -> "古典诗";
+            default       -> "现代诗";
+        };
     }
 
     private String langDisplayName(String lang) {
@@ -119,12 +138,44 @@ public class PoemService {
         };
     }
 
-    private String outputFormName(String targetLang, String styleName) {
+    private String outputFormName(String targetLang, String styleCode) {
+        String code = styleCode == null ? "modern" : styleCode;
+        return switch (code) {
+            // 中文古典诗体
+            case "jueju" -> "中文绝句：四句，每句七字（或可写五言绝句五字），第二、四句末字押平声韵";
+            case "lvshi" -> "中文律诗（七律）：共八句，每句七字，第二、四、六、八句末字押平声韵；颔联（三四句）与颈联（五六句）须对仗";
+            case "ci"    -> "宋词：依词牌长短句结构创作（推荐如《如梦令》《浣溪沙》《虞美人》《水调歌头》等），请在【转写结果】首行标注词牌名";
+            case "qu"    -> "元曲（散曲小令）：以小令形式创作（推荐如《天净沙》《山坡羊》《沉醉东风》等），请在【转写结果】首行标注曲牌名，可加衬字，语言可较直白";
+            // 韩语古典诗体
+            case "sijo"  -> "韩语时调（시조）：三行结构，每行分前后句，音节约 3-4-4-4 / 3-4-4-4 / 3-5-4-3，第三行首句须含转折（종장의 첫 음보）";
+            case "gasa"  -> "韩语歌辞（가사）：四音步长行体，行数不固定，节奏自由，叙抒结合，使用古典韩语诗体风格";
+            // 俄语诗体
+            case "sonnet" -> "俄语十四行诗：14 行，押韵方案 ABAB CDCD EFEF GG（莎士比亚式）或 ABBA ABBA CDC DCD（彼特拉克式），任择其一";
+            case "ode"    -> "俄语颂诗：庄严抒情风格，由多个四行节构成，每节押 ABAB 或 AABB，语言典雅";
+            case "lyric"  -> "俄语抒情格律诗：共 8 行，押韵方案 ABABCDCD，重视音步与情感张力";
+            // 现代自由体
+            case "modern" -> modernForm(targetLang);
+            // 兼容旧值
+            case "classical" -> defaultClassicalForm(targetLang);
+            default -> modernForm(targetLang);
+        };
+    }
+
+    private String modernForm(String targetLang) {
         if (targetLang == null) targetLang = "ZH";
         return switch (targetLang) {
-            case "KO" -> styleName + "韩语时调（시조）：共三行，每行分前后句，音节约 3-4-4-4 / 3-4-4-4 / 3-5-4-3";
-            case "RU" -> styleName + "俄语格律诗：共八行，押韵方案 ABABCDCD，保持俄语诗意与韵律感";
-            default   -> styleName + "中文七律：共八句，每句七字，偶数句末字押韵（二、四、六、八句）";
+            case "KO" -> "韩语现代诗：自由体，无固定格律，注重意象凝练与节奏感";
+            case "RU" -> "俄语现代诗（自由体）：不严格押韵，重视意象与语感张力";
+            default   -> "中文现代诗：自由体，无格律约束，注重意象与节奏";
+        };
+    }
+
+    private String defaultClassicalForm(String targetLang) {
+        if (targetLang == null) targetLang = "ZH";
+        return switch (targetLang) {
+            case "KO" -> "韩语时调（시조）：三行结构，音节约 3-4-4-4 / 3-4-4-4 / 3-5-4-3";
+            case "RU" -> "俄语格律诗：8 行，押韵 ABABCDCD";
+            default   -> "中文七律：八句七言，偶数句末押平声韵";
         };
     }
 

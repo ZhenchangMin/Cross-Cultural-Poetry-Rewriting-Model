@@ -38,10 +38,10 @@
 
       <!-- 诗歌风格 -->
       <div class="param-group">
-        <span class="param-label">诗歌风格</span>
+        <span class="param-label">输出诗歌的风格</span>
         <div class="pill-bar">
           <button
-            v-for="opt in styles" :key="opt.value"
+            v-for="opt in currentStyles" :key="opt.value"
             class="pill" :class="{ active: styleVal === opt.value }"
             @click="styleVal = opt.value"
           >
@@ -93,15 +93,35 @@ const langs = [
   { value: 'KO', zh: '韩语', en: 'KO' },
   { value: 'RU', zh: '俄语', en: 'RU' },
 ]
-const styles = [
-  { value: 'classical', zh: '古典', en: 'Classical' },
-  { value: 'modern',    zh: '现代', en: 'Modern'    },
-]
+
+// 按目标语言切换可选诗学形式
+const stylesByLang = {
+  ZH: [
+    { value: 'jueju',  zh: '绝句',   en: 'Jueju'  },
+    { value: 'lvshi',  zh: '律诗',   en: 'Lüshi'  },
+    { value: 'ci',     zh: '宋词',   en: 'Ci'     },
+    { value: 'qu',     zh: '元曲',   en: 'Qu'     },
+    { value: 'modern', zh: '现代诗', en: 'Modern' },
+  ],
+  KO: [
+    { value: 'sijo',   zh: '时调',   en: 'Sijo'   },
+    { value: 'gasa',   zh: '歌辞',   en: 'Gasa'   },
+    { value: 'modern', zh: '现代诗', en: 'Modern' },
+  ],
+  RU: [
+    { value: 'sonnet', zh: '十四行', en: 'Sonnet' },
+    { value: 'ode',    zh: '颂诗',   en: 'Ode'    },
+    { value: 'lyric',  zh: '抒情诗', en: 'Lyric'  },
+    { value: 'modern', zh: '现代诗', en: 'Modern' },
+  ],
+}
 
 const sourceLangVal = computed({ get: () => props.sourceLang, set: v => emit('update:sourceLang', v) })
 const targetLangVal = computed({ get: () => props.targetLang, set: v => emit('update:targetLang', v) })
 const styleVal      = computed({ get: () => props.style,      set: v => emit('update:style', v) })
 const intensityVal  = computed({ get: () => props.intensity,  set: v => emit('update:intensity', v) })
+
+const currentStyles = computed(() => stylesByLang[targetLangVal.value] || stylesByLang.ZH)
 
 // 当输入语言切换到与输出语言相同时，自动切到第一个不同的选项
 watch(sourceLangVal, (newVal) => {
@@ -110,6 +130,14 @@ watch(sourceLangVal, (newVal) => {
     if (other) targetLangVal.value = other.value
   }
 })
+
+// 切换目标语言时，始终回到该语言下的第一个诗歌形式（即第一个按钮）
+watch(targetLangVal, () => {
+  const list = currentStyles.value
+  if (list.length > 0) {
+    styleVal.value = list[0].value
+  }
+}, { immediate: true })
 </script>
 
 <style scoped>
@@ -229,8 +257,9 @@ watch(sourceLangVal, (newVal) => {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 2px;
-  padding: 7px 0; /* 与 pill 内层 padding 一致，撑起相同高度 */
+  padding: 20px 0 8px; /* 总高与 pill-bar 一致，红色滑轨偏下 */
 }
 
 .intensity-slider {
@@ -333,5 +362,62 @@ watch(sourceLangVal, (newVal) => {
   text-transform: uppercase;
   position: relative;
   z-index: 1;
+}
+
+/* ── Responsive (mobile) ── */
+@media (max-width: 820px) {
+  .control-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px 0 4px;
+  }
+
+  .param-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    flex: none;
+  }
+
+  .param-group {
+    gap: 6px;
+  }
+
+  .arrow-sep {
+    display: none;
+  }
+
+  .pill-bar {
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    flex: 1 1 auto;
+    padding: 6px 10px;
+  }
+
+  .pill-zh { font-size: 12px; }
+
+  /* 文化适配强度滑块 */
+  .intensity-group { min-width: 0; }
+
+  .intensity-wrap {
+    padding: 3px 10px;
+  }
+
+  .slider-track-wrap {
+    padding: 18px 0 6px;
+  }
+
+  /* 生成按钮：占满整行，作为页面的主要触发器 */
+  .gen-btn {
+    align-self: stretch;
+    width: 100%;
+    padding: 12px;
+    margin-top: 4px;
+  }
+
+  .gen-zh { font-size: 16px; letter-spacing: 0.3em; }
 }
 </style>

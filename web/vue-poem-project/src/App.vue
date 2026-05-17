@@ -3,8 +3,18 @@
     <div class="paper-texture"></div>
     <div class="bg-watermark">詩</div>
     <router-view />
+    <SplashScreen v-if="showSplash" @done="showSplash = false" />
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+import SplashScreen from './components/SplashScreen.vue'
+
+// 移动端跳过启动动画，避免在小屏上出现闪现；桌面端保持不变
+const isMobile = window.matchMedia('(max-width: 820px)').matches
+const showSplash = ref(!isMobile)
+</script>
 
 <style>
 *, *::before, *::after {
@@ -89,4 +99,13 @@ html, body {
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--ink-raised); }
 ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+/* ── Responsive (mobile) ── */
+@media (max-width: 820px) {
+  .bg-watermark {
+    font-size: 240px;
+    right: -40px;
+    bottom: -50px;
+  }
+}
 </style>

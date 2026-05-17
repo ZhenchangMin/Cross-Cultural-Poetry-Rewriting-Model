@@ -10,7 +10,6 @@
 [![Transformers](https://img.shields.io/badge/Transformers-4.44+-FFAE00?logo=huggingface&logoColor=white)](https://huggingface.co/docs/transformers)
 [![Vue](https://img.shields.io/badge/Vue-3.x-4FC08D?logo=vue.js&logoColor=white)](https://vuejs.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
-[![License](https://img.shields.io/badge/Use-%E6%95%99%E5%AD%A6%20%C2%B7%20%E7%A7%91%E7%A0%94-blue.svg)](#-许可声明)
 
 [项目简介](#-项目简介) ·
 [模型架构](#-模型架构三位一体) ·
@@ -27,13 +26,13 @@
 
 本项目为**南京大学大学生创新训练计划**作品（2025.12 – 2026.12）。
 
-传统机器翻译在处理诗歌时常常**丢失文化意象、违反格律、风格走形**——把"白桦树"译成"杨柳"很容易，但要让一首叶赛宁写成李商隐的风骨，靠翻译 API 是做不到的。
+传统机器翻译在处理诗歌时常常**丢失文化意象、违反格律、风格走形**：把"白桦树"译成"杨柳"很容易，但要让一首叶赛宁写成李商隐的风骨，靠翻译是做不到的。
 
 我们提出**「语义—风格—文化」三位一体可控生成框架**：
 
 > **不翻译原文，只提取语义。** 用冻结的 **XLM-RoBERTa** 把任意语言的诗歌编码成多语言对齐的语义向量，再经一个可学习的投影头与文化嵌入，作为前缀注入 **Qwen2.5-1.5B**，由 LoRA 微调后的解码器生成符合**七律平仄、押韵、对仗**约束的中文诗。
 
-**MVP 阶段**支持 🇷🇺 俄语 → 七律 与 🇰🇷 韩语 → 七律（零样本跨语言），未来可扩展至更多语言与诗体（绝句、宋词等）。
+**MVP 阶段**支持 俄语 → 七律 与 韩语 → 七律，未来可扩展至更多语言与诗体。
 
 ---
 
@@ -44,17 +43,17 @@
             │
             ▼
    ┌────────────────────────┐
-   │  XLM-RoBERTa  ❄ 冻结    │   多语言语义对齐
+   │  XLM-RoBERTa   冻结    │   多语言语义对齐
    └────────────┬───────────┘
                 │ [CLS]  768-d
                 ▼
    ┌────────────────────────┐
-   │  ProjectionMLP  🔥 可训 │   768 → 1536
+   │  ProjectionMLP    可训 │   768 → 1536
    └────────────┬───────────┘
                 │   语义前缀 [B, 1, 1536]
                 │
    ┌────────────────────────┐
-   │  CultureEmbedding 🔥可训│   ←  唐诗 / 宋词 / 现代…
+   │  CultureEmbedding  可训│   ←  唐诗 / 宋词 / 现代诗等
    └────────────┬───────────┘
                 │   文化前缀 [B, 1, 1536]
                 ▼
@@ -62,14 +61,14 @@
                 │  concat
                 ▼
    ┌────────────────────────┐
-   │  Qwen2.5-1.5B + LoRA   │   🔥 LoRA r=16 可训
+   │  Qwen2.5-1.5B + LoRA   │   LoRA r=16 可训
    └────────────┬───────────┘
                 ▼
    ┌────────────────────────┐
    │  格律打分器 (scorer)    │   平仄 / 押韵 / 字数
    └────────────┬───────────┘
                 ▼
-            ✦ 中文七律 ✦
+              中文七律 
 ```
 
 ### 关键设计
@@ -77,13 +76,10 @@
 | 模块 | 作用 | 参数 | 状态 |
 |------|------|------|------|
 | `SemanticEncoder` (XLM-R-base) | 多语言语义编码 | ~280M | ❄ 冻结 |
-| `ProjectionMLP` | 跨模型空间对齐 768→1536 | ~1.5M | 🔥 训练 |
-| `CultureEmbedding` | 可学习文化风格向量表 | 极少 | 🔥 训练 |
-| `Qwen2.5-1.5B` (LoRA) | 中文七律生成 | ~1.5B / LoRA ~10M | 🔥 LoRA |
+| `ProjectionMLP` | 跨模型空间对齐 768→1536 | ~1.5M |  训练 |
+| `CultureEmbedding` | 可学习文化风格向量表 | 极少 |  训练 |
+| `Qwen2.5-1.5B` (LoRA) | 中文七律生成 | ~1.5B / LoRA ~10M |  LoRA |
 | `scorer_qilu` | 平仄韵脚打分，候选重排 | — | 规则 |
-
-**为什么训练只用中文自重建却能跨语言推理？**
-XLM-R 的多语言空间是天然对齐的——「秋风」与 «осенний ветер»、«가을바람» 在嵌入空间中近邻。中文自重建训练后，模型已经学会从该空间的任意一点生成七律，于是**俄语 / 韩语推理零样本可用**。
 
 ---
 
@@ -98,9 +94,6 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
-
-> **推荐显存**：训练 ≥ 12 GB（fp16 + LoRA r=16），推理 ≥ 6 GB。
-> 显存吃紧时可在 `configs/train_trinity_config.yaml` 中开启 `load_in_4bit: true`（需 bitsandbytes）。
 
 ### 2. 准备语料
 
@@ -162,7 +155,7 @@ npm run serve
 
 ```
 Cross-Cultural-Poetry-Rewriting-Model/
-├── research/                       # 🧠 ML 训练与推理（Python）
+├── research/                       #   ML 训练与推理（Python）
 │   ├── configs/
 │   │   ├── train_config.yaml             # baseline 配置
 │   │   └── train_trinity_config.yaml     # 三位一体配置

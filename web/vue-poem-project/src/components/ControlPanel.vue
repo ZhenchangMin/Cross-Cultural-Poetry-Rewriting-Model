@@ -53,23 +53,37 @@
 
       <!-- 文化适配强度 -->
       <div class="param-group intensity-group">
-        <span class="param-label">文化适配强度</span>
+        <div class="label-row">
+          <span class="param-label">文化适配强度</span>
+          <button type="button" class="help-btn" aria-label="什么是异化和归化">
+            ?
+            <span class="help-tip" role="tooltip">
+              <span class="tip-line">
+                <strong>异化 (Foreignization)</strong>
+                以源文化为中心，最大限度保留原诗内容——意象、典故、句法都向源文化贴近，读者读完会明确感到"这是一首外国诗"，可能略生硬，但完整保留了原诗的文化独特性。
+              </span>
+              <span class="tip-line">
+                <strong>归化 (Domestication)</strong>
+                以目标文化为中心，让作品读起来像本国本土原创——源语意象、典故置换为目标文化对应物，消除翻译腔，读者会感到"这是一首本国诗"，但失去了原诗的异国情调。
+              </span>
+              <span class="tip-cite">— Venuti, L. (1995). <em>The Translator's Invisibility</em>.</span>
+            </span>
+          </button>
+        </div>
         <div class="intensity-wrap">
-          <span class="intensity-pole">异化</span>
-          <div class="slider-track-wrap">
-            <input
-              type="range" min="1" max="5" step="1"
-              v-model.number="intensityVal"
-              class="intensity-slider"
-            />
-            <div class="tick-row">
-              <span
-                v-for="n in 5" :key="n"
-                class="tick" :class="{ active: intensityVal === n }"
-              >{{ n }}</span>
-            </div>
-          </div>
-          <span class="intensity-pole">归化</span>
+          <span class="intensity-pole">
+            <span class="pole-zh">异化</span>
+            <span class="pole-en">Foreignization</span>
+          </span>
+          <input
+            type="range" min="1" max="5" step="1"
+            v-model.number="intensityVal"
+            class="intensity-slider"
+          />
+          <span class="intensity-pole">
+            <span class="pole-zh">归化</span>
+            <span class="pole-en">Domestication</span>
+          </span>
         </div>
       </div>
 
@@ -165,8 +179,8 @@ watch(targetLangVal, () => {
 
 .param-label {
   font-family: 'Noto Serif SC', serif;
-  font-size: 10px;
-  letter-spacing: 0.28em;
+  font-size: 12px;
+  letter-spacing: 0.22em;
   color: var(--text-faded);
 }
 
@@ -232,41 +246,151 @@ watch(targetLangVal, () => {
 .pill.active .pill-en  { color: var(--red-dim); opacity: 0.6; }
 
 /* ── 文化适配强度滑块 ── */
-.intensity-group { min-width: 200px; }
+.intensity-group { min-width: 280px; }
+
+.label-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.help-btn {
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-bright);
+  background: transparent;
+  color: var(--text-faded);
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+  position: relative;
+  transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+
+.help-btn:hover,
+.help-btn:focus-visible {
+  color: var(--red);
+  border-color: var(--red-border);
+  box-shadow: 0 0 6px rgba(192, 56, 40, 0.25);
+  outline: none;
+}
+
+.help-tip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  width: 380px;
+  padding: 16px 18px;
+  background: var(--ink-surface);
+  border: 1px solid var(--border-bright);
+  color: var(--text-aged);
+  font-family: 'Noto Serif SC', serif;
+  font-size: 13px;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(160, 104, 24, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+  z-index: 100;
+  white-space: normal;
+  cursor: default;
+}
+
+.help-tip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--border-bright);
+}
+
+.help-btn:hover .help-tip,
+.help-btn:focus-visible .help-tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.tip-line strong {
+  color: var(--red);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tip-cite {
+  font-family: 'Cinzel', serif;
+  font-size: 10.5px;
+  color: var(--text-faded);
+  letter-spacing: 0.08em;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  margin-top: 2px;
+}
+.tip-cite em { font-style: italic; }
 
 .intensity-wrap {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: stretch;
+  gap: 2px;
   background: var(--ink-raised);
   border: 1px solid var(--border);
-  padding: 3px 12px; /* 与 pill-bar 外层 padding 一致 */
+  padding: 3px;
   box-shadow: inset 0 1px 3px rgba(120, 80, 20, 0.06);
 }
 
 .intensity-pole {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 10px;
-  color: var(--text-faded);
-  letter-spacing: 0.05em;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 7px 14px;
   flex-shrink: 0;
 }
 
-.slider-track-wrap {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 2px;
-  padding: 20px 0 8px; /* 总高与 pill-bar 一致，红色滑轨偏下 */
+/* 字体规格与 .pill-zh / .pill-en 严格一致，不设 line-height 让其继承浏览器默认，确保两框高度相同 */
+.pole-zh {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 13px;
+  color: var(--text-aged);
+  letter-spacing: 0.05em;
+}
+
+.pole-en {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  color: var(--text-faded);
+  letter-spacing: 0.12em;
 }
 
 .intensity-slider {
   -webkit-appearance: none;
   appearance: none;
-  width: 100%;
+  flex: 1;
+  min-width: 80px;
   height: 2px;
+  align-self: center;
+  margin: 0 6px;
   background: linear-gradient(to right, var(--gold-dim), var(--red));
   border-radius: 1px;
   outline: none;
@@ -290,24 +414,14 @@ watch(targetLangVal, () => {
   box-shadow: 0 0 10px rgba(192, 56, 40, 0.55);
 }
 
-.tick-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2px;
-}
-
-.tick {
-  font-family: 'Cinzel', serif;
-  font-size: 8px;
-  color: var(--text-faded);
-  opacity: 0.4;
-  transition: opacity 0.2s, color 0.2s;
-  line-height: 1;
-}
-
-.tick.active {
-  color: var(--red);
-  opacity: 0.8;
+.intensity-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 1.5px solid var(--ink-surface);
+  box-shadow: 0 0 6px rgba(192, 56, 40, 0.35);
+  cursor: pointer;
 }
 
 /* ── 生成按钮 ── */
@@ -402,12 +516,26 @@ watch(targetLangVal, () => {
   /* 文化适配强度滑块 */
   .intensity-group { min-width: 0; }
 
-  .intensity-wrap {
-    padding: 3px 10px;
+  .intensity-pole {
+    padding: 6px 10px;
   }
 
-  .slider-track-wrap {
-    padding: 18px 0 6px;
+  .pole-zh { font-size: 12px; }
+
+  /* tooltip 在小屏改成靠左定位，避免溢出视口 */
+  .help-tip {
+    width: min(320px, calc(100vw - 32px));
+    left: 0;
+    transform: translateX(0) translateY(4px);
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+  .tip-line strong { font-size: 13px; }
+  .tip-cite { font-size: 10px; }
+  .help-tip::after { left: 12px; transform: translateX(0); }
+  .help-btn:hover .help-tip,
+  .help-btn:focus-visible .help-tip {
+    transform: translateX(0) translateY(0);
   }
 
   /* 生成按钮：占满整行，作为页面的主要触发器 */

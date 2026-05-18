@@ -68,6 +68,7 @@ const handleGenerate = async () => {
   try {
     const res = await fetch('/translate', {
       method: 'POST',
+      credentials: 'omit',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         text: text.value,

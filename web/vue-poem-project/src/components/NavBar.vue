@@ -8,6 +8,15 @@
       </div>
     </router-link>
 
+    <div class="nav-title" aria-hidden="true">
+      <span class="nav-title-rune">⬡</span>
+      <div class="nav-title-block">
+        <h1 class="nav-title-zh">詩歌跨文化重寫</h1>
+        <p class="nav-title-en">Cross-Cultural Poetry Rewriting</p>
+      </div>
+      <span class="nav-title-rune">⬡</span>
+    </div>
+
     <ul class="nav-links">
       <li v-for="item in navItems" :key="item.key">
         <router-link
@@ -51,6 +60,53 @@ const navItems = [
   position: relative;
   z-index: 2;
   border-bottom: 1px solid var(--border);
+}
+
+/* ── Centered title ── */
+.nav-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.nav-title-rune {
+  color: var(--gold-dim);
+  font-size: 13px;
+  opacity: 0.5;
+  animation: nav-rune-breathe 4s ease-in-out infinite;
+}
+.nav-title-rune:last-child { animation-delay: 2s; }
+
+@keyframes nav-rune-breathe {
+  0%, 100% { opacity: 0.3; }
+  50%      { opacity: 0.65; }
+}
+
+.nav-title-block { text-align: center; }
+
+.nav-title-zh {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: var(--text-parchment);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.nav-title-en {
+  margin: 4px 0 0;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  color: var(--text-faded);
+  text-transform: uppercase;
 }
 
 .nav-brand {
@@ -185,8 +241,23 @@ const navItems = [
 }
 .nav-link--soon:hover { color: var(--text-aged); }
 
-/* ── Responsive (mobile) ── */
+/* ── Responsive ── */
+@media (max-width: 1180px) {
+  .nav-title { gap: 14px; }
+  .nav-title-zh { font-size: 19px; letter-spacing: 0.16em; }
+  .nav-title-en { font-size: 9px; letter-spacing: 0.26em; }
+  .nav-title-rune { font-size: 12px; }
+}
+
+@media (max-width: 960px) {
+  .nav-title-rune { display: none; }
+  .nav-title { gap: 0; }
+}
+
 @media (max-width: 820px) {
+  /* 移动端：导航栏拥挤，把居中标题隐藏 */
+  .nav-title { display: none; }
+
   .navbar {
     padding: 10px 0 8px;
     gap: 8px;

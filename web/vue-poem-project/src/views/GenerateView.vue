@@ -5,17 +5,9 @@
 
     <NavBar />
 
-    <header class="header">
-      <div class="header-rule"></div>
-      <div class="header-body">
-        <span class="rune">⬡</span>
-        <div class="title-block">
-          <h1 class="title-zh">詩歌跨文化重寫</h1>
-          <p class="title-en">Cross-Cultural Poetry Rewriting</p>
-        </div>
-        <span class="rune">⬡</span>
-      </div>
-      <div class="header-rule"></div>
+    <header class="mobile-title" aria-hidden="true">
+      <h1 class="title-zh">詩歌跨文化重寫</h1>
+      <p class="title-en">Cross-Cultural Poetry Rewriting</p>
     </header>
 
     <main class="workspace">
@@ -118,60 +110,9 @@ const handleGenerate = async () => {
   background: radial-gradient(circle, rgba(160, 104, 24, 0.08) 0%, transparent 65%);
 }
 
-/* ── Header ── */
-.header {
-  padding: 36px 0 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  position: relative;
-  z-index: 1;
-}
-
-.header-rule {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to right, transparent 0%, var(--border-bright) 30%, var(--border-bright) 70%, transparent 100%);
-}
-
-.header-body {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.rune {
-  color: var(--gold-dim);
-  font-size: 15px;
-  opacity: 0.5;
-  animation: rune-breathe 4s ease-in-out infinite;
-}
-.rune:last-child { animation-delay: 2s; }
-
-@keyframes rune-breathe {
-  0%, 100% { opacity: 0.3; }
-  50%       { opacity: 0.65; }
-}
-
-.title-block { text-align: center; }
-
-.title-zh {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 26px;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  color: var(--text-parchment);
-  line-height: 1.2;
-}
-
-.title-en {
-  margin-top: 5px;
-  font-family: 'Cinzel', serif;
-  font-size: 10px;
-  letter-spacing: 0.32em;
-  color: var(--text-faded);
-  text-transform: uppercase;
+/* ── Mobile-only title (导航栏居中标题在窄屏隐藏后的回退) ── */
+.mobile-title {
+  display: none;
 }
 
 /* ── Workspace ── */
@@ -180,6 +121,7 @@ const handleGenerate = async () => {
   display: flex;
   gap: 0;
   min-height: 420px;
+  margin-top: 24px;
   position: relative;
   z-index: 1;
 }
@@ -232,19 +174,34 @@ const handleGenerate = async () => {
   .orb-1 { width: 300px; height: 300px; top: -100px; left: -80px; }
   .orb-2 { width: 360px; height: 360px; bottom: -120px; right: -80px; }
 
-  .header {
-    padding: 20px 0 16px;
-    gap: 10px;
+  .mobile-title {
+    display: block;
+    text-align: center;
+    padding: 14px 0 4px;
   }
-  .header-body { gap: 16px; }
-  .rune { font-size: 12px; }
-  .title-zh { font-size: 20px; letter-spacing: 0.14em; }
-  .title-en { font-size: 9px; letter-spacing: 0.26em; }
+  .mobile-title .title-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    color: var(--text-parchment);
+    line-height: 1.2;
+    margin: 0;
+  }
+  .mobile-title .title-en {
+    margin: 4px 0 0;
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.26em;
+    color: var(--text-faded);
+    text-transform: uppercase;
+  }
 
   .workspace {
     flex-direction: column;
     gap: 18px;
     min-height: 0;
+    margin-top: 16px;
     flex: none; /* 解除 flex:1 强行平分，让两栏自然按 min-height 撑开 */
   }
   .pane { min-height: 280px; }

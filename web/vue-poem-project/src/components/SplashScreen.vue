@@ -22,7 +22,7 @@
         <span class="divider-line"></span>
         <span class="divider-dot"></span>
       </div>
-      <div class="logo-title-zh">詩歌跨文化重寫</div>
+      <div class="logo-title-zh">詩歌跨文化轉寫</div>
       <div class="logo-title-en">Cross-Cultural Poetry Rewriting</div>
     </div>
   </div>

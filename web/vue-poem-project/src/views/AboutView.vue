@@ -27,7 +27,7 @@
         </h2>
         <p class="prose">
           <strong>诗渡（Poem&nbsp;Bridge）</strong>是一项面向多语种古典与现代诗歌的
-          <em>跨文化重写</em>（Cross-Cultural&nbsp;Rewriting）系统。
+          <em>跨文化转写</em>（Cross-Cultural&nbsp;Rewriting）系统。
           我们尝试让一首诗歌，不只是被字面翻译，
           而是以新的形式被"重新写出来"——保留其情感与内容的同时，
           穿上目标文化的格律与音韵。

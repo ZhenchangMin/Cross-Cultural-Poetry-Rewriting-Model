@@ -6,7 +6,7 @@
     <NavBar />
 
     <header class="mobile-title" aria-hidden="true">
-      <h1 class="title-zh">詩歌跨文化重寫</h1>
+      <h1 class="title-zh">詩歌跨文化轉寫</h1>
       <p class="title-en">Cross-Cultural Poetry Rewriting</p>
     </header>
 

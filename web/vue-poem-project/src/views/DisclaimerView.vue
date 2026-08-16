@@ -71,7 +71,7 @@
           <p class="clause-sub">Research Nature</p>
           <p class="clause-body">
             本系统是<strong>南京大学大学生创新创业训练计划</strong>的学术研究原型，
-            旨在探索跨语言、跨文化诗歌重写的可行性，<em>不作为商业产品提供</em>。
+            旨在探索跨语言、跨文化诗歌转写的可行性，<em>不作为商业产品提供</em>。
           </p>
         </article>
       </section>

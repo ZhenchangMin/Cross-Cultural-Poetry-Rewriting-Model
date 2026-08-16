@@ -11,7 +11,7 @@
     <div class="nav-title" aria-hidden="true">
       <span class="nav-title-rune">⬡</span>
       <div class="nav-title-block">
-        <h1 class="nav-title-zh">詩歌跨文化重寫</h1>
+        <h1 class="nav-title-zh">詩歌跨文化轉寫</h1>
         <p class="nav-title-en">Cross-Cultural Poetry Rewriting</p>
       </div>
       <span class="nav-title-rune">⬡</span>

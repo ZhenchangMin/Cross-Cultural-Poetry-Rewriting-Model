@@ -1,0 +1,22 @@
+# 本地 AI 助手配置
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+
+# 构建产物
+dist/
+target/
+
+# IDE
+.idea/
+.vscode/
+
+# 环境变量与密钥
+.env
+.env.*

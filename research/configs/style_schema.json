@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-08-23",
+  "description": "V1 target-control taxonomy for Chinese regulated-verse rewriting. Form and style are active in V1 training; culture.adaptation is reserved for later cross-cultural supervision.",
+  "form": {
+    "type": "single_label",
+    "required": true,
+    "values": {
+      "qijue7": {
+        "zh": "七言绝句",
+        "constraints": {
+          "lines": 4,
+          "chars_per_line": 7,
+          "rhyme_positions": [2, 4]
+        }
+      },
+      "qilv7": {
+        "zh": "七言律诗",
+        "constraints": {
+          "lines": 8,
+          "chars_per_line": 7,
+          "rhyme_positions": [2, 4, 6, 8],
+          "parallel_couplets": [[3, 4], [5, 6]]
+        }
+      }
+    }
+  },
+  "style": {
+    "emotion": {
+      "type": "multi_label",
+      "required": true,
+      "min_items": 1,
+      "max_items": 2,
+      "values": {
+        "serene": "清宁 / 平和",
+        "joyful": "欢愉 / 明朗",
+        "melancholic": "感伤 / 惆怅",
+        "lonely": "孤寂 / 凄清",
+        "heroic": "豪迈 / 昂扬",
+        "indignant": "悲愤 / 沉郁"
+      }
+    },
+    "imagery": {
+      "type": "multi_label",
+      "required": true,
+      "min_items": 1,
+      "max_items": 4,
+      "values": {
+        "landscape": "山水自然",
+        "celestial": "天象",
+        "season_weather": "时令与气候",
+        "flora": "植物",
+        "fauna": "动物",
+        "travel": "行旅",
+        "frontier": "边塞军旅",
+        "human_culture": "人文文化"
+      }
+    },
+    "diction": {
+      "type": "single_label",
+      "required": true,
+      "values": {
+        "plain": "质朴",
+        "refined": "典雅",
+        "ornate": "绮丽"
+      }
+    },
+    "expression": {
+      "type": "single_label",
+      "required": true,
+      "values": {
+        "direct": "直抒",
+        "balanced": "情景交融",
+        "implicit": "含蓄"
+      }
+    },
+    "energy": {
+      "type": "single_label",
+      "required": true,
+      "values": {
+        "gentle": "舒缓",
+        "balanced": "平稳",
+        "vigorous": "强烈 / 顿挫 / 奔放"
+      }
+    },
+    "density": {
+      "type": "single_label",
+      "required": true,
+      "values": {
+        "sparse": "疏朗",
+        "medium": "适中",
+        "dense": "密集"
+      }
+    }
+  },
+  "culture": {
+    "adaptation": {
+      "type": "ordinal_nullable",
+      "required": true,
+      "active_in_v1_training": false,
+      "min": 1,
+      "max": 5,
+      "default": null,
+      "values": {
+        "1": "极端异化",
+        "2": "偏异化",
+        "3": "平衡",
+        "4": "偏归化",
+        "5": "极端归化"
+      }
+    }
+  },
+  "metadata": {
+    "model_input_in_v1": false,
+    "recommended_fields": [
+      "title",
+      "author",
+      "dynasty",
+      "source"
+    ],
+    "optional_future_fields": [
+      "year",
+      "collection",
+      "source_id",
+      "annotation_method",
+      "annotator",
+      "review_status"
+    ]
+  },
+  "blank_sample_template": {
+    "id": "",
+    "text": "",
+    "form": "",
+    "style": {
+      "emotion": [],
+      "imagery": [],
+      "diction": "",
+      "expression": "",
+      "energy": "",
+      "density": ""
+    },
+    "culture": {
+      "adaptation": null
+    },
+    "metadata": {
+      "title": "",
+      "author": "",
+      "dynasty": "唐",
+      "source": ""
+    }
+  }
+}

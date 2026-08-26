@@ -1,0 +1,34 @@
+{
+  "sample_version": "v1",
+  "sampling_method": "uniform_author_then_uniform_poem_within_form",
+  "seed": 20260823,
+  "source": {
+    "path": "data/raw/tang_style_annotation_candidates.jsonl",
+    "sha256": "9d2f74c2f96ba08e809802972e83cf86d226f00fe82d9473ecde5159a54b206a",
+    "records": 18312,
+    "by_form": {
+      "qilv7": 7943,
+      "qijue7": 10369
+    },
+    "unique_authors": 1325
+  },
+  "target": {
+    "qijue7": 500,
+    "qilv7": 500
+  },
+  "selected": {
+    "records": 1000,
+    "by_form": {
+      "qilv7": 500,
+      "qijue7": 500
+    },
+    "unique_authors": 873,
+    "authors_in_both_forms": 127,
+    "max_records_from_one_author": 2
+  },
+  "constraints": {
+    "max_per_author_per_form": 1,
+    "style_labels_are_still_unlabeled": true,
+    "gold_status": "candidate_only_until_human_review"
+  }
+}

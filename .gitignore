@@ -1,5 +1,6 @@
 # 本地 AI 助手配置
 .claude/
+CLAUDE.md
 
 # Python
 __pycache__/

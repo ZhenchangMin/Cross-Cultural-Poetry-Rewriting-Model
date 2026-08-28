@@ -770,3 +770,66 @@ data/processed/style_annotation/
 ```
 
 只有在人工复核并明确接受/修改这些候选标签后，才能将结果提交到最终 `style` 字段。
+
+---
+
+## 21. 训练入口校验与 Dataset（Model Baseline V1）
+
+模型训练侧新增明确的数据阶段闸门：
+
+```text
+candidate
+   ↓
+preannotated
+   ↓
+human review
+   ↓
+gold
+   ↓
+PoetryTrainingDataset
+   ↓
+tokenizer / model
+```
+
+`research/src/data/validate_dataset.py` 支持三个 stage：
+
+- `candidate`：最终 `style` 可以为空；
+- `preannotated`：检查 `annotation.prelabel` 的结构与已有预测值是否合法；
+- `gold`：六个最终 `style` 维度必须完整、合法，才允许进入训练。
+
+例如：
+
+```bash
+python -m src.data.validate_dataset \
+  data/processed/style_annotation/preannotated_v1.jsonl \
+  --stage preannotated
+```
+
+当前 `preannotated_v1.jsonl` 在 `preannotated` 阶段为 **1000/1000 合法**；同一文件若按 `gold` 校验，则 **1000/1000 被拒绝**，因为人工确认的最终 Style 仍为空。这是预期行为，也是防止 weak label 被误当作训练真值的保护机制。
+
+### 21.1 Gold-only Dataset Loader
+
+`research/src/data/dataset.py` 中的 `PoetryTrainingDataset` 默认只接受通过 `gold` 校验的数据，不会自动把 `annotation.prelabel` 复制进 `style`。
+
+Baseline B0 先把结构化 Style 转换为可读控制文本，例如：
+
+```text
+诗体：七言绝句
+情感：感伤惆怅、孤寂凄清
+意象：天象、行旅、时令气候
+辞藻：典雅
+表达：情景交融
+气势：舒缓
+密度：适中
+```
+
+然后严格分离：
+
+```text
+prompt_text  -> 模型输入
+原诗正文     -> supervised target
+```
+
+作者、标题等 metadata 不进入 Prompt，以继续避免作者身份 shortcut。
+
+这一阶段的 Dataset 暂时保持 framework-agnostic，不依赖 PyTorch。下一步接入 Qwen tokenizer 后，再把 `TrainingExample` 编码成 `input_ids / attention_mask / labels`。

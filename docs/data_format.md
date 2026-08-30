@@ -773,6 +773,66 @@ data/processed/style_annotation/
 
 ---
 
+## 22. B0 Causal-LM Tokenization
+
+第一版训练模型使用 `Qwen/Qwen2.5-1.5B-Instruct`。Gold `TrainingExample` 通过模型原生 chat template 组织为：
+
+```text
+<user> control prompt
+<assistant> gold poem
+```
+
+训练时模型会看到完整 token 序列，但 `labels` 不等于简单复制全部 `input_ids`：
+
+- user/prompt 部分：`labels = -100`，不参与 cross-entropy loss；
+- assistant/目标诗部分：`labels = input_ids`，作为真正监督信号；
+- batch padding 部分：同样使用 `labels = -100`；
+- `attention_mask` 对有效 token 为 `1`，padding 为 `0`。
+
+实现：
+
+```text
+src/data/tokenization.py
+```
+
+其中包含：
+
+- Qwen chat-template 前缀一致性检查；
+- prompt masking；
+- 优先保留目标诗的截断策略；
+- 动态 batch padding；
+- tokenizer 没有显式 pad token 时回退到 EOS 的兼容逻辑。
+
+真实 tokenizer smoke test：
+
+```bash
+python scripts/smoke_tokenizer.py
+```
+
+当前离线测试使用 ModelScope 下载的官方 Qwen tokenizer 文件，缓存在：
+
+```text
+research/models/_cache/Qwen2.5-1.5B-Instruct-tokenizer/
+```
+
+该缓存目录不进入 Git。
+
+2026-08-30 smoke test 结果：
+
+```text
+tokenizer=Qwen2TokenizerFast
+sequence_length=91
+prompt_tokens=59
+supervised_tokens=32
+truncated=False
+prompt_mask_ok=True
+completion_labels_ok=True
+```
+
+监督部分解码为目标诗正文并带 Qwen assistant 结束标记 `<|im_end|>`，说明 prompt/completion token 边界与真实 Qwen2.5-Instruct chat template 对齐。
+
+---
+
 ## 21. 训练入口校验与 Dataset（Model Baseline V1）
 
 模型训练侧新增明确的数据阶段闸门：

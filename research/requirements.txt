@@ -7,3 +7,7 @@ python-docx>=1.1
 
 # 测试
 pytest>=8.0
+
+# Baseline tokenizer / causal LM
+transformers>=4.44,<5
+jinja2>=3.1

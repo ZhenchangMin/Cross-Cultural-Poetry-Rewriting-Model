@@ -28,3 +28,6 @@ research/data/external/chinese-poetry/
 # 大型可再生语料产物
 research/data/raw/tang_style_annotation_candidates.jsonl
 research/data/raw/tang_candidates_smoke.jsonl
+
+# Local model/tokenizer cache
+research/models/_cache/

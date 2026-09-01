@@ -11,3 +11,8 @@ pytest>=8.0
 # Baseline tokenizer / causal LM
 transformers>=4.44,<5
 jinja2>=3.1
+
+# 参数高效微调 / 训练调度
+# PyTorch 本身与 CPU/CUDA 平台相关，请按 docs/training_setup.md 单独安装。
+peft>=0.17,<1
+accelerate>=1.0,<2

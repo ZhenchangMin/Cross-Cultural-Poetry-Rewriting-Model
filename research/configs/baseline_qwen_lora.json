@@ -1,0 +1,41 @@
+{
+  "experiment_name": "b0_qwen2.5_1.5b_lora",
+  "model": {
+    "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "precision": "bf16",
+    "gradient_checkpointing": true,
+    "max_length": 512
+  },
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "training": {
+    "batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "seed": 20260901,
+    "log_every_steps": 10,
+    "save_every_steps": 100,
+    "output_dir": "outputs/baseline_qwen_lora"
+  },
+  "generation": {
+    "max_new_tokens": 128,
+    "do_sample": false,
+    "temperature": 1.0,
+    "top_p": 1.0
+  }
+}

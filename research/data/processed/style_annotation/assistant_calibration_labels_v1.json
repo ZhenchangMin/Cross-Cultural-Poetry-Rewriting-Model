@@ -1,0 +1,331 @@
+{
+  "version": "v1",
+  "reviewer": "chatgpt_gpt-5.6-sol",
+  "review_status": "assistant_calibrated_pending_human",
+  "guideline": "docs/style_annotation_guideline_v1.md",
+  "records": {
+    "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["joyful"], "confidence": 0.82, "evidence": ["好教載取芳菲樹", "剩照岷天瑟瑟波"]},
+        "imagery": {"value": ["flora", "landscape", "celestial", "human_culture"], "confidence": 0.90, "evidence": ["花市", "江平", "月曉"]},
+        "diction": {"value": "refined", "confidence": 0.84, "evidence": ["芳菲樹", "瑟瑟波"]},
+        "expression": {"value": "implicit", "confidence": 0.78, "evidence": ["月曉已開花市合", "江平偏見竹簰多"]},
+        "energy": {"value": "balanced", "confidence": 0.82, "evidence": ["好教載取", "剩照"]},
+        "density": {"value": "dense", "confidence": 0.86, "evidence": ["花市", "竹簰", "岷天"]}
+      }
+    },
+    "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic", "lonely"], "confidence": 0.92, "evidence": ["空門是寂寥", "竹院藏衰老", "一點寒燈"]},
+        "imagery": {"value": ["landscape", "travel", "human_culture", "flora"], "confidence": 0.88, "evidence": ["滄海", "附船浮浪", "竹院"]},
+        "diction": {"value": "refined", "confidence": 0.88, "evidence": ["世路皆虛幻", "碧山尋塔"]},
+        "expression": {"value": "balanced", "confidence": 0.90, "evidence": ["不覺空門是寂寥", "一點寒燈弟子燒"]},
+        "energy": {"value": "gentle", "confidence": 0.90, "evidence": ["浮浪久", "一點寒燈"]},
+        "density": {"value": "dense", "confidence": 0.78, "evidence": ["滄海", "碧山", "竹院"]}
+      }
+    },
+    "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic"], "confidence": 0.82, "evidence": ["笑無成", "長嫌爲客"]},
+        "imagery": {"value": ["landscape", "flora", "travel"], "confidence": 0.93, "evidence": ["看山", "野花", "爲客"]},
+        "diction": {"value": "plain", "confidence": 0.78, "evidence": ["處處看山", "漸被時人識姓名"]},
+        "expression": {"value": "direct", "confidence": 0.86, "evidence": ["長嫌爲客", "笑無成"]},
+        "energy": {"value": "balanced", "confidence": 0.80, "evidence": ["處處看山不可行", "漸被時人識姓名"]},
+        "density": {"value": "medium", "confidence": 0.88, "evidence": ["山", "野花", "客"]}
+      }
+    },
+    "tang-4e7818af-b432-424d-b011-21180f6e9053": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["serene"], "confidence": 0.88, "evidence": ["幽院", "靜落茶甌與酒杯"]},
+        "imagery": {"value": ["flora", "human_culture", "season_weather", "fauna"], "confidence": 0.82, "evidence": ["庭栽", "秋氣早", "山禽"]},
+        "diction": {"value": "refined", "confidence": 0.86, "evidence": ["翠色兼寒影", "綠陰開"]},
+        "expression": {"value": "implicit", "confidence": 0.82, "evidence": ["小門深向綠陰開", "靜落茶甌與酒杯"]},
+        "energy": {"value": "gentle", "confidence": 0.91, "evidence": ["幽院", "靜落"]},
+        "density": {"value": "dense", "confidence": 0.72, "evidence": ["溪風", "山禽", "綠陰"]}
+      }
+    },
+    "tang-f7973e61-9631-48b9-853d-839a9b51da9c": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic"], "confidence": 0.94, "evidence": ["却惘然", "同醉友", "已三年"]},
+        "imagery": {"value": ["flora", "human_culture", "landscape"], "confidence": 0.82, "evidence": ["茱", "菊", "平阡"]},
+        "diction": {"value": "refined", "confidence": 0.82, "evidence": ["簪茱泛菊", "登高"]},
+        "expression": {"value": "direct", "confidence": 0.92, "evidence": ["却惘然", "同醉友"]},
+        "energy": {"value": "gentle", "confidence": 0.86, "evidence": ["飲過三杯却惘然", "已三年"]},
+        "density": {"value": "medium", "confidence": 0.75, "evidence": ["茱", "菊", "三杯"]}
+      }
+    },
+    "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["serene"], "confidence": 0.66, "evidence": ["閑風往往弄江聲", "尋高躅"]},
+        "imagery": {"value": ["human_culture", "celestial", "landscape"], "confidence": 0.78, "evidence": ["重樓", "雲架", "江聲"]},
+        "diction": {"value": "ornate", "confidence": 0.86, "evidence": ["魚目驪珠", "高躅", "虹梁雅韻"]},
+        "expression": {"value": "balanced", "confidence": 0.72, "evidence": ["萬古名", "閑風往往弄江聲"]},
+        "energy": {"value": "balanced", "confidence": 0.72, "evidence": ["過鳥時時衝客會", "謬將蹇步尋高躅"]},
+        "density": {"value": "medium", "confidence": 0.62, "evidence": ["重樓", "江聲", "驪珠"], "note": "override rule dense: several lexicon hits are metaphor/allusion rather than independent imagery"}
+      }
+    },
+    "tang-740c1743-61f4-4694-908b-6737af54523d": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["serene"], "confidence": 0.97, "evidence": ["境靜", "流水能清物外心"]},
+        "imagery": {"value": ["human_culture", "landscape", "celestial"], "confidence": 0.94, "evidence": ["鐘聲", "青山", "月影"]},
+        "diction": {"value": "refined", "confidence": 0.90, "evidence": ["塵中事", "物外心"]},
+        "expression": {"value": "balanced", "confidence": 0.86, "evidence": ["青山解隔塵中事", "流水能清物外心"]},
+        "energy": {"value": "gentle", "confidence": 0.97, "evidence": ["境靜", "流水能清"]},
+        "density": {"value": "medium", "confidence": 0.90, "evidence": ["鐘", "月", "青山"]}
+      }
+    },
+    "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["joyful"], "confidence": 0.92, "evidence": ["添興詠", "狂歌醉舞一家家"]},
+        "imagery": {"value": ["season_weather", "flora", "human_culture"], "confidence": 0.82, "evidence": ["紛紛落", "楊花", "狂歌醉舞"]},
+        "diction": {"value": "ornate", "confidence": 0.86, "evidence": ["天寶瑤花", "瑞牒", "粉署"]},
+        "expression": {"value": "balanced", "confidence": 0.86, "evidence": ["密飄粉署", "狂歌醉舞"]},
+        "energy": {"value": "vigorous", "confidence": 0.91, "evidence": ["狂歌醉舞一家家"]},
+        "density": {"value": "medium", "confidence": 0.78, "evidence": ["瑤花", "楊花", "青松"]}
+      }
+    },
+    "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic"], "confidence": 0.90, "evidence": ["歸時晚", "送浮雲逐故人"]},
+        "imagery": {"value": ["flora", "landscape", "travel", "celestial"], "confidence": 0.88, "evidence": ["木葉", "湘水濱", "浮雲"]},
+        "diction": {"value": "refined", "confidence": 0.88, "evidence": ["木葉紛紛湘水濱", "浮雲逐故人"]},
+        "expression": {"value": "balanced", "confidence": 0.90, "evidence": ["臨風自笑歸時晚", "更送浮雲逐故人"]},
+        "energy": {"value": "gentle", "confidence": 0.88, "evidence": ["臨風", "浮雲"]},
+        "density": {"value": "dense", "confidence": 0.72, "evidence": ["木葉", "湘水", "浮雲"]}
+      }
+    },
+    "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic", "lonely"], "confidence": 0.92, "evidence": ["傷離羣", "目送北歸翼", "惜無瑤華"]},
+        "imagery": {"value": ["landscape", "travel", "season_weather", "fauna"], "confidence": 0.92, "evidence": ["楚水", "遠道", "秋風"]},
+        "diction": {"value": "refined", "confidence": 0.91, "evidence": ["沙禽相呼曙色分", "瑤華持寄君"]},
+        "expression": {"value": "balanced", "confidence": 0.94, "evidence": ["況值遠道傷離羣", "停艫目送北歸翼"]},
+        "energy": {"value": "gentle", "confidence": 0.86, "evidence": ["却望", "目送"]},
+        "density": {"value": "dense", "confidence": 0.86, "evidence": ["沙禽", "漁浦", "楚水"]}
+      }
+    },
+    "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic", "heroic"], "confidence": 0.88, "evidence": ["百戰中", "力保山河", "故營空"]},
+        "imagery": {"value": ["frontier", "landscape", "season_weather", "human_culture"], "confidence": 0.90, "evidence": ["兵符", "山河", "秋風"]},
+        "diction": {"value": "refined", "confidence": 0.88, "evidence": ["三授兵符百戰中", "秋風牢落故營空"]},
+        "expression": {"value": "balanced", "confidence": 0.87, "evidence": ["嗟下世", "故營空"]},
+        "energy": {"value": "vigorous", "confidence": 0.90, "evidence": ["百戰中", "力保山河"]},
+        "density": {"value": "dense", "confidence": 0.76, "evidence": ["兵符", "山河", "秋風"]}
+      }
+    },
+    "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic", "indignant"], "confidence": 0.82, "evidence": ["不見人", "獨傷春", "烽火年年報虜塵"]},
+        "imagery": {"value": ["landscape", "flora", "travel", "frontier"], "confidence": 0.88, "evidence": ["流水", "野棠", "送客"]},
+        "diction": {"value": "refined", "confidence": 0.91, "evidence": ["平田渺渺獨傷春", "烽火年年報虜塵"]},
+        "expression": {"value": "balanced", "confidence": 0.94, "evidence": ["遠岫依依如送客", "獨傷春"]},
+        "energy": {"value": "balanced", "confidence": 0.72, "evidence": ["平田渺渺", "烽火年年"]},
+        "density": {"value": "dense", "confidence": 0.86, "evidence": ["菰蒲", "野棠", "江燕"]}
+      }
+    },
+    "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic"], "confidence": 0.96, "evidence": ["今日爲灰", "不堪著"]},
+        "imagery": {"value": ["flora", "human_culture"], "confidence": 0.88, "evidence": ["青楓根", "衣上花"]},
+        "diction": {"value": "plain", "confidence": 0.92, "evidence": ["爺娘送我", "今日爲灰不堪著"]},
+        "expression": {"value": "direct", "confidence": 0.94, "evidence": ["不記", "不堪著"]},
+        "energy": {"value": "gentle", "confidence": 0.86, "evidence": ["幾迴落", "今日爲灰"]},
+        "density": {"value": "sparse", "confidence": 0.86, "evidence": ["青楓根", "衣上花"], "note": "override rule medium: '今日' is not celestial imagery and the poem uses few distinct image systems"}
+      }
+    },
+    "tang-e95c7ae1-b846-4b76-b889-3b8ab60bfa15": {
+      "quality": {"status": "exclude", "reason": "source_fragment_composite: title is 句 and the eight lines form semantically disconnected verse fragments rather than a coherent regulated poem"},
+      "style": null
+    },
+    "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["heroic", "serene"], "confidence": 0.78, "evidence": ["爭似布衣雲水客", "不將名字挂乾坤"]},
+        "imagery": {"value": ["human_culture", "landscape", "travel", "celestial"], "confidence": 0.76, "evidence": ["天子", "雲水客", "乾坤"]},
+        "diction": {"value": "refined", "confidence": 0.86, "evidence": ["五等諸侯", "布衣雲水客"]},
+        "expression": {"value": "direct", "confidence": 0.88, "evidence": ["爭似", "不將名字挂乾坤"]},
+        "energy": {"value": "vigorous", "confidence": 0.86, "evidence": ["九重天子人中貴", "爭似布衣雲水客"]},
+        "density": {"value": "medium", "confidence": 0.72, "evidence": ["雲水", "客", "乾坤"]}
+      }
+    },
+    "tang-fce06ca0-8b8f-4ce9-b83b-425e062ecbce": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["serene", "melancholic"], "confidence": 0.74, "evidence": ["恨不逢君", "不如高臥"]},
+        "imagery": {"value": ["flora", "landscape", "travel", "human_culture"], "confidence": 0.90, "evidence": ["青松", "曲沼", "桃源"]},
+        "diction": {"value": "refined", "confidence": 0.91, "evidence": ["陶令五男", "薜荔成帷", "桃源"]},
+        "expression": {"value": "balanced", "confidence": 0.90, "evidence": ["恨不逢君", "芙蓉曲沼春流滿"]},
+        "energy": {"value": "gentle", "confidence": 0.90, "evidence": ["晚靄多", "高臥眄庭柯"]},
+        "density": {"value": "medium", "confidence": 0.74, "evidence": ["青松", "芙蓉", "薜荔"]}
+      }
+    },
+    "tang-a39ebbbd-8626-4de4-a582-23146a31e189": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["joyful"], "confidence": 0.92, "evidence": ["望春宮", "御酒中"]},
+        "imagery": {"value": ["season_weather", "human_culture", "celestial", "flora"], "confidence": 0.90, "evidence": ["春雪", "春風", "花光"]},
+        "diction": {"value": "refined", "confidence": 0.86, "evidence": ["龍驂", "天文", "御酒"]},
+        "expression": {"value": "balanced", "confidence": 0.82, "evidence": ["春雪舞春風", "寒氣行銷御酒中"]},
+        "energy": {"value": "balanced", "confidence": 0.82, "evidence": ["龍驂曉入", "春雪舞春風"]},
+        "density": {"value": "dense", "confidence": 0.86, "evidence": ["春雪", "春風", "花光"]}
+      }
+    },
+    "tang-88020cd6-c877-4632-a3d0-174216653e83": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["serene", "heroic"], "confidence": 0.72, "evidence": ["大千世界便輝光", "浮沉聚散亦何傷"]},
+        "imagery": {"value": ["landscape", "celestial", "season_weather"], "confidence": 0.91, "evidence": ["奇峯", "月輪", "烟雲"]},
+        "diction": {"value": "ornate", "confidence": 0.88, "evidence": ["大千世界", "華嶽", "蓬萊"]},
+        "expression": {"value": "balanced", "confidence": 0.80, "evidence": ["日月長", "浮沉聚散亦何傷"]},
+        "energy": {"value": "vigorous", "confidence": 0.82, "evidence": ["勝槩壓諸方", "大千世界便輝光"]},
+        "density": {"value": "dense", "confidence": 0.84, "evidence": ["奇峯", "月輪", "烟雲"], "note": "override rule sparse: the lexicon misses several mountain/cosmic image terms"}
+      }
+    },
+    "tang-e5980c45-6386-4d47-a777-3855fe8c70a7": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic"], "confidence": 0.95, "evidence": ["別後思今夕", "漢水東流是寸心"]},
+        "imagery": {"value": ["season_weather", "flora", "fauna", "landscape"], "confidence": 0.88, "evidence": ["良夜深", "紅萱", "鵲驚林"]},
+        "diction": {"value": "refined", "confidence": 0.91, "evidence": ["紅萱露滴", "漢水東流是寸心"]},
+        "expression": {"value": "balanced", "confidence": 0.92, "evidence": ["露滴鵲驚林", "欲知別後思今夕"]},
+        "energy": {"value": "gentle", "confidence": 0.90, "evidence": ["良夜深", "漢水東流"]},
+        "density": {"value": "dense", "confidence": 0.84, "evidence": ["紅萱", "露", "鵲驚林"]}
+      }
+    },
+    "tang-5dead6b4-9462-4e8c-9e70-cd1801b9eab8": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic", "lonely"], "confidence": 0.88, "evidence": ["哀弦", "楚客前", "一帆萬里信歸船"]},
+        "imagery": {"value": ["landscape", "season_weather", "travel", "human_culture"], "confidence": 0.90, "evidence": ["湖邊", "秋天", "樓上"]},
+        "diction": {"value": "refined", "confidence": 0.90, "evidence": ["湘娥帝子寄哀弦", "極目江山"]},
+        "expression": {"value": "balanced", "confidence": 0.92, "evidence": ["木葉偏飛楚客前", "極目江山何處是"]},
+        "energy": {"value": "gentle", "confidence": 0.84, "evidence": ["木葉偏飛", "一帆萬里"]},
+        "density": {"value": "dense", "confidence": 0.84, "evidence": ["湖邊", "樓上", "木葉"]}
+      }
+    },
+    "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic"], "confidence": 0.76, "evidence": ["不忍登樓望"]},
+        "imagery": {"value": ["season_weather", "landscape", "flora", "human_culture"], "confidence": 0.88, "evidence": ["臘雪消", "灞岸江頭", "纖條"]},
+        "diction": {"value": "ornate", "confidence": 0.82, "evidence": ["萬架金絲著地嬌", "東風偷軟"]},
+        "expression": {"value": "balanced", "confidence": 0.82, "evidence": ["春來不忍登樓望", "萬架金絲著地嬌"]},
+        "energy": {"value": "gentle", "confidence": 0.88, "evidence": ["東風偷軟", "纖條"]},
+        "density": {"value": "dense", "confidence": 0.76, "evidence": ["臘雪", "東風", "纖條"]}
+      }
+    },
+    "tang-7887d2d9-3655-45b1-a556-349d95304058": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["heroic", "joyful"], "confidence": 0.94, "evidence": ["破虜功成百戰場", "感激逢君"]},
+        "imagery": {"value": ["frontier", "human_culture", "season_weather", "fauna"], "confidence": 0.90, "evidence": ["旌斾", "春風", "試馬"]},
+        "diction": {"value": "refined", "confidence": 0.90, "evidence": ["天書新拜漢中郎", "旌斾春風起"]},
+        "expression": {"value": "balanced", "confidence": 0.82, "evidence": ["破虜功成", "感激逢君共異鄉"]},
+        "energy": {"value": "vigorous", "confidence": 0.95, "evidence": ["百戰場", "旌斾春風起", "試馬"]},
+        "density": {"value": "dense", "confidence": 0.86, "evidence": ["旌斾", "鬬雞", "試馬"]}
+      }
+    },
+    "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic"], "confidence": 0.88, "evidence": ["綿綿思", "別後", "羨君"]},
+        "imagery": {"value": ["flora", "landscape", "travel", "human_culture"], "confidence": 0.82, "evidence": ["芳草", "山上望", "麗譙"]},
+        "diction": {"value": "refined", "confidence": 0.84, "evidence": ["燧林芳草綿綿思", "陟麗譙"]},
+        "expression": {"value": "direct", "confidence": 0.90, "evidence": ["綿綿思", "羨君"]},
+        "energy": {"value": "gentle", "confidence": 0.84, "evidence": ["綿綿思", "山上望"]},
+        "density": {"value": "medium", "confidence": 0.66, "evidence": ["芳草", "麗譙", "山上望"], "note": "override rule dense: generic temporal cue inflated the threshold boundary"}
+      }
+    },
+    "tang-0a84422b-f228-4263-8d6f-281b1606d605": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["joyful", "serene"], "confidence": 0.78, "evidence": ["清淺", "幸陪謝客題詩句"]},
+        "imagery": {"value": ["landscape", "flora", "season_weather", "fauna"], "confidence": 0.94, "evidence": ["山水", "懸蘿弱篠", "宿雨"]},
+        "diction": {"value": "refined", "confidence": 0.92, "evidence": ["朝暾和翠微", "懸蘿弱篠"]},
+        "expression": {"value": "balanced", "confidence": 0.88, "evidence": ["宿雨朝暾和翠微", "幸陪謝客題詩句"]},
+        "energy": {"value": "gentle", "confidence": 0.85, "evidence": ["垂清淺", "花隨月令"]},
+        "density": {"value": "dense", "confidence": 0.88, "evidence": ["山水", "懸蘿弱篠", "宿雨"]}
+      }
+    },
+    "tang-cf19cbe0-2ec7-4f4b-823f-c21646165b82": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic", "lonely"], "confidence": 0.92, "evidence": ["空庭明月", "夜長路遠"]},
+        "imagery": {"value": ["human_culture", "celestial", "landscape", "travel"], "confidence": 0.88, "evidence": ["錦衾", "明月", "路遠"]},
+        "diction": {"value": "refined", "confidence": 0.78, "evidence": ["錦衾斑復斑", "朱衣殷復殷"]},
+        "expression": {"value": "implicit", "confidence": 0.92, "evidence": ["空庭明月閑復閑", "夜長路遠山復山"]},
+        "energy": {"value": "gentle", "confidence": 0.94, "evidence": ["閑復閑", "夜長"]},
+        "density": {"value": "medium", "confidence": 0.75, "evidence": ["錦衾", "明月", "山"], "note": "override rule dense: repetition reuses a small image set rather than adding many distinct images"}
+      }
+    },
+    "tang-95477829-6273-4f85-a0b8-d5bf3c07e507": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic"], "confidence": 0.78, "evidence": ["學愁眉", "離亭"]},
+        "imagery": {"value": ["flora", "season_weather", "human_culture", "celestial"], "confidence": 0.88, "evidence": ["綻黃搖綠", "風飄絮", "日映絲"]},
+        "diction": {"value": "ornate", "confidence": 0.94, "evidence": ["綻黃搖綠嫩參差", "畫筵偷舞態", "學愁眉"]},
+        "expression": {"value": "implicit", "confidence": 0.82, "evidence": ["偷舞態", "學愁眉", "離亭"]},
+        "energy": {"value": "gentle", "confidence": 0.88, "evidence": ["帶露含煙", "低臨"]},
+        "density": {"value": "dense", "confidence": 0.78, "evidence": ["露", "風飄絮", "日映絲"], "note": "override rule medium: the lexicon misses repeated willow/branch/silk imagery"}
+      }
+    },
+    "tang-08bc5154-ff91-4308-9b25-134908d248d4": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["serene"], "confidence": 0.93, "evidence": ["徐徐撥櫂", "半輪殘月"]},
+        "imagery": {"value": ["human_culture", "landscape", "celestial", "travel"], "confidence": 0.90, "evidence": ["鐘聲", "遠灘", "殘月"]},
+        "diction": {"value": "refined", "confidence": 0.90, "evidence": ["浪疊朝霞錦繡翻", "半輪殘月"]},
+        "expression": {"value": "implicit", "confidence": 0.91, "evidence": ["徐徐撥櫂却歸灣", "浪疊朝霞錦繡翻"]},
+        "energy": {"value": "gentle", "confidence": 0.82, "evidence": ["徐徐撥櫂", "殘月落山前"]},
+        "density": {"value": "dense", "confidence": 0.86, "evidence": ["鐘聲", "殘月", "浪疊朝霞"]}
+      }
+    },
+    "tang-36164dcf-cc54-4fbe-8a1c-010f4076b182": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["joyful"], "confidence": 0.78, "evidence": ["七聖陪軒", "泠然香吹落花深"]},
+        "imagery": {"value": ["landscape", "flora", "fauna", "celestial"], "confidence": 0.94, "evidence": ["山水", "松蘿", "青鳥白雲"]},
+        "diction": {"value": "ornate", "confidence": 0.93, "evidence": ["六龍驤首", "青鳥白雲王母使", "泠然香吹"]},
+        "expression": {"value": "balanced", "confidence": 0.76, "evidence": ["一丘山水當鳴琴", "山中日暮幽巖下"]},
+        "energy": {"value": "balanced", "confidence": 0.78, "evidence": ["六龍驤首曉駸駸", "泠然香吹落花深"]},
+        "density": {"value": "dense", "confidence": 0.92, "evidence": ["松蘿", "青鳥白雲", "落花"]}
+      }
+    },
+    "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["melancholic"], "confidence": 0.91, "evidence": ["如今不在", "舊時啼處"]},
+        "imagery": {"value": ["landscape", "fauna"], "confidence": 0.95, "evidence": ["閩山", "鶯啼"]},
+        "diction": {"value": "plain", "confidence": 0.93, "evidence": ["如今不在鶯啼處", "鶯在舊時啼處啼"]},
+        "expression": {"value": "implicit", "confidence": 0.91, "evidence": ["如今不在", "舊時啼處啼"]},
+        "energy": {"value": "gentle", "confidence": 0.94, "evidence": ["歲歲有鶯啼", "舊時啼處啼"]},
+        "density": {"value": "sparse", "confidence": 0.92, "evidence": ["閩山", "鶯"], "note": "override rule medium: '歲歲' is temporal recurrence, not a season/weather image"}
+      }
+    },
+    "tang-805df95b-c30d-4773-ac47-68f6574f6d81": {
+      "quality": {"status": "include", "reason": ""},
+      "style": {
+        "emotion": {"value": ["serene", "joyful"], "confidence": 0.84, "evidence": ["醉觸藤花落酒杯", "爲吟伴"]},
+        "imagery": {"value": ["human_culture", "flora", "landscape", "fauna"], "confidence": 0.95, "evidence": ["林亭", "藤花", "白鳥"]},
+        "diction": {"value": "refined", "confidence": 0.91, "evidence": ["清邃林亭", "紅鱗多自鏡中來"]},
+        "expression": {"value": "balanced", "confidence": 0.86, "evidence": ["醉觸藤花落酒杯", "終年此地爲吟伴"]},
+        "energy": {"value": "gentle", "confidence": 0.88, "evidence": ["清邃", "薄暮迴"]},
+        "density": {"value": "dense", "confidence": 0.92, "evidence": ["林亭", "蕉葉", "白鳥"]}
+      }
+    }
+  }
+}

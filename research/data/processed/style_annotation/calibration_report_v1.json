@@ -1,0 +1,27 @@
+{
+  "version": "v1",
+  "seed": 20260920,
+  "per_form": 15,
+  "records": 30,
+  "form_counts": {
+    "qijue7": 15,
+    "qilv7": 15
+  },
+  "unique_authors": 30,
+  "density_prelabel_counts": {
+    "dense": 19,
+    "medium": 10,
+    "sparse": 1
+  },
+  "imagery_prelabel_counts": {
+    "celestial": 24,
+    "fauna": 3,
+    "flora": 13,
+    "frontier": 3,
+    "human_culture": 17,
+    "landscape": 20,
+    "season_weather": 16,
+    "travel": 14
+  },
+  "note": "Calibration only; style remains unpromoted and this file is not Gold."
+}

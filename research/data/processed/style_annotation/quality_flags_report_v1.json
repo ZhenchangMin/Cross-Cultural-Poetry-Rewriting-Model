@@ -1,0 +1,12 @@
+{
+  "version": "v1",
+  "records_scanned": 1000,
+  "records_flagged": 14,
+  "flag_counts": {
+    "source_fragment_title": 14
+  },
+  "severity_counts": {
+    "high": 14
+  },
+  "policy": "flags prioritize review; they do not automatically exclude records from Gold"
+}

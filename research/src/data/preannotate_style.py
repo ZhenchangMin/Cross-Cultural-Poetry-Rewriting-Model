@@ -45,7 +45,7 @@ DEFAULT_REPORT = Path("data/processed/style_annotation/preannotation_report_v1.j
 DEFAULT_LEXICON = Path("configs/imagery_lexicon_v1.json")
 DEFAULT_SCHEMA = Path("configs/style_schema.json")
 ANNOTATION_VERSION = "v1"
-RULE_METHOD = "lexicon_heuristic_v1"
+RULE_METHOD = "lexicon_heuristic_v1_1"
 LLM_METHOD = "deepseek_semantic_v1"
 DEEPSEEK_URL = "https://api.deepseek.com/chat/completions"
 LLM_DIMS = ("emotion", "diction", "expression", "energy")
@@ -468,7 +468,14 @@ def _has_llm_labels(record: Mapping[str, Any]) -> bool:
         return False
 
 
-def build_report(records: Sequence[Mapping[str, Any]], *, llm_attempted: int, llm_success: int, llm_failed: int) -> Dict[str, Any]:
+def build_report(
+    records: Sequence[Mapping[str, Any]],
+    *,
+    llm_attempted: int,
+    llm_success: int,
+    llm_failed: int,
+    lexicon_version: str | None = None,
+) -> Dict[str, Any]:
     imagery_empty = 0
     imagery_counts: Dict[str, int] = {}
     density_counts = {"sparse": 0, "medium": 0, "dense": 0}
@@ -493,6 +500,7 @@ def build_report(records: Sequence[Mapping[str, Any]], *, llm_attempted: int, ll
         "records": len(records),
         "rules": {
             "method": RULE_METHOD,
+            "lexicon_version": lexicon_version,
             "imagery_empty": imagery_empty,
             "imagery_label_counts": imagery_counts,
             "density_label_counts": density_counts,
@@ -579,6 +587,7 @@ def main() -> int:
         llm_attempted=llm_attempted,
         llm_success=llm_success,
         llm_failed=llm_failed,
+        lexicon_version=str(lexicon_cfg.get("version", "")) or None,
     )
     write_jsonl(records, args.output)
     write_json(report, args.report)

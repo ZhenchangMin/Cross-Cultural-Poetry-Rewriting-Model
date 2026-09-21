@@ -1,0 +1,33 @@
+{
+  "annotation_version": "v1",
+  "records": 30,
+  "rules": {
+    "method": "lexicon_heuristic_v1_1",
+    "lexicon_version": "1.1",
+    "imagery_empty": 0,
+    "imagery_label_counts": {
+      "flora": 17,
+      "landscape": 20,
+      "celestial": 10,
+      "human_culture": 20,
+      "travel": 17,
+      "season_weather": 12,
+      "fauna": 5,
+      "frontier": 4
+    },
+    "density_label_counts": {
+      "sparse": 5,
+      "medium": 10,
+      "dense": 15
+    }
+  },
+  "llm": {
+    "method": "deepseek_semantic_v1",
+    "complete_records": 0,
+    "attempted_this_run": 0,
+    "success_this_run": 0,
+    "failed_this_run": 0
+  },
+  "gold_status": "candidate_only_until_human_review",
+  "style_fields_modified": false
+}

@@ -1,0 +1,181 @@
+{
+  "version": "v1",
+  "records": 30,
+  "included": 29,
+  "excluded": 1,
+  "exclusions": [
+    {
+      "id": "tang-e95c7ae1-b846-4b76-b889-3b8ab60bfa15",
+      "reason": "source_fragment_composite: title is 句 and the eight lines form semantically disconnected verse fragments rather than a coherent regulated poem"
+    }
+  ],
+  "canonical_style_promoted": 0,
+  "status": "assistant_calibrated_pending_human",
+  "rule_comparison": {
+    "imagery_exact_match": 9,
+    "imagery_exact_match_rate": 0.3103,
+    "imagery_mean_jaccard": 0.7132,
+    "density_agreement": 23,
+    "density_agreement_rate": 0.7931,
+    "density_overrides": [
+      {
+        "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+        "rule": "sparse",
+        "reviewed": "medium",
+        "note": ""
+      },
+      {
+        "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+        "rule": "medium",
+        "reviewed": "dense",
+        "note": ""
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "rule": "medium",
+        "reviewed": "sparse",
+        "note": "override rule medium: '今日' is not celestial imagery and the poem uses few distinct image systems"
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "rule": "sparse",
+        "reviewed": "medium",
+        "note": ""
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "rule": "sparse",
+        "reviewed": "dense",
+        "note": "override rule sparse: the lexicon misses several mountain/cosmic image terms"
+      },
+      {
+        "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "rule": "medium",
+        "reviewed": "dense",
+        "note": "override rule medium: the lexicon misses repeated willow/branch/silk imagery"
+      }
+    ]
+  },
+  "low_confidence_decisions": [
+    {
+      "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+      "dimension": "density",
+      "confidence": 0.62,
+      "value": "medium"
+    },
+    {
+      "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+      "dimension": "emotion",
+      "confidence": 0.66,
+      "value": [
+        "serene"
+      ]
+    },
+    {
+      "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+      "dimension": "density",
+      "confidence": 0.66,
+      "value": "medium"
+    },
+    {
+      "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+      "dimension": "density",
+      "confidence": 0.72,
+      "value": "dense"
+    },
+    {
+      "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+      "dimension": "energy",
+      "confidence": 0.72,
+      "value": "balanced"
+    },
+    {
+      "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+      "dimension": "expression",
+      "confidence": 0.72,
+      "value": "balanced"
+    },
+    {
+      "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+      "dimension": "density",
+      "confidence": 0.72,
+      "value": "dense"
+    },
+    {
+      "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+      "dimension": "emotion",
+      "confidence": 0.72,
+      "value": [
+        "serene",
+        "heroic"
+      ]
+    },
+    {
+      "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+      "dimension": "energy",
+      "confidence": 0.72,
+      "value": "balanced"
+    },
+    {
+      "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+      "dimension": "density",
+      "confidence": 0.72,
+      "value": "medium"
+    },
+    {
+      "id": "tang-fce06ca0-8b8f-4ce9-b83b-425e062ecbce",
+      "dimension": "density",
+      "confidence": 0.74,
+      "value": "medium"
+    },
+    {
+      "id": "tang-fce06ca0-8b8f-4ce9-b83b-425e062ecbce",
+      "dimension": "emotion",
+      "confidence": 0.74,
+      "value": [
+        "serene",
+        "melancholic"
+      ]
+    }
+  ],
+  "style_distributions": {
+    "emotion": {
+      "heroic": 4,
+      "indignant": 1,
+      "joyful": 7,
+      "lonely": 4,
+      "melancholic": 16,
+      "serene": 9
+    },
+    "imagery": {
+      "celestial": 11,
+      "fauna": 8,
+      "flora": 18,
+      "frontier": 3,
+      "human_culture": 20,
+      "landscape": 23,
+      "season_weather": 12,
+      "travel": 11
+    },
+    "diction": {
+      "ornate": 6,
+      "plain": 3,
+      "refined": 20
+    },
+    "expression": {
+      "balanced": 18,
+      "direct": 5,
+      "implicit": 6
+    },
+    "energy": {
+      "balanced": 6,
+      "gentle": 18,
+      "vigorous": 5
+    },
+    "density": {
+      "dense": 18,
+      "medium": 9,
+      "sparse": 2
+    }
+  }
+}

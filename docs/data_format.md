@@ -603,7 +603,7 @@ data/processed/style_annotation/
           "landscape": ["山", "江"],
           "celestial": ["月"]
         },
-        "method": "lexicon_heuristic_v1",
+        "method": "lexicon_heuristic_v1_1",
         "status": "prelabeled"
       },
       "emotion": {
@@ -770,6 +770,63 @@ data/processed/style_annotation/
 ```
 
 只有在人工复核并明确接受/修改这些候选标签后，才能将结果提交到最终 `style` 字段。
+
+### 20.7 2026-09 校准批次与 Lexicon V1.1
+
+为避免直接把规则噪声扩散到 1000 首，先固定了一个可复现校准批次：
+
+- seed: `20260920`；
+- 七绝 15 首 + 七律 15 首；
+- 30 位不同作者；
+- canonical `style` 保持空白；
+- 助手逐首提出 `style_proposal`，状态为 `assistant_calibrated_pending_human`，**不等同于 Gold**。
+
+同时增加样本质量审核。30 首中有 1 首标题为 `句` 的八行记录被判定为 source-fragment composite：结构满足 8×7，但上下片段语义不构成完整七律。因此 Gold 构建必须先做 `quality=include/exclude`，再做 Style 审核。
+
+全 1000 首中，标题恰好为 `句` 的 14 条记录被标记为 `priority_quality_review`；该 flag 只提高审核优先级，不自动删除。
+
+校准发现旧规则主要问题集中在高歧义单字：
+
+- `celestial` 中的 `日 / 天 / 空 / 辰 / 漢 / 斗`；
+- `season_weather` 中的 `暮 / 曉 / 夕 / 夜 / 晨 / 晚 / 歲`。
+
+Lexicon V1.1 删除上述高歧义单字，并加入更具体的短语（如 `落日 / 白日 / 銀漢 / 星辰 / 天際`）以及遗漏的常见植物词。
+
+在 29 首可用校准诗上，规则与逐首校准的比较：
+
+| Metric | V1.0 | V1.1 |
+| --- | ---: | ---: |
+| imagery exact match | 10.3% | 31.0% |
+| imagery mean Jaccard | 0.619 | 0.713 |
+| celestial precision | 0.478 | 0.800 |
+| season/weather precision | 0.562 | 0.833 |
+| density agreement | 75.9% | 79.3% |
+
+因此 V1.1 被保留，但规则仍只作为 reviewer cue，不作为最终 Style 真值。
+
+V1.1 全量规则结果：
+
+- records: 1000；
+- imagery empty: 22；
+- imagery counts: `landscape=584`, `human_culture=599`, `flora=480`, `celestial=387`, `season_weather=548`, `travel=321`, `fauna=234`, `frontier=123`；
+- density: `sparse=204`, `medium=500`, `dense=296`；
+- external LLM calls: 0；
+- canonical `style` modified: 0。
+
+对应文件：
+
+```text
+data/processed/style_annotation/
+├── calibration_sample_v1.jsonl
+├── assistant_calibration_labels_v1.json
+├── calibration_rule_v1_1.jsonl
+├── assistant_calibrated_v1_1.jsonl
+├── assistant_calibration_report_v1_1.json
+├── quality_flags_v1.jsonl
+├── quality_flags_report_v1.json
+├── preannotated_v1_1.jsonl
+└── preannotation_report_v1_1.json
+```
 
 ---
 

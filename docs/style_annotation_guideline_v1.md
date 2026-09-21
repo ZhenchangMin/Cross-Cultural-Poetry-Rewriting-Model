@@ -150,3 +150,39 @@ Recommended statuses:
 - `gold_adjudicated`: final agreed label set used as Gold supervision/evaluation.
 
 This distinction must remain visible in metadata and reports.
+
+## 10. Human review and Gold promotion
+
+Assistant proposals are never promoted automatically. Initialize an explicit review state:
+
+```bash
+cd research
+python scripts/human_review.py init --reviewer "<human reviewer>"
+```
+
+Every record starts with:
+
+```text
+decision = pending
+```
+
+even when the assistant suggestion is `accept` or `exclude`. The reviewer must explicitly set one of:
+
+- `accept`: accept the proposed final style;
+- `edit`: modify `final_style` and accept the edited labels;
+- `exclude`: exclude the record from Gold for a documented quality reason;
+- `pending`: not yet reviewed.
+
+Inspect progress with:
+
+```bash
+python scripts/human_review.py status
+```
+
+Gold promotion is refused while any records remain pending:
+
+```bash
+python scripts/human_review.py promote
+```
+
+After all decisions are completed, promotion copies only the human-reviewed `final_style` into canonical `style`, records reviewer/provenance, and re-runs the canonical Gold validator. This promoted file is the first artifact eligible for supervised training.

@@ -1,0 +1,46 @@
+{
+  "energy": {
+    "gold_distribution": {
+      "gentle": 14,
+      "balanced": 6,
+      "vigorous": 4
+    },
+    "prediction_distribution": {
+      "balanced": 21,
+      "vigorous": 2,
+      "gentle": 1
+    },
+    "illegal_raw_values": {},
+    "confusion": {
+      "gentle->balanced": 11,
+      "balanced->balanced": 6,
+      "vigorous->balanced": 4,
+      "gentle->vigorous": 2,
+      "gentle->gentle": 1
+    },
+    "emotion_prediction_vs_energy_prediction": {
+      "serene -> balanced": 11,
+      "joyful -> balanced": 1,
+      "lonely -> balanced": 5,
+      "indignant -> balanced": 3,
+      "melancholic -> balanced": 1,
+      "serene -> gentle": 1,
+      "serene -> vigorous": 2
+    },
+    "causal_limit": "Single configuration, 24 historically exposed Gold. Confusion supports descriptive diagnosis only; no ablation isolates definitions, examples, and model capacity."
+  },
+  "evidence": {
+    "json_parse_count": 24,
+    "input_wrapper_echo_count": 20,
+    "root_key_patterns": {
+      "fixed_predictions,poem": 20,
+      "poem": 1,
+      "diction,emotion,energy,expression": 2,
+      "境靜聞鐘聲易響,庭高見月影難沈,流水能清物外心,青山解隔塵中事": 1
+    }
+  },
+  "protected_inputs_verified": 60,
+  "gold_modified": false,
+  "training_started": false,
+  "silver_batch_started": false
+}

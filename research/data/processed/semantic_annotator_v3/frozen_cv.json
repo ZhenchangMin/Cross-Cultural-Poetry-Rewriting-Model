@@ -1,0 +1,778 @@
+{
+  "version": "semantic_annotator_v3",
+  "scope": "development 4-fold cross-validation; all Gold historically exposed; not independent test",
+  "seed": 20260925,
+  "gold_total": 24,
+  "gold_sources": {
+    "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-4e7818af-b432-424d-b011-21180f6e9053": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-f7973e61-9631-48b9-853d-839a9b51da9c": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-740c1743-61f4-4694-908b-6737af54523d": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-a39ebbbd-8626-4de4-a582-23146a31e189": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-88020cd6-c877-4632-a3d0-174216653e83": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-e5980c45-6386-4d47-a777-3855fe8c70a7": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-7887d2d9-3655-45b1-a556-349d95304058": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-0a84422b-f228-4263-8d6f-281b1606d605": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-95477829-6273-4f85-a0b8-d5bf3c07e507": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ],
+    "tang-805df95b-c30d-4773-ac47-68f6574f6d81": [
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration24_v1.jsonl",
+      "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl"
+    ]
+  },
+  "file_hashes": {
+    "data/processed/style_annotation/gold_calibration24_v1.jsonl": "440ff4eaa61b534b14b53b15ee6659e63f7ab4dda9605c5bdfa99514034e1cd2",
+    "data/processed/style_annotation/gold_calibration_v1.jsonl": "c0963756ec12c77852ed56818bb5934086833810d2a0da495966b47d89df8d43",
+    "configs/style_schema.json": "534709a70b833833e065a72fe77fce994649beeb412263cbfbe4f2c1fbcb48f3",
+    "configs/imagery_lexicon_v1.json": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+    "src/data/semantic_annotator_v3.py": "4e18d2b3b5bc7b3684509980af24979688626c6374d1a2c9735186f998b42243",
+    "scripts/semantic_v3.py": "29ae469ac6b8d86d6c65d62d00814f0b7e991849578d1be1c42020d326e2f6e7",
+    "src/data/preannotate_style.py": "f881d301465662debf4dd44bdef45bd303d1e2f924fb3ab68db554b512697391",
+    "src/data/silver_annotation.py": "aae86ef063d65a49d52cf4eea187897a5247aebd011d9bba5f791b15a99cc408"
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "evaluation_ids": [
+        "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+        "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "tang-e5980c45-6386-4d47-a777-3855fe8c70a7"
+      ],
+      "calibration_ids": [
+        "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+        "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+        "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "tang-7887d2d9-3655-45b1-a556-349d95304058",
+        "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+        "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+        "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+        "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+        "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419"
+      ],
+      "anchors": {
+        "emotion": [
+          {
+            "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+            "label": [
+              "serene"
+            ],
+            "centrality": 0.052521929985610935
+          },
+          {
+            "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+            "label": [
+              "joyful"
+            ],
+            "centrality": 0.04757647323436797
+          },
+          {
+            "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+            "label": [
+              "melancholic"
+            ],
+            "centrality": 0.05148055353196362
+          },
+          {
+            "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+            "label": [
+              "heroic"
+            ],
+            "centrality": 0.03750586029067042
+          }
+        ],
+        "diction": [
+          {
+            "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+            "label": "ornate",
+            "centrality": 0.05311198235726537
+          },
+          {
+            "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+            "label": "plain",
+            "centrality": 0.075
+          },
+          {
+            "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+            "label": "refined",
+            "centrality": 0.060804304470226916
+          }
+        ],
+        "expression": [
+          {
+            "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+            "label": "balanced",
+            "centrality": 0.05497905940776871
+          },
+          {
+            "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+            "label": "direct",
+            "centrality": 0.0196078431372549
+          },
+          {
+            "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+            "label": "implicit",
+            "centrality": 0.04265593561368209
+          }
+        ],
+        "energy": [
+          {
+            "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+            "label": "balanced",
+            "centrality": 0.0427947579846314
+          },
+          {
+            "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+            "label": "gentle",
+            "centrality": 0.06105828874566231
+          },
+          {
+            "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+            "label": "vigorous",
+            "centrality": 0.03750586029067042
+          }
+        ]
+      },
+      "evaluation_distribution": {
+        "emotion": {
+          "serene": 1,
+          "joyful": 2,
+          "melancholic": 4,
+          "lonely": 0,
+          "heroic": 0,
+          "indignant": 0
+        },
+        "imagery": {
+          "landscape": 5,
+          "celestial": 1,
+          "season_weather": 3,
+          "flora": 5,
+          "fauna": 2,
+          "travel": 3,
+          "frontier": 0,
+          "human_culture": 3
+        },
+        "diction": {
+          "plain": 1,
+          "refined": 4,
+          "ornate": 1
+        },
+        "expression": {
+          "direct": 2,
+          "balanced": 3,
+          "implicit": 1
+        },
+        "energy": {
+          "gentle": 3,
+          "balanced": 2,
+          "vigorous": 1
+        },
+        "density": {
+          "sparse": 1,
+          "medium": 2,
+          "dense": 3
+        }
+      },
+      "evaluation_forms": {
+        "qijue7": 4,
+        "qilv7": 2
+      }
+    },
+    {
+      "fold": 1,
+      "evaluation_ids": [
+        "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af"
+      ],
+      "calibration_ids": [
+        "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+        "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+        "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "tang-7887d2d9-3655-45b1-a556-349d95304058",
+        "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+        "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+        "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+        "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+        "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+        "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+        "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419"
+      ],
+      "anchors": {
+        "emotion": [
+          {
+            "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+            "label": [
+              "serene"
+            ],
+            "centrality": 0.03292993678734537
+          },
+          {
+            "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+            "label": [
+              "melancholic"
+            ],
+            "centrality": 0.05000066974750519
+          },
+          {
+            "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+            "label": [
+              "joyful"
+            ],
+            "centrality": 0.03516569908079342
+          },
+          {
+            "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+            "label": [
+              "heroic"
+            ],
+            "centrality": 0.037037037037037035
+          }
+        ],
+        "diction": [
+          {
+            "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+            "label": "ornate",
+            "centrality": 0.05819180819180819
+          },
+          {
+            "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+            "label": "plain",
+            "centrality": 0.0975609756097561
+          },
+          {
+            "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+            "label": "refined",
+            "centrality": 0.055206008905992233
+          }
+        ],
+        "expression": [
+          {
+            "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+            "label": "balanced",
+            "centrality": 0.055865029577161475
+          },
+          {
+            "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+            "label": "direct",
+            "centrality": 0.05857214680744092
+          },
+          {
+            "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+            "label": "implicit",
+            "centrality": 0.020257346548426362
+          }
+        ],
+        "energy": [
+          {
+            "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+            "label": "balanced",
+            "centrality": 0.038754719076171444
+          },
+          {
+            "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+            "label": "gentle",
+            "centrality": 0.053651543407570876
+          },
+          {
+            "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+            "label": "vigorous",
+            "centrality": 0.042556980056980054
+          }
+        ]
+      },
+      "evaluation_distribution": {
+        "emotion": {
+          "serene": 3,
+          "joyful": 1,
+          "melancholic": 2,
+          "lonely": 0,
+          "heroic": 1,
+          "indignant": 0
+        },
+        "imagery": {
+          "landscape": 3,
+          "celestial": 2,
+          "season_weather": 3,
+          "flora": 3,
+          "fauna": 1,
+          "travel": 1,
+          "frontier": 1,
+          "human_culture": 4
+        },
+        "diction": {
+          "plain": 1,
+          "refined": 4,
+          "ornate": 1
+        },
+        "expression": {
+          "direct": 1,
+          "balanced": 4,
+          "implicit": 1
+        },
+        "energy": {
+          "gentle": 3,
+          "balanced": 2,
+          "vigorous": 1
+        },
+        "density": {
+          "sparse": 1,
+          "medium": 2,
+          "dense": 3
+        }
+      },
+      "evaluation_forms": {
+        "qijue7": 3,
+        "qilv7": 3
+      }
+    },
+    {
+      "fold": 2,
+      "evaluation_ids": [
+        "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "tang-7887d2d9-3655-45b1-a556-349d95304058",
+        "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+        "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+        "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+        "tang-f7973e61-9631-48b9-853d-839a9b51da9c"
+      ],
+      "calibration_ids": [
+        "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+        "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+        "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+        "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+        "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+        "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419"
+      ],
+      "anchors": {
+        "emotion": [
+          {
+            "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+            "label": [
+              "serene"
+            ],
+            "centrality": 0.0351428878922709
+          },
+          {
+            "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+            "label": [
+              "joyful"
+            ],
+            "centrality": 0.041944444444444444
+          },
+          {
+            "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+            "label": [
+              "melancholic"
+            ],
+            "centrality": 0.05417891252406089
+          },
+          {
+            "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+            "label": [
+              "heroic"
+            ],
+            "centrality": 0.0379746835443038
+          }
+        ],
+        "diction": [
+          {
+            "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+            "label": "ornate",
+            "centrality": 0.048228501058689734
+          },
+          {
+            "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+            "label": "plain",
+            "centrality": 0.08333333333333333
+          },
+          {
+            "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+            "label": "refined",
+            "centrality": 0.046172058347710127
+          }
+        ],
+        "expression": [
+          {
+            "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+            "label": "balanced",
+            "centrality": 0.04858682997384649
+          },
+          {
+            "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+            "label": "direct",
+            "centrality": 0.07352941176470588
+          },
+          {
+            "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+            "label": "implicit",
+            "centrality": 0.034744268077601406
+          }
+        ],
+        "energy": [
+          {
+            "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+            "label": "balanced",
+            "centrality": 0.04763493778842222
+          },
+          {
+            "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+            "label": "gentle",
+            "centrality": 0.04926162945603776
+          },
+          {
+            "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+            "label": "vigorous",
+            "centrality": 0.048690312069181604
+          }
+        ]
+      },
+      "evaluation_distribution": {
+        "emotion": {
+          "serene": 1,
+          "joyful": 2,
+          "melancholic": 4,
+          "lonely": 0,
+          "heroic": 1,
+          "indignant": 0
+        },
+        "imagery": {
+          "landscape": 5,
+          "celestial": 0,
+          "season_weather": 2,
+          "flora": 3,
+          "fauna": 3,
+          "travel": 1,
+          "frontier": 2,
+          "human_culture": 5
+        },
+        "diction": {
+          "plain": 1,
+          "refined": 5,
+          "ornate": 0
+        },
+        "expression": {
+          "direct": 1,
+          "balanced": 4,
+          "implicit": 1
+        },
+        "energy": {
+          "gentle": 4,
+          "balanced": 1,
+          "vigorous": 1
+        },
+        "density": {
+          "sparse": 1,
+          "medium": 1,
+          "dense": 4
+        }
+      },
+      "evaluation_forms": {
+        "qijue7": 3,
+        "qilv7": 3
+      }
+    },
+    {
+      "fold": 3,
+      "evaluation_ids": [
+        "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+        "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+        "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+        "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419"
+      ],
+      "calibration_ids": [
+        "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "tang-7887d2d9-3655-45b1-a556-349d95304058",
+        "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+        "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+        "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+        "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+        "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+        "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "tang-f7973e61-9631-48b9-853d-839a9b51da9c"
+      ],
+      "anchors": {
+        "emotion": [
+          {
+            "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+            "label": [
+              "serene"
+            ],
+            "centrality": 0.04740613288971174
+          },
+          {
+            "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+            "label": [
+              "heroic",
+              "joyful"
+            ],
+            "centrality": 0.053896950319724544
+          },
+          {
+            "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+            "label": [
+              "joyful"
+            ],
+            "centrality": 0.06089068825910931
+          },
+          {
+            "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+            "label": [
+              "melancholic"
+            ],
+            "centrality": 0.05245378719878708
+          }
+        ],
+        "diction": [
+          {
+            "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+            "label": "ornate",
+            "centrality": 0.0594059405940594
+          },
+          {
+            "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+            "label": "plain",
+            "centrality": 0.09044715447154472
+          },
+          {
+            "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+            "label": "refined",
+            "centrality": 0.05649541902624151
+          }
+        ],
+        "expression": [
+          {
+            "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+            "label": "balanced",
+            "centrality": 0.04998639789045271
+          },
+          {
+            "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+            "label": "direct",
+            "centrality": 0.0602061337355455
+          },
+          {
+            "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+            "label": "implicit",
+            "centrality": 0.019986449864498643
+          }
+        ],
+        "energy": [
+          {
+            "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+            "label": "balanced",
+            "centrality": 0.0425990675990676
+          },
+          {
+            "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+            "label": "gentle",
+            "centrality": 0.055433061815985535
+          },
+          {
+            "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+            "label": "vigorous",
+            "centrality": 0.05374143183549124
+          }
+        ]
+      },
+      "evaluation_distribution": {
+        "emotion": {
+          "serene": 2,
+          "joyful": 1,
+          "melancholic": 3,
+          "lonely": 0,
+          "heroic": 1,
+          "indignant": 0
+        },
+        "imagery": {
+          "landscape": 5,
+          "celestial": 4,
+          "season_weather": 3,
+          "flora": 4,
+          "fauna": 1,
+          "travel": 2,
+          "frontier": 0,
+          "human_culture": 4
+        },
+        "diction": {
+          "plain": 0,
+          "refined": 4,
+          "ornate": 2
+        },
+        "expression": {
+          "direct": 1,
+          "balanced": 4,
+          "implicit": 1
+        },
+        "energy": {
+          "gentle": 4,
+          "balanced": 1,
+          "vigorous": 1
+        },
+        "density": {
+          "sparse": 1,
+          "medium": 3,
+          "dense": 2
+        }
+      },
+      "evaluation_forms": {
+        "qijue7": 3,
+        "qilv7": 3
+      }
+    }
+  ],
+  "fold_selection": "4000 fixed-seed form-quota assignments; inverse-frequency weighted label balance; no model scores used",
+  "anchor_selection": "single-label: one character-Jaccard class medoid per available label; emotion: four examples maximizing coverage then singleton clarity then medoid centrality; ID tie breaks",
+  "anchor_limitation": "lexical medoid is a deterministic representativeness proxy, not independent human clarity adjudication",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "generation": {
+    "do_sample": false,
+    "semantic_max_new_tokens": 96,
+    "evidence_max_new_tokens": 320
+  },
+  "llm_repair_enabled": false,
+  "semantic_gate": {
+    "emotion": 0.7,
+    "diction": 0.6,
+    "expression": 0.6,
+    "energy": 0.6
+  },
+  "protocol_gate": 0.9,
+  "rule_gate": {
+    "imagery_f1": 0.7,
+    "density_accuracy": 0.95
+  },
+  "future_confidence_filters": {
+    "semantic": 0.8,
+    "imagery": 0.7,
+    "density": 0.5
+  },
+  "silver_batch_forbidden": true,
+  "training_forbidden": true
+}

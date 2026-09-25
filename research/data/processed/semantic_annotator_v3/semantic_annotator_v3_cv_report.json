@@ -1,0 +1,2250 @@
+{
+  "scope": "development 4-fold cross-validation; all Gold historically exposed; not independent test",
+  "aggregate": {
+    "n": 24,
+    "dimensions": {
+      "emotion": {
+        "n": 24,
+        "accuracy": 0.20833333333333334,
+        "label_coverage": 1.0,
+        "accuracy_on_legal_predictions": 0.20833333333333334,
+        "confusion": {
+          "missed:joyful": 5,
+          "missed:melancholic": 12,
+          "extra:serene": 7,
+          "extra:indignant": 3,
+          "missed:heroic": 3,
+          "extra:lonely": 5
+        },
+        "confusion_label_pairs": {
+          "melancholic->serene": 6,
+          "melancholic->lonely": 4,
+          "melancholic->indignant": 2,
+          "heroic->indignant": 1,
+          "joyful->indignant": 1,
+          "joyful->serene": 1,
+          "heroic->lonely": 1
+        },
+        "gold_distribution": {
+          "joyful": 6,
+          "serene": 7,
+          "melancholic": 13,
+          "heroic": 3
+        },
+        "prediction_distribution": {
+          "serene": 14,
+          "indignant": 3,
+          "joyful": 1,
+          "melancholic": 1,
+          "lonely": 5
+        },
+        "protocol": {
+          "json_parse_success_rate": 1.0,
+          "semantic_schema_success_rate": 1.0,
+          "full_semantic_protocol_valid_rate": 1.0,
+          "type_valid_rate": 1.0,
+          "evidence_success_rate": 0.0
+        },
+        "normalization_count": 0,
+        "evidence_success_on_attempted": 0.0,
+        "precision": 0.375,
+        "recall": 0.3103448275862069,
+        "f1": 0.33962264150943394,
+        "counts": {
+          "tp": 9,
+          "fp": 15,
+          "fn": 20
+        },
+        "averaging": "micro"
+      },
+      "diction": {
+        "n": 24,
+        "accuracy": 0.2916666666666667,
+        "label_coverage": 1.0,
+        "accuracy_on_legal_predictions": 0.2916666666666667,
+        "confusion": {
+          "refined->ornate": 10,
+          "refined->plain": 7,
+          "ornate->ornate": 4,
+          "plain->plain": 3
+        },
+        "confusion_label_pairs": {},
+        "gold_distribution": {
+          "refined": 17,
+          "ornate": 4,
+          "plain": 3
+        },
+        "prediction_distribution": {
+          "ornate": 14,
+          "plain": 10
+        },
+        "protocol": {
+          "json_parse_success_rate": 1.0,
+          "semantic_schema_success_rate": 1.0,
+          "full_semantic_protocol_valid_rate": 1.0,
+          "type_valid_rate": 1.0,
+          "evidence_success_rate": 0.0
+        },
+        "normalization_count": 0,
+        "evidence_success_on_attempted": 0.0
+      },
+      "expression": {
+        "n": 24,
+        "accuracy": 0.4166666666666667,
+        "label_coverage": 1.0,
+        "accuracy_on_legal_predictions": 0.4166666666666667,
+        "confusion": {
+          "balanced->balanced": 6,
+          "implicit->balanced": 1,
+          "balanced->implicit": 8,
+          "implicit->implicit": 3,
+          "balanced->direct": 1,
+          "direct->implicit": 4,
+          "direct->direct": 1
+        },
+        "confusion_label_pairs": {},
+        "gold_distribution": {
+          "balanced": 15,
+          "implicit": 4,
+          "direct": 5
+        },
+        "prediction_distribution": {
+          "balanced": 7,
+          "implicit": 15,
+          "direct": 2
+        },
+        "protocol": {
+          "json_parse_success_rate": 1.0,
+          "semantic_schema_success_rate": 1.0,
+          "full_semantic_protocol_valid_rate": 1.0,
+          "type_valid_rate": 1.0,
+          "evidence_success_rate": 0.0
+        },
+        "normalization_count": 0,
+        "evidence_success_on_attempted": 0.0
+      },
+      "energy": {
+        "n": 24,
+        "accuracy": 0.2916666666666667,
+        "label_coverage": 1.0,
+        "accuracy_on_legal_predictions": 0.2916666666666667,
+        "confusion": {
+          "gentle->balanced": 11,
+          "balanced->balanced": 6,
+          "vigorous->balanced": 4,
+          "gentle->vigorous": 2,
+          "gentle->gentle": 1
+        },
+        "confusion_label_pairs": {},
+        "gold_distribution": {
+          "gentle": 14,
+          "balanced": 6,
+          "vigorous": 4
+        },
+        "prediction_distribution": {
+          "balanced": 21,
+          "vigorous": 2,
+          "gentle": 1
+        },
+        "protocol": {
+          "json_parse_success_rate": 1.0,
+          "semantic_schema_success_rate": 1.0,
+          "full_semantic_protocol_valid_rate": 1.0,
+          "type_valid_rate": 1.0,
+          "evidence_success_rate": 0.0
+        },
+        "normalization_count": 0,
+        "evidence_success_on_attempted": 0.0
+      }
+    },
+    "record_level_protocol": {
+      "json_parse_success_rate": 1.0,
+      "semantic_schema_success_rate": 1.0,
+      "full_semantic_protocol_valid_rate": 1.0,
+      "evidence_success_rate": 0.0,
+      "full_two_stage_success_rate": 0.0
+    },
+    "errors": [
+      {
+        "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+        "dimension": "emotion",
+        "gold": [
+          "joyful",
+          "serene"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "dimension": "emotion",
+        "gold": [
+          "serene",
+          "joyful"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "indignant"
+        ],
+        "raw_prediction": [
+          "indignant"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+        "dimension": "emotion",
+        "gold": [
+          "heroic",
+          "joyful"
+        ],
+        "prediction": [
+          "indignant"
+        ],
+        "raw_prediction": [
+          "indignant"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+        "dimension": "emotion",
+        "gold": [
+          "serene",
+          "joyful"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "dimension": "emotion",
+        "gold": [
+          "serene",
+          "heroic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "dimension": "emotion",
+        "gold": [
+          "joyful"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "lonely"
+        ],
+        "raw_prediction": [
+          "lonely"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "lonely"
+        ],
+        "raw_prediction": [
+          "lonely"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "indignant"
+        ],
+        "raw_prediction": [
+          "indignant"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "lonely"
+        ],
+        "raw_prediction": [
+          "lonely"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "raw_prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "lonely"
+        ],
+        "raw_prediction": [
+          "lonely"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "dimension": "emotion",
+        "gold": [
+          "heroic"
+        ],
+        "prediction": [
+          "lonely"
+        ],
+        "raw_prediction": [
+          "lonely"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "ornate",
+        "raw_prediction": "ornate",
+        "label_valid": true
+      },
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "ornate",
+        "raw_prediction": "ornate",
+        "label_valid": true
+      },
+      {
+        "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "raw_prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "ornate",
+        "raw_prediction": "ornate",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "raw_prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "ornate",
+        "raw_prediction": "ornate",
+        "label_valid": true
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "raw_prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "raw_prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "ornate",
+        "raw_prediction": "ornate",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "ornate",
+        "raw_prediction": "ornate",
+        "label_valid": true
+      },
+      {
+        "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "ornate",
+        "raw_prediction": "ornate",
+        "label_valid": true
+      },
+      {
+        "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "ornate",
+        "raw_prediction": "ornate",
+        "label_valid": true
+      },
+      {
+        "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "ornate",
+        "raw_prediction": "ornate",
+        "label_valid": true
+      },
+      {
+        "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "ornate",
+        "raw_prediction": "ornate",
+        "label_valid": true
+      },
+      {
+        "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "raw_prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "raw_prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "raw_prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "dimension": "expression",
+        "gold": "implicit",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": "direct",
+        "raw_prediction": "direct",
+        "label_valid": true
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": "implicit",
+        "raw_prediction": "implicit",
+        "label_valid": true
+      },
+      {
+        "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+        "dimension": "energy",
+        "gold": "vigorous",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "vigorous",
+        "raw_prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "dimension": "energy",
+        "gold": "vigorous",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "vigorous",
+        "raw_prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+        "dimension": "energy",
+        "gold": "vigorous",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "dimension": "energy",
+        "gold": "vigorous",
+        "prediction": "balanced",
+        "raw_prediction": "balanced",
+        "label_valid": true
+      }
+    ],
+    "note": "All evaluation records remain in semantic denominators, independent of evidence; invalid labels are missing predictions."
+  },
+  "folds": [
+    {
+      "n": 6,
+      "dimensions": {
+        "emotion": {
+          "n": 6,
+          "accuracy": 0.16666666666666666,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.16666666666666666,
+          "confusion": {
+            "missed:joyful": 1,
+            "missed:melancholic": 4,
+            "extra:serene": 2,
+            "extra:lonely": 1,
+            "extra:indignant": 1
+          },
+          "confusion_label_pairs": {
+            "melancholic->serene": 2,
+            "melancholic->lonely": 1,
+            "melancholic->indignant": 1
+          },
+          "gold_distribution": {
+            "serene": 1,
+            "joyful": 2,
+            "melancholic": 4
+          },
+          "prediction_distribution": {
+            "serene": 3,
+            "joyful": 1,
+            "lonely": 1,
+            "indignant": 1
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.2857142857142857,
+          "f1": 0.3076923076923077,
+          "counts": {
+            "tp": 2,
+            "fp": 4,
+            "fn": 5
+          },
+          "averaging": "micro"
+        },
+        "diction": {
+          "n": 6,
+          "accuracy": 0.3333333333333333,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.3333333333333333,
+          "confusion": {
+            "refined->ornate": 3,
+            "refined->plain": 1,
+            "ornate->ornate": 1,
+            "plain->plain": 1
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "refined": 4,
+            "ornate": 1,
+            "plain": 1
+          },
+          "prediction_distribution": {
+            "ornate": 4,
+            "plain": 2
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        },
+        "expression": {
+          "n": 6,
+          "accuracy": 0.0,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.0,
+          "confusion": {
+            "implicit->balanced": 1,
+            "direct->implicit": 2,
+            "balanced->implicit": 3
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "implicit": 1,
+            "direct": 2,
+            "balanced": 3
+          },
+          "prediction_distribution": {
+            "balanced": 1,
+            "implicit": 5
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        },
+        "energy": {
+          "n": 6,
+          "accuracy": 0.3333333333333333,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.3333333333333333,
+          "confusion": {
+            "balanced->balanced": 2,
+            "gentle->balanced": 3,
+            "vigorous->balanced": 1
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "balanced": 2,
+            "gentle": 3,
+            "vigorous": 1
+          },
+          "prediction_distribution": {
+            "balanced": 6
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        }
+      },
+      "record_level_protocol": {
+        "json_parse_success_rate": 1.0,
+        "semantic_schema_success_rate": 1.0,
+        "full_semantic_protocol_valid_rate": 1.0,
+        "evidence_success_rate": 0.0,
+        "full_two_stage_success_rate": 0.0
+      },
+      "errors": [
+        {
+          "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+          "dimension": "emotion",
+          "gold": [
+            "serene",
+            "joyful"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "lonely"
+          ],
+          "raw_prediction": [
+            "lonely"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "indignant"
+          ],
+          "raw_prediction": [
+            "indignant"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "ornate",
+          "raw_prediction": "ornate",
+          "label_valid": true
+        },
+        {
+          "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "plain",
+          "raw_prediction": "plain",
+          "label_valid": true
+        },
+        {
+          "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "ornate",
+          "raw_prediction": "ornate",
+          "label_valid": true
+        },
+        {
+          "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "ornate",
+          "raw_prediction": "ornate",
+          "label_valid": true
+        },
+        {
+          "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+          "dimension": "expression",
+          "gold": "implicit",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+          "dimension": "expression",
+          "gold": "direct",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+          "dimension": "expression",
+          "gold": "balanced",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+          "dimension": "expression",
+          "gold": "balanced",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+          "dimension": "expression",
+          "gold": "direct",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+          "dimension": "expression",
+          "gold": "balanced",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+          "dimension": "energy",
+          "gold": "vigorous",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        }
+      ],
+      "note": "All evaluation records remain in semantic denominators, independent of evidence; invalid labels are missing predictions.",
+      "fold": 0
+    },
+    {
+      "n": 6,
+      "dimensions": {
+        "emotion": {
+          "n": 6,
+          "accuracy": 0.5,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.5,
+          "confusion": {
+            "missed:heroic": 1,
+            "missed:joyful": 1,
+            "extra:serene": 2,
+            "missed:melancholic": 1
+          },
+          "confusion_label_pairs": {
+            "joyful->serene": 1,
+            "melancholic->serene": 1
+          },
+          "gold_distribution": {
+            "serene": 3,
+            "heroic": 1,
+            "joyful": 1,
+            "melancholic": 2
+          },
+          "prediction_distribution": {
+            "serene": 5,
+            "melancholic": 1
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.5714285714285714,
+          "f1": 0.6153846153846154,
+          "counts": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 3
+          },
+          "averaging": "micro"
+        },
+        "diction": {
+          "n": 6,
+          "accuracy": 0.3333333333333333,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.3333333333333333,
+          "confusion": {
+            "refined->plain": 2,
+            "ornate->ornate": 1,
+            "refined->ornate": 2,
+            "plain->plain": 1
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "refined": 4,
+            "ornate": 1,
+            "plain": 1
+          },
+          "prediction_distribution": {
+            "plain": 3,
+            "ornate": 3
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        },
+        "expression": {
+          "n": 6,
+          "accuracy": 0.6666666666666666,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.6666666666666666,
+          "confusion": {
+            "implicit->implicit": 1,
+            "balanced->balanced": 3,
+            "balanced->implicit": 1,
+            "direct->implicit": 1
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "implicit": 1,
+            "balanced": 4,
+            "direct": 1
+          },
+          "prediction_distribution": {
+            "implicit": 3,
+            "balanced": 3
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        },
+        "energy": {
+          "n": 6,
+          "accuracy": 0.5,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.5,
+          "confusion": {
+            "gentle->balanced": 2,
+            "vigorous->balanced": 1,
+            "balanced->balanced": 2,
+            "gentle->gentle": 1
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "gentle": 3,
+            "vigorous": 1,
+            "balanced": 2
+          },
+          "prediction_distribution": {
+            "balanced": 5,
+            "gentle": 1
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        }
+      },
+      "record_level_protocol": {
+        "json_parse_success_rate": 1.0,
+        "semantic_schema_success_rate": 1.0,
+        "full_semantic_protocol_valid_rate": 1.0,
+        "evidence_success_rate": 0.0,
+        "full_two_stage_success_rate": 0.0
+      },
+      "errors": [
+        {
+          "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+          "dimension": "emotion",
+          "gold": [
+            "serene",
+            "heroic"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+          "dimension": "emotion",
+          "gold": [
+            "joyful"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "plain",
+          "raw_prediction": "plain",
+          "label_valid": true
+        },
+        {
+          "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "plain",
+          "raw_prediction": "plain",
+          "label_valid": true
+        },
+        {
+          "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "ornate",
+          "raw_prediction": "ornate",
+          "label_valid": true
+        },
+        {
+          "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "ornate",
+          "raw_prediction": "ornate",
+          "label_valid": true
+        },
+        {
+          "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+          "dimension": "expression",
+          "gold": "balanced",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+          "dimension": "expression",
+          "gold": "direct",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+          "dimension": "energy",
+          "gold": "vigorous",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        }
+      ],
+      "note": "All evaluation records remain in semantic denominators, independent of evidence; invalid labels are missing predictions.",
+      "fold": 1
+    },
+    {
+      "n": 6,
+      "dimensions": {
+        "emotion": {
+          "n": 6,
+          "accuracy": 0.0,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.0,
+          "confusion": {
+            "missed:melancholic": 4,
+            "extra:indignant": 2,
+            "missed:heroic": 1,
+            "missed:joyful": 2,
+            "extra:lonely": 3
+          },
+          "confusion_label_pairs": {
+            "melancholic->lonely": 3,
+            "melancholic->indignant": 1,
+            "heroic->indignant": 1,
+            "joyful->indignant": 1
+          },
+          "gold_distribution": {
+            "melancholic": 4,
+            "heroic": 1,
+            "joyful": 2,
+            "serene": 1
+          },
+          "prediction_distribution": {
+            "indignant": 2,
+            "serene": 1,
+            "lonely": 3
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0,
+          "precision": 0.16666666666666666,
+          "recall": 0.125,
+          "f1": 0.14285714285714285,
+          "counts": {
+            "tp": 1,
+            "fp": 5,
+            "fn": 7
+          },
+          "averaging": "micro"
+        },
+        "diction": {
+          "n": 6,
+          "accuracy": 0.16666666666666666,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.16666666666666666,
+          "confusion": {
+            "refined->ornate": 3,
+            "plain->plain": 1,
+            "refined->plain": 2
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "refined": 5,
+            "plain": 1
+          },
+          "prediction_distribution": {
+            "ornate": 3,
+            "plain": 3
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        },
+        "expression": {
+          "n": 6,
+          "accuracy": 0.6666666666666666,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.6666666666666666,
+          "confusion": {
+            "balanced->direct": 1,
+            "balanced->balanced": 2,
+            "implicit->implicit": 1,
+            "balanced->implicit": 1,
+            "direct->direct": 1
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "balanced": 4,
+            "implicit": 1,
+            "direct": 1
+          },
+          "prediction_distribution": {
+            "direct": 2,
+            "balanced": 2,
+            "implicit": 2
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        },
+        "energy": {
+          "n": 6,
+          "accuracy": 0.16666666666666666,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.16666666666666666,
+          "confusion": {
+            "balanced->balanced": 1,
+            "vigorous->balanced": 1,
+            "gentle->balanced": 4
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "balanced": 1,
+            "vigorous": 1,
+            "gentle": 4
+          },
+          "prediction_distribution": {
+            "balanced": 6
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        }
+      },
+      "record_level_protocol": {
+        "json_parse_success_rate": 1.0,
+        "semantic_schema_success_rate": 1.0,
+        "full_semantic_protocol_valid_rate": 1.0,
+        "evidence_success_rate": 0.0,
+        "full_two_stage_success_rate": 0.0
+      },
+      "errors": [
+        {
+          "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "indignant"
+          ],
+          "raw_prediction": [
+            "indignant"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+          "dimension": "emotion",
+          "gold": [
+            "heroic",
+            "joyful"
+          ],
+          "prediction": [
+            "indignant"
+          ],
+          "raw_prediction": [
+            "indignant"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+          "dimension": "emotion",
+          "gold": [
+            "serene",
+            "joyful"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "lonely"
+          ],
+          "raw_prediction": [
+            "lonely"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "lonely"
+          ],
+          "raw_prediction": [
+            "lonely"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "lonely"
+          ],
+          "raw_prediction": [
+            "lonely"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "ornate",
+          "raw_prediction": "ornate",
+          "label_valid": true
+        },
+        {
+          "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "ornate",
+          "raw_prediction": "ornate",
+          "label_valid": true
+        },
+        {
+          "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "ornate",
+          "raw_prediction": "ornate",
+          "label_valid": true
+        },
+        {
+          "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "plain",
+          "raw_prediction": "plain",
+          "label_valid": true
+        },
+        {
+          "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "plain",
+          "raw_prediction": "plain",
+          "label_valid": true
+        },
+        {
+          "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+          "dimension": "expression",
+          "gold": "balanced",
+          "prediction": "direct",
+          "raw_prediction": "direct",
+          "label_valid": true
+        },
+        {
+          "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+          "dimension": "expression",
+          "gold": "balanced",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+          "dimension": "energy",
+          "gold": "vigorous",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        }
+      ],
+      "note": "All evaluation records remain in semantic denominators, independent of evidence; invalid labels are missing predictions.",
+      "fold": 2
+    },
+    {
+      "n": 6,
+      "dimensions": {
+        "emotion": {
+          "n": 6,
+          "accuracy": 0.16666666666666666,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.16666666666666666,
+          "confusion": {
+            "missed:joyful": 1,
+            "missed:melancholic": 3,
+            "extra:serene": 3,
+            "missed:heroic": 1,
+            "extra:lonely": 1
+          },
+          "confusion_label_pairs": {
+            "melancholic->serene": 3,
+            "heroic->lonely": 1
+          },
+          "gold_distribution": {
+            "joyful": 1,
+            "serene": 2,
+            "melancholic": 3,
+            "heroic": 1
+          },
+          "prediction_distribution": {
+            "serene": 5,
+            "lonely": 1
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.2857142857142857,
+          "f1": 0.3076923076923077,
+          "counts": {
+            "tp": 2,
+            "fp": 4,
+            "fn": 5
+          },
+          "averaging": "micro"
+        },
+        "diction": {
+          "n": 6,
+          "accuracy": 0.3333333333333333,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.3333333333333333,
+          "confusion": {
+            "refined->ornate": 2,
+            "refined->plain": 2,
+            "ornate->ornate": 2
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "refined": 4,
+            "ornate": 2
+          },
+          "prediction_distribution": {
+            "ornate": 4,
+            "plain": 2
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        },
+        "expression": {
+          "n": 6,
+          "accuracy": 0.3333333333333333,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.3333333333333333,
+          "confusion": {
+            "balanced->balanced": 1,
+            "balanced->implicit": 3,
+            "implicit->implicit": 1,
+            "direct->implicit": 1
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "balanced": 4,
+            "implicit": 1,
+            "direct": 1
+          },
+          "prediction_distribution": {
+            "balanced": 1,
+            "implicit": 5
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        },
+        "energy": {
+          "n": 6,
+          "accuracy": 0.16666666666666666,
+          "label_coverage": 1.0,
+          "accuracy_on_legal_predictions": 0.16666666666666666,
+          "confusion": {
+            "gentle->balanced": 2,
+            "balanced->balanced": 1,
+            "gentle->vigorous": 2,
+            "vigorous->balanced": 1
+          },
+          "confusion_label_pairs": {},
+          "gold_distribution": {
+            "gentle": 4,
+            "balanced": 1,
+            "vigorous": 1
+          },
+          "prediction_distribution": {
+            "balanced": 4,
+            "vigorous": 2
+          },
+          "protocol": {
+            "json_parse_success_rate": 1.0,
+            "semantic_schema_success_rate": 1.0,
+            "full_semantic_protocol_valid_rate": 1.0,
+            "type_valid_rate": 1.0,
+            "evidence_success_rate": 0.0
+          },
+          "normalization_count": 0,
+          "evidence_success_on_attempted": 0.0
+        }
+      },
+      "record_level_protocol": {
+        "json_parse_success_rate": 1.0,
+        "semantic_schema_success_rate": 1.0,
+        "full_semantic_protocol_valid_rate": 1.0,
+        "evidence_success_rate": 0.0,
+        "full_two_stage_success_rate": 0.0
+      },
+      "errors": [
+        {
+          "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+          "dimension": "emotion",
+          "gold": [
+            "joyful",
+            "serene"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+          "dimension": "emotion",
+          "gold": [
+            "melancholic"
+          ],
+          "prediction": [
+            "serene"
+          ],
+          "raw_prediction": [
+            "serene"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+          "dimension": "emotion",
+          "gold": [
+            "heroic"
+          ],
+          "prediction": [
+            "lonely"
+          ],
+          "raw_prediction": [
+            "lonely"
+          ],
+          "label_valid": true
+        },
+        {
+          "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "ornate",
+          "raw_prediction": "ornate",
+          "label_valid": true
+        },
+        {
+          "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "plain",
+          "raw_prediction": "plain",
+          "label_valid": true
+        },
+        {
+          "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "ornate",
+          "raw_prediction": "ornate",
+          "label_valid": true
+        },
+        {
+          "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+          "dimension": "diction",
+          "gold": "refined",
+          "prediction": "plain",
+          "raw_prediction": "plain",
+          "label_valid": true
+        },
+        {
+          "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+          "dimension": "expression",
+          "gold": "balanced",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+          "dimension": "expression",
+          "gold": "balanced",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+          "dimension": "expression",
+          "gold": "balanced",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+          "dimension": "expression",
+          "gold": "direct",
+          "prediction": "implicit",
+          "raw_prediction": "implicit",
+          "label_valid": true
+        },
+        {
+          "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        },
+        {
+          "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "vigorous",
+          "raw_prediction": "vigorous",
+          "label_valid": true
+        },
+        {
+          "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+          "dimension": "energy",
+          "gold": "gentle",
+          "prediction": "vigorous",
+          "raw_prediction": "vigorous",
+          "label_valid": true
+        },
+        {
+          "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+          "dimension": "energy",
+          "gold": "vigorous",
+          "prediction": "balanced",
+          "raw_prediction": "balanced",
+          "label_valid": true
+        }
+      ],
+      "note": "All evaluation records remain in semantic denominators, independent of evidence; invalid labels are missing predictions.",
+      "fold": 3
+    }
+  ],
+  "rules": {
+    "imagery": {
+      "n": 24,
+      "missing_predictions": 0,
+      "exact_match_accuracy": 0.2916666666666667,
+      "mean_confidence": 0.86375,
+      "confusion": {
+        "extra:travel": 6,
+        "missed:fauna": 5,
+        "missed:landscape": 4,
+        "missed:flora": 3,
+        "missed:human_culture": 3,
+        "missed:season_weather": 2,
+        "extra:fauna": 2,
+        "extra:flora": 2,
+        "extra:celestial": 2,
+        "extra:human_culture": 1,
+        "extra:season_weather": 1,
+        "extra:landscape": 1,
+        "missed:celestial": 1
+      },
+      "confidence_bins": [
+        {
+          "lower": 0,
+          "upper": 0.6,
+          "count": 0,
+          "exact_matches": 0
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "count": 5,
+          "exact_matches": 1
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.000001,
+          "count": 19,
+          "exact_matches": 6
+        }
+      ],
+      "precision": 0.8148148148148148,
+      "recall": 0.7857142857142857,
+      "f1": 0.8,
+      "averaging": "micro",
+      "counts": {
+        "tp": 66,
+        "fp": 15,
+        "fn": 18
+      },
+      "per_label": {
+        "landscape": {
+          "precision": 0.9333333333333333,
+          "recall": 0.7777777777777778,
+          "f1": 0.8484848484848485
+        },
+        "celestial": {
+          "precision": 0.75,
+          "recall": 0.8571428571428571,
+          "f1": 0.8
+        },
+        "season_weather": {
+          "precision": 0.9,
+          "recall": 0.8181818181818182,
+          "f1": 0.8571428571428571
+        },
+        "flora": {
+          "precision": 0.8571428571428571,
+          "recall": 0.8,
+          "f1": 0.8275862068965517
+        },
+        "fauna": {
+          "precision": 0.5,
+          "recall": 0.2857142857142857,
+          "f1": 0.36363636363636365
+        },
+        "travel": {
+          "precision": 0.5384615384615384,
+          "recall": 1.0,
+          "f1": 0.7
+        },
+        "frontier": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "human_culture": {
+          "precision": 0.9285714285714286,
+          "recall": 0.8125,
+          "f1": 0.8666666666666667
+        }
+      }
+    },
+    "density": {
+      "n": 24,
+      "missing_predictions": 0,
+      "exact_match_accuracy": 1.0,
+      "mean_confidence": 0.6081666666666666,
+      "confusion": {},
+      "confidence_bins": [
+        {
+          "lower": 0,
+          "upper": 0.6,
+          "count": 12,
+          "exact_matches": 12
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "count": 11,
+          "exact_matches": 11
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.000001,
+          "count": 1,
+          "exact_matches": 1
+        }
+      ],
+      "accuracy": 1.0
+    }
+  },
+  "gate": {
+    "silver_gate": "fail",
+    "dimension_ready": {
+      "emotion": false,
+      "diction": false,
+      "expression": false,
+      "energy": false,
+      "imagery": true,
+      "density": true
+    },
+    "semantic_quality_threshold_met": {
+      "emotion": false,
+      "diction": false,
+      "expression": false,
+      "energy": false,
+      "imagery": true,
+      "density": true
+    },
+    "reasons": [
+      "emotion: metric=0.3396 (required 0.7), semantic protocol=1.0000, evidence=0.0000 (each required .90)",
+      "diction: metric=0.2917 (required 0.6), semantic protocol=1.0000, evidence=0.0000 (each required .90)",
+      "expression: metric=0.4167 (required 0.6), semantic protocol=1.0000, evidence=0.0000 (each required .90)",
+      "energy: metric=0.2917 (required 0.6), semantic protocol=1.0000, evidence=0.0000 (each required .90)",
+      "full two-stage success=0.0000 < .90"
+    ],
+    "readiness_scope": "development-only screening, not independent test proof; future per-record confidence filters still apply",
+    "silver_batch_started": false
+  },
+  "llm_repair_calls": 0,
+  "request_count": 120,
+  "evidence_note": "verbatim protocol success does not establish semantic relevance of evidence",
+  "rules_exposure_note": "fixed lexicon/rules v1.1 evaluated on all 24; historically calibrated on Gold, not independent CV-trained rules"
+}

@@ -1,0 +1,268 @@
+{
+  "n": 6,
+  "dimensions": {
+    "emotion": {
+      "n": 6,
+      "accuracy": 0.5,
+      "label_coverage": 1.0,
+      "accuracy_on_legal_predictions": 0.5,
+      "confusion": {
+        "missed:heroic": 1,
+        "missed:joyful": 1,
+        "extra:serene": 2,
+        "missed:melancholic": 1
+      },
+      "confusion_label_pairs": {
+        "joyful->serene": 1,
+        "melancholic->serene": 1
+      },
+      "gold_distribution": {
+        "serene": 3,
+        "heroic": 1,
+        "joyful": 1,
+        "melancholic": 2
+      },
+      "prediction_distribution": {
+        "serene": 5,
+        "melancholic": 1
+      },
+      "protocol": {
+        "json_parse_success_rate": 1.0,
+        "semantic_schema_success_rate": 1.0,
+        "full_semantic_protocol_valid_rate": 1.0,
+        "type_valid_rate": 1.0,
+        "evidence_success_rate": 0.0
+      },
+      "normalization_count": 0,
+      "evidence_success_on_attempted": 0.0,
+      "precision": 0.6666666666666666,
+      "recall": 0.5714285714285714,
+      "f1": 0.6153846153846154,
+      "counts": {
+        "tp": 4,
+        "fp": 2,
+        "fn": 3
+      },
+      "averaging": "micro"
+    },
+    "diction": {
+      "n": 6,
+      "accuracy": 0.3333333333333333,
+      "label_coverage": 1.0,
+      "accuracy_on_legal_predictions": 0.3333333333333333,
+      "confusion": {
+        "refined->plain": 2,
+        "ornate->ornate": 1,
+        "refined->ornate": 2,
+        "plain->plain": 1
+      },
+      "confusion_label_pairs": {},
+      "gold_distribution": {
+        "refined": 4,
+        "ornate": 1,
+        "plain": 1
+      },
+      "prediction_distribution": {
+        "plain": 3,
+        "ornate": 3
+      },
+      "protocol": {
+        "json_parse_success_rate": 1.0,
+        "semantic_schema_success_rate": 1.0,
+        "full_semantic_protocol_valid_rate": 1.0,
+        "type_valid_rate": 1.0,
+        "evidence_success_rate": 0.0
+      },
+      "normalization_count": 0,
+      "evidence_success_on_attempted": 0.0
+    },
+    "expression": {
+      "n": 6,
+      "accuracy": 0.6666666666666666,
+      "label_coverage": 1.0,
+      "accuracy_on_legal_predictions": 0.6666666666666666,
+      "confusion": {
+        "implicit->implicit": 1,
+        "balanced->balanced": 3,
+        "balanced->implicit": 1,
+        "direct->implicit": 1
+      },
+      "confusion_label_pairs": {},
+      "gold_distribution": {
+        "implicit": 1,
+        "balanced": 4,
+        "direct": 1
+      },
+      "prediction_distribution": {
+        "implicit": 3,
+        "balanced": 3
+      },
+      "protocol": {
+        "json_parse_success_rate": 1.0,
+        "semantic_schema_success_rate": 1.0,
+        "full_semantic_protocol_valid_rate": 1.0,
+        "type_valid_rate": 1.0,
+        "evidence_success_rate": 0.0
+      },
+      "normalization_count": 0,
+      "evidence_success_on_attempted": 0.0
+    },
+    "energy": {
+      "n": 6,
+      "accuracy": 0.5,
+      "label_coverage": 1.0,
+      "accuracy_on_legal_predictions": 0.5,
+      "confusion": {
+        "gentle->balanced": 2,
+        "vigorous->balanced": 1,
+        "balanced->balanced": 2,
+        "gentle->gentle": 1
+      },
+      "confusion_label_pairs": {},
+      "gold_distribution": {
+        "gentle": 3,
+        "vigorous": 1,
+        "balanced": 2
+      },
+      "prediction_distribution": {
+        "balanced": 5,
+        "gentle": 1
+      },
+      "protocol": {
+        "json_parse_success_rate": 1.0,
+        "semantic_schema_success_rate": 1.0,
+        "full_semantic_protocol_valid_rate": 1.0,
+        "type_valid_rate": 1.0,
+        "evidence_success_rate": 0.0
+      },
+      "normalization_count": 0,
+      "evidence_success_on_attempted": 0.0
+    }
+  },
+  "record_level_protocol": {
+    "json_parse_success_rate": 1.0,
+    "semantic_schema_success_rate": 1.0,
+    "full_semantic_protocol_valid_rate": 1.0,
+    "evidence_success_rate": 0.0,
+    "full_two_stage_success_rate": 0.0
+  },
+  "errors": [
+    {
+      "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+      "dimension": "emotion",
+      "gold": [
+        "serene",
+        "heroic"
+      ],
+      "prediction": [
+        "serene"
+      ],
+      "raw_prediction": [
+        "serene"
+      ],
+      "label_valid": true
+    },
+    {
+      "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+      "dimension": "emotion",
+      "gold": [
+        "joyful"
+      ],
+      "prediction": [
+        "serene"
+      ],
+      "raw_prediction": [
+        "serene"
+      ],
+      "label_valid": true
+    },
+    {
+      "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+      "dimension": "emotion",
+      "gold": [
+        "melancholic"
+      ],
+      "prediction": [
+        "serene"
+      ],
+      "raw_prediction": [
+        "serene"
+      ],
+      "label_valid": true
+    },
+    {
+      "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+      "dimension": "diction",
+      "gold": "refined",
+      "prediction": "plain",
+      "raw_prediction": "plain",
+      "label_valid": true
+    },
+    {
+      "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+      "dimension": "diction",
+      "gold": "refined",
+      "prediction": "plain",
+      "raw_prediction": "plain",
+      "label_valid": true
+    },
+    {
+      "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+      "dimension": "diction",
+      "gold": "refined",
+      "prediction": "ornate",
+      "raw_prediction": "ornate",
+      "label_valid": true
+    },
+    {
+      "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+      "dimension": "diction",
+      "gold": "refined",
+      "prediction": "ornate",
+      "raw_prediction": "ornate",
+      "label_valid": true
+    },
+    {
+      "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+      "dimension": "expression",
+      "gold": "balanced",
+      "prediction": "implicit",
+      "raw_prediction": "implicit",
+      "label_valid": true
+    },
+    {
+      "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+      "dimension": "expression",
+      "gold": "direct",
+      "prediction": "implicit",
+      "raw_prediction": "implicit",
+      "label_valid": true
+    },
+    {
+      "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+      "dimension": "energy",
+      "gold": "gentle",
+      "prediction": "balanced",
+      "raw_prediction": "balanced",
+      "label_valid": true
+    },
+    {
+      "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+      "dimension": "energy",
+      "gold": "gentle",
+      "prediction": "balanced",
+      "raw_prediction": "balanced",
+      "label_valid": true
+    },
+    {
+      "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+      "dimension": "energy",
+      "gold": "vigorous",
+      "prediction": "balanced",
+      "raw_prediction": "balanced",
+      "label_valid": true
+    }
+  ],
+  "note": "All evaluation records remain in semantic denominators, independent of evidence; invalid labels are missing predictions.",
+  "fold": 1
+}

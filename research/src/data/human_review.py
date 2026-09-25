@@ -155,6 +155,7 @@ def promote_reviewed_gold(
             "reviewer": reviewer,
             "notes": str(entry.get("notes", "")),
             "status": "gold_adjudicated",
+            "confirmation_provenance": copy.deepcopy(dict(entry)),
         }
 
         issues = validate_record(item, schema, stage="gold", line=1)

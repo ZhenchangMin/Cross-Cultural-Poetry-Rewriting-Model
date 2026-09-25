@@ -1,0 +1,104 @@
+{
+  "scope": "descriptive_only; single reviewer; not inter-rater reliability",
+  "total": 24,
+  "forms": {
+    "qijue7": 13,
+    "qilv7": 11
+  },
+  "unique_authors": 24,
+  "style_distribution": {
+    "emotion": {
+      "serene": 7,
+      "joyful": 6,
+      "melancholic": 13,
+      "lonely": 0,
+      "heroic": 3,
+      "indignant": 0
+    },
+    "imagery": {
+      "landscape": 18,
+      "celestial": 7,
+      "season_weather": 11,
+      "flora": 15,
+      "fauna": 7,
+      "travel": 7,
+      "frontier": 3,
+      "human_culture": 16
+    },
+    "diction": {
+      "plain": 3,
+      "refined": 17,
+      "ornate": 4
+    },
+    "expression": {
+      "direct": 5,
+      "balanced": 15,
+      "implicit": 4
+    },
+    "energy": {
+      "gentle": 14,
+      "balanced": 6,
+      "vigorous": 4
+    },
+    "density": {
+      "sparse": 4,
+      "medium": 8,
+      "dense": 12
+    }
+  },
+  "multi_label_counts": [
+    "emotion",
+    "imagery"
+  ],
+  "review_decisions_all30": {
+    "accept": 21,
+    "edit": 3,
+    "exclude": 0,
+    "pending": 6
+  },
+  "review_decisions_gold": {
+    "accept": 21,
+    "edit": 3
+  },
+  "low_frequency_threshold": "count <= 2, including zero; descriptive, no resampling",
+  "low_frequency_labels": {
+    "emotion": {
+      "lonely": 0,
+      "indignant": 0
+    },
+    "imagery": {},
+    "diction": {},
+    "expression": {},
+    "energy": {},
+    "density": {}
+  },
+  "human_changes_vs_source_assisted_proposal": {
+    "emotion": 2,
+    "imagery": 0,
+    "diction": 1,
+    "expression": 0,
+    "energy": 0,
+    "density": 0
+  },
+  "rule_disagreements_with_gold": {
+    "imagery": 17,
+    "density": 0
+  },
+  "interpretation": "changes and weak-rule differences are not a measured dispute rate",
+  "input_sha256": {
+    "assistant_calibrated_v1_1.jsonl": "7f74f3fcca8cd4d84122f4583edcbdbaaaaed04f4151b903aeb17cee7abd1caf",
+    "calibration_sample_v1.jsonl": "1b1b555f36845326c650918ff4006cc88a50fb3e904069b1993081b195965269",
+    "review_candidates24_v2.jsonl": "85885502a92cba7a584ac9e856e1e5efbada4a2bc63b90fa4429a11a47cf38f3",
+    "human_review_state_v1.json": "24d68eef5bc52da10282f62b88adcd6cf65ad2227424a12bb11fa85af52e759e",
+    "human_review_state24_v2.json": "757adb47997b99960e355ceec78950eb76573709379dff82752c5386520c9b34",
+    "source_reference_all30_v2.jsonl": "9c3db75a57a7f56865d2da72748a20e1fa5b08ea767a03c7fa6622db11b6cb02",
+    "calibration_rule_v1_1.jsonl": "fe840f00e7cde05c57d558663d796b0a3887f63682db8d23bc14cbbc9cb9c83c",
+    "preannotated_v1_1.jsonl": "952d443e7ecd1b69d9e9a8eb48af8500a9b5c1a6044cd9d5fe3399b932db6dd9",
+    "quality_flags_v1.jsonl": "b5281a3bd97bd1fa9aa62213fdf442adc1aae69af130a310a035a4e31cbdeb27",
+    "configs\\style_schema.json": "534709a70b833833e065a72fe77fce994649beeb412263cbfbe4f2c1fbcb48f3",
+    "configs\\imagery_lexicon_v1.json": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+    "src\\data\\preannotate_style.py": "f881d301465662debf4dd44bdef45bd303d1e2f924fb3ab68db554b512697391",
+    "src\\data\\calibration_gold.py": "9f50eff3e778e8abf01523f6ed9f31aa4f1545b605ce2e600bf19ebfb87227b2"
+  },
+  "gold_sha256": "c0963756ec12c77852ed56818bb5934086833810d2a0da495966b47d89df8d43"
+}

@@ -1,0 +1,105 @@
+{
+  "status": "manifest_only_not_yet_wired_into_splitter",
+  "groups": [
+    {
+      "group_id": "calibration_variant_05_v1",
+      "members": [
+        "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "tang-8ee4a403-4578-4bde-bb43-b5e7e5f296ed"
+      ],
+      "matches": [
+        {
+          "id": "tang-8ee4a403-4578-4bde-bb43-b5e7e5f296ed",
+          "title": "九日廣陵登高懷邵二先輩",
+          "author": "歐陽詹",
+          "text": "簪萸泛菊俯平阡\n飲過三杯却惘然\n十歲此辰同醉友\n登高各處已三年",
+          "similarity": 0.9643,
+          "in_sample1000": false
+        }
+      ],
+      "decision": "conservative_same_split_if_included",
+      "method": "assistant-confirmed text-family candidates after same-length SequenceMatcher >= 0.70; whitespace removed; no script normalization",
+      "scope": "9 targeted poems searched against 18,312 candidates; not a corpus-wide deduplication guarantee"
+    },
+    {
+      "group_id": "calibration_variant_12_v1",
+      "members": [
+        "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "tang-39623e50-e397-46d0-8715-f405674194cf"
+      ],
+      "matches": [
+        {
+          "id": "tang-39623e50-e397-46d0-8715-f405674194cf",
+          "title": "自蘇臺至望亭驛人家盡空春物增思悵然有作因寄從弟紓",
+          "author": "李嘉祐",
+          "text": "南浦菰蔣覆白蘋\n東吳黎庶逐黃巾\n野棠自發空臨水\n江燕初歸不見人\n遠岫依依如送客\n平田渺渺獨傷春\n那堪回首長洲苑\n烽火年年報虜塵",
+          "similarity": 0.9286,
+          "in_sample1000": false
+        }
+      ],
+      "decision": "conservative_same_split_if_included",
+      "method": "assistant-confirmed text-family candidates after same-length SequenceMatcher >= 0.70; whitespace removed; no script normalization",
+      "scope": "9 targeted poems searched against 18,312 candidates; not a corpus-wide deduplication guarantee"
+    },
+    {
+      "group_id": "calibration_variant_15_v1",
+      "members": [
+        "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "tang-7bb2a4bd-77a1-4394-8059-5d730a18e43b"
+      ],
+      "matches": [
+        {
+          "id": "tang-7bb2a4bd-77a1-4394-8059-5d730a18e43b",
+          "title": "贈李德成",
+          "author": "呂巖",
+          "text": "九重天子寰中貴\n五等諸侯門外尊\n爭似布衣狂醉客\n不教性命屬乾坤",
+          "similarity": 0.7143,
+          "in_sample1000": false
+        }
+      ],
+      "decision": "conservative_same_split_if_included",
+      "method": "assistant-confirmed text-family candidates after same-length SequenceMatcher >= 0.70; whitespace removed; no script normalization",
+      "scope": "9 targeted poems searched against 18,312 candidates; not a corpus-wide deduplication guarantee"
+    },
+    {
+      "group_id": "calibration_variant_17_v1",
+      "members": [
+        "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "tang-c44d50c8-eabc-4e14-84f7-fbe4d2af0e5b"
+      ],
+      "matches": [
+        {
+          "id": "tang-c44d50c8-eabc-4e14-84f7-fbe4d2af0e5b",
+          "title": "苑中遇雪應制",
+          "author": "劉憲",
+          "text": "龍驂曉入望春宮\n正逢春雪舞東風\n花光倂灑天文上\n寒氣行消御酒中",
+          "similarity": 0.8929,
+          "in_sample1000": false
+        }
+      ],
+      "decision": "conservative_same_split_if_included",
+      "method": "assistant-confirmed text-family candidates after same-length SequenceMatcher >= 0.70; whitespace removed; no script normalization",
+      "scope": "9 targeted poems searched against 18,312 candidates; not a corpus-wide deduplication guarantee"
+    },
+    {
+      "group_id": "calibration_variant_25_v1",
+      "members": [
+        "tang-cf19cbe0-2ec7-4f4b-823f-c21646165b82",
+        "tang-6403d78f-966f-453a-9d67-1f15803a466b"
+      ],
+      "matches": [
+        {
+          "id": "tang-6403d78f-966f-453a-9d67-1f15803a466b",
+          "title": "官坡館聯句",
+          "author": "崔常侍",
+          "text": "牀頭錦衾班復班\n架上朱衣殷復殷\n空庭朗月閑復閑\n夜長路遠山復山",
+          "similarity": 0.8929,
+          "in_sample1000": false
+        }
+      ],
+      "decision": "conservative_same_split_if_included",
+      "method": "assistant-confirmed text-family candidates after same-length SequenceMatcher >= 0.70; whitespace removed; no script normalization",
+      "scope": "9 targeted poems searched against 18,312 candidates; not a corpus-wide deduplication guarantee"
+    }
+  ]
+}

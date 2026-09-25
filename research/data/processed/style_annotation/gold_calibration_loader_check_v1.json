@@ -1,0 +1,51 @@
+{
+  "gold_valid": 24,
+  "unresolved": 6,
+  "dataset_length": 24,
+  "metadata_prompt_invariance": true,
+  "samples": [
+    {
+      "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+      "form": "qijue7",
+      "style": {
+        "emotion": [
+          "serene",
+          "joyful"
+        ],
+        "imagery": [
+          "flora",
+          "landscape",
+          "celestial",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "implicit",
+        "energy": "balanced",
+        "density": "dense"
+      },
+      "target_text": "月曉已開花市合\n江平偏見竹簰多\n好教載取芳菲樹\n剩照岷天瑟瑟波",
+      "prompt_text": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n情感：清宁平和、欢愉明朗\n意象：植物、山水自然、天象、人文文化\n辞藻：典雅\n表达：含蓄\n气势：平稳\n密度：密集\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。"
+    },
+    {
+      "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+      "form": "qilv7",
+      "style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "landscape",
+          "travel",
+          "human_culture",
+          "flora"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "target_text": "自說年深別石橋\n遍遊靈跡熟南朝\n已知世路皆虛幻\n不覺空門是寂寥\n滄海附船浮浪久\n碧山尋塔上雲遙\n如今竹院藏衰老\n一點寒燈弟子燒",
+      "prompt_text": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言律诗\n情感：感伤惆怅\n意象：山水自然、行旅、人文文化、植物\n辞藻：典雅\n表达：情景交融\n气势：舒缓\n密度：密集\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。"
+    }
+  ]
+}

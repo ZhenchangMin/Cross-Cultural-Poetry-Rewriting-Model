@@ -1,0 +1,1786 @@
+{
+  "policy": "frozen_lexicon_proxy_v1_1",
+  "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+  "rules_sha256": "f881d301465662debf4dd44bdef45bd303d1e2f924fb3ab68db554b512697391",
+  "records": [
+    {
+      "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+      "sequence": 1,
+      "terms": [
+        "月",
+        "樹",
+        "江",
+        "波",
+        "瑟",
+        "竹",
+        "花"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "江",
+          "波"
+        ],
+        "celestial": [
+          "月"
+        ],
+        "season_weather": [],
+        "flora": [
+          "花",
+          "竹",
+          "樹"
+        ],
+        "fauna": [],
+        "travel": [],
+        "frontier": [],
+        "human_culture": [
+          "瑟"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.558,
+        "evidence": {
+          "unique_imagery_terms": 7,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 1.75,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "flora",
+            "landscape",
+            "celestial",
+            "human_culture"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+      "sequence": 2,
+      "terms": [
+        "別",
+        "寒",
+        "山",
+        "橋",
+        "浪",
+        "海",
+        "燈",
+        "石",
+        "竹",
+        "船",
+        "路",
+        "門",
+        "院",
+        "雲"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "石",
+          "海",
+          "浪",
+          "山"
+        ],
+        "celestial": [
+          "雲"
+        ],
+        "season_weather": [
+          "寒"
+        ],
+        "flora": [
+          "竹"
+        ],
+        "fauna": [],
+        "travel": [
+          "別",
+          "橋",
+          "路",
+          "船"
+        ],
+        "frontier": [],
+        "human_culture": [
+          "門",
+          "院",
+          "燈"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.558,
+        "evidence": {
+          "unique_imagery_terms": 14,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 1.75,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "landscape",
+            "travel",
+            "human_culture",
+            "celestial"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+      "sequence": 3,
+      "terms": [
+        "客",
+        "山",
+        "花",
+        "野"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "山",
+          "野"
+        ],
+        "celestial": [],
+        "season_weather": [],
+        "flora": [
+          "花"
+        ],
+        "fauna": [],
+        "travel": [
+          "客"
+        ],
+        "frontier": [],
+        "human_culture": []
+      },
+      "computed": {
+        "value": "medium",
+        "confidence": 0.733,
+        "evidence": {
+          "unique_imagery_terms": 4,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 1.0,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "landscape",
+            "flora",
+            "travel"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+      "sequence": 4,
+      "terms": [
+        "客",
+        "寒",
+        "山",
+        "庭",
+        "杯",
+        "溪",
+        "秋",
+        "酒",
+        "野",
+        "門",
+        "院",
+        "風"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "溪",
+          "野",
+          "山"
+        ],
+        "celestial": [],
+        "season_weather": [
+          "風",
+          "秋",
+          "寒"
+        ],
+        "flora": [],
+        "fauna": [],
+        "travel": [
+          "客"
+        ],
+        "frontier": [],
+        "human_culture": [
+          "庭",
+          "院",
+          "門",
+          "酒",
+          "杯"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.5,
+        "evidence": {
+          "unique_imagery_terms": 12,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 1.5,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "human_culture",
+            "landscape",
+            "season_weather",
+            "travel"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+      "sequence": 5,
+      "terms": [
+        "杯",
+        "茱",
+        "菊"
+      ],
+      "terms_by_category": {
+        "landscape": [],
+        "celestial": [],
+        "season_weather": [],
+        "flora": [
+          "茱",
+          "菊"
+        ],
+        "fauna": [],
+        "travel": [],
+        "frontier": [],
+        "human_culture": [
+          "杯"
+        ]
+      },
+      "computed": {
+        "value": "medium",
+        "confidence": 0.5,
+        "evidence": {
+          "unique_imagery_terms": 3,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 0.75,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "flora",
+            "human_culture"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+      "sequence": 6,
+      "terms": [
+        "城",
+        "客",
+        "樓",
+        "江",
+        "王",
+        "珠",
+        "虹",
+        "雲",
+        "風",
+        "魚",
+        "鳥"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "江"
+        ],
+        "celestial": [
+          "雲",
+          "虹"
+        ],
+        "season_weather": [
+          "風"
+        ],
+        "flora": [],
+        "fauna": [
+          "鳥",
+          "魚"
+        ],
+        "travel": [
+          "客"
+        ],
+        "frontier": [],
+        "human_culture": [
+          "樓",
+          "城",
+          "王",
+          "珠"
+        ]
+      },
+      "computed": {
+        "value": "medium",
+        "confidence": 0.617,
+        "evidence": {
+          "unique_imagery_terms": 11,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 1.375,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "human_culture",
+            "celestial",
+            "fauna",
+            "landscape"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+      "sequence": 7,
+      "terms": [
+        "山",
+        "庭",
+        "月",
+        "鐘"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "山"
+        ],
+        "celestial": [
+          "月"
+        ],
+        "season_weather": [],
+        "flora": [],
+        "fauna": [],
+        "travel": [],
+        "frontier": [],
+        "human_culture": [
+          "鐘",
+          "庭"
+        ]
+      },
+      "computed": {
+        "value": "medium",
+        "confidence": 0.733,
+        "evidence": {
+          "unique_imagery_terms": 4,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 1.0,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "human_culture",
+            "landscape",
+            "celestial"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+      "sequence": 8,
+      "terms": [
+        "松",
+        "歌",
+        "舞",
+        "花"
+      ],
+      "terms_by_category": {
+        "landscape": [],
+        "celestial": [],
+        "season_weather": [],
+        "flora": [
+          "花",
+          "松"
+        ],
+        "fauna": [],
+        "travel": [],
+        "frontier": [],
+        "human_culture": [
+          "歌",
+          "舞"
+        ]
+      },
+      "computed": {
+        "value": "sparse",
+        "confidence": 0.617,
+        "evidence": {
+          "unique_imagery_terms": 4,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 0.5,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "flora",
+            "human_culture"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+      "sequence": 9,
+      "terms": [
+        "木",
+        "歸",
+        "送",
+        "雲",
+        "風"
+      ],
+      "terms_by_category": {
+        "landscape": [],
+        "celestial": [
+          "雲"
+        ],
+        "season_weather": [
+          "風"
+        ],
+        "flora": [
+          "木"
+        ],
+        "fauna": [],
+        "travel": [
+          "歸",
+          "送"
+        ],
+        "frontier": [],
+        "human_culture": []
+      },
+      "computed": {
+        "value": "medium",
+        "confidence": 0.733,
+        "evidence": {
+          "unique_imagery_terms": 5,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 1.25,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "travel",
+            "celestial",
+            "season_weather",
+            "flora"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+      "sequence": 10,
+      "terms": [
+        "別",
+        "山",
+        "岸",
+        "歸",
+        "沙",
+        "津",
+        "浦",
+        "渡",
+        "湖",
+        "秋",
+        "送",
+        "雲",
+        "風"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "沙",
+          "浦",
+          "湖",
+          "岸",
+          "山"
+        ],
+        "celestial": [
+          "雲"
+        ],
+        "season_weather": [
+          "秋",
+          "風"
+        ],
+        "flora": [],
+        "fauna": [],
+        "travel": [
+          "渡",
+          "津",
+          "別",
+          "送",
+          "歸"
+        ],
+        "frontier": [],
+        "human_culture": []
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.529,
+        "evidence": {
+          "unique_imagery_terms": 13,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 1.625,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "landscape",
+            "travel",
+            "season_weather",
+            "celestial"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+      "sequence": 11,
+      "terms": [
+        "兵",
+        "山",
+        "征",
+        "戰",
+        "河",
+        "營",
+        "秋",
+        "風"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "山",
+          "河"
+        ],
+        "celestial": [],
+        "season_weather": [
+          "秋",
+          "風"
+        ],
+        "flora": [],
+        "fauna": [],
+        "travel": [
+          "征"
+        ],
+        "frontier": [
+          "征",
+          "兵",
+          "戰",
+          "營"
+        ],
+        "human_culture": []
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.617,
+        "evidence": {
+          "unique_imagery_terms": 8,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 2.0,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "frontier",
+            "landscape",
+            "season_weather",
+            "travel"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+      "sequence": 12,
+      "terms": [
+        "客",
+        "春",
+        "棠",
+        "歸",
+        "江",
+        "洲",
+        "浦",
+        "烽火",
+        "燕",
+        "菰",
+        "蒲",
+        "蘋",
+        "虜",
+        "送",
+        "野"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "浦",
+          "野",
+          "江",
+          "洲"
+        ],
+        "celestial": [],
+        "season_weather": [
+          "春"
+        ],
+        "flora": [
+          "菰",
+          "蒲",
+          "蘋",
+          "棠"
+        ],
+        "fauna": [
+          "燕"
+        ],
+        "travel": [
+          "歸",
+          "送",
+          "客"
+        ],
+        "frontier": [
+          "烽火",
+          "虜"
+        ],
+        "human_culture": []
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.588,
+        "evidence": {
+          "unique_imagery_terms": 15,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 1.875,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "landscape",
+            "flora",
+            "travel",
+            "frontier"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+      "sequence": 13,
+      "terms": [
+        "楓",
+        "花",
+        "送"
+      ],
+      "terms_by_category": {
+        "landscape": [],
+        "celestial": [],
+        "season_weather": [],
+        "flora": [
+          "楓",
+          "花"
+        ],
+        "fauna": [],
+        "travel": [
+          "送"
+        ],
+        "frontier": [],
+        "human_culture": []
+      },
+      "computed": {
+        "value": "medium",
+        "confidence": 0.5,
+        "evidence": {
+          "unique_imagery_terms": 3,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 0.75,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "flora",
+            "travel"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-e95c7ae1-b846-4b76-b889-3b8ab60bfa15",
+      "sequence": 14,
+      "terms": [
+        "仙",
+        "山",
+        "征",
+        "書",
+        "野"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "山",
+          "野"
+        ],
+        "celestial": [],
+        "season_weather": [],
+        "flora": [],
+        "fauna": [],
+        "travel": [
+          "征"
+        ],
+        "frontier": [
+          "征"
+        ],
+        "human_culture": [
+          "仙",
+          "書"
+        ]
+      },
+      "computed": {
+        "value": "sparse",
+        "confidence": 0.558,
+        "evidence": {
+          "unique_imagery_terms": 5,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 0.625,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "landscape",
+            "human_culture",
+            "travel",
+            "frontier"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+      "sequence": 15,
+      "terms": [
+        "客",
+        "雲"
+      ],
+      "terms_by_category": {
+        "landscape": [],
+        "celestial": [
+          "雲"
+        ],
+        "season_weather": [],
+        "flora": [],
+        "fauna": [],
+        "travel": [
+          "客"
+        ],
+        "frontier": [],
+        "human_culture": []
+      },
+      "computed": {
+        "value": "sparse",
+        "confidence": 0.617,
+        "evidence": {
+          "unique_imagery_terms": 2,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 0.5,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "celestial",
+            "travel"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-fce06ca0-8b8f-4ce9-b83b-425e062ecbce",
+      "sequence": 16,
+      "terms": [
+        "客",
+        "庭",
+        "春",
+        "晚靄",
+        "松",
+        "桃",
+        "芙蓉",
+        "荷",
+        "薜"
+      ],
+      "terms_by_category": {
+        "landscape": [],
+        "celestial": [],
+        "season_weather": [
+          "春",
+          "晚靄"
+        ],
+        "flora": [
+          "荷",
+          "松",
+          "芙蓉",
+          "薜",
+          "桃"
+        ],
+        "fauna": [],
+        "travel": [
+          "客"
+        ],
+        "frontier": [],
+        "human_culture": [
+          "庭"
+        ]
+      },
+      "computed": {
+        "value": "medium",
+        "confidence": 0.85,
+        "evidence": {
+          "unique_imagery_terms": 9,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 1.125,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "flora",
+            "season_weather",
+            "travel",
+            "human_culture"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+      "sequence": 17,
+      "terms": [
+        "宮",
+        "寒",
+        "春",
+        "舞",
+        "花",
+        "酒",
+        "雪",
+        "風",
+        "龍"
+      ],
+      "terms_by_category": {
+        "landscape": [],
+        "celestial": [],
+        "season_weather": [
+          "春",
+          "雪",
+          "風",
+          "寒"
+        ],
+        "flora": [
+          "花"
+        ],
+        "fauna": [
+          "龍"
+        ],
+        "travel": [],
+        "frontier": [],
+        "human_culture": [
+          "宮",
+          "舞",
+          "酒"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.675,
+        "evidence": {
+          "unique_imagery_terms": 9,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 2.25,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "season_weather",
+            "human_culture",
+            "flora",
+            "fauna"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+      "sequence": 18,
+      "terms": [
+        "原",
+        "曜",
+        "月",
+        "烟",
+        "雲"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "原"
+        ],
+        "celestial": [
+          "月",
+          "曜",
+          "雲"
+        ],
+        "season_weather": [
+          "烟"
+        ],
+        "flora": [],
+        "fauna": [],
+        "travel": [],
+        "frontier": [],
+        "human_culture": []
+      },
+      "computed": {
+        "value": "sparse",
+        "confidence": 0.558,
+        "evidence": {
+          "unique_imagery_terms": 5,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 0.625,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "celestial",
+            "landscape",
+            "season_weather"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+      "sequence": 19,
+      "terms": [
+        "別",
+        "林",
+        "萱",
+        "酒",
+        "露",
+        "鵲"
+      ],
+      "terms_by_category": {
+        "landscape": [],
+        "celestial": [],
+        "season_weather": [
+          "露"
+        ],
+        "flora": [
+          "萱",
+          "林"
+        ],
+        "fauna": [
+          "鵲"
+        ],
+        "travel": [
+          "別"
+        ],
+        "frontier": [],
+        "human_culture": [
+          "酒"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.5,
+        "evidence": {
+          "unique_imagery_terms": 6,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 1.5,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "flora",
+            "season_weather",
+            "fauna",
+            "travel"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-5dead6b4-9462-4e8c-9e70-cd1801b9eab8",
+      "sequence": 20,
+      "terms": [
+        "仙",
+        "客",
+        "山",
+        "帆",
+        "帝",
+        "木",
+        "樓",
+        "歸",
+        "江",
+        "湖",
+        "秋",
+        "臺",
+        "船",
+        "邊",
+        "門",
+        "雲",
+        "風"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "湖",
+          "江",
+          "山"
+        ],
+        "celestial": [
+          "雲"
+        ],
+        "season_weather": [
+          "秋",
+          "風"
+        ],
+        "flora": [
+          "木"
+        ],
+        "fauna": [],
+        "travel": [
+          "客",
+          "帆",
+          "歸",
+          "船"
+        ],
+        "frontier": [
+          "邊"
+        ],
+        "human_culture": [
+          "樓",
+          "仙",
+          "帝",
+          "門",
+          "臺"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.646,
+        "evidence": {
+          "unique_imagery_terms": 17,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 2.125,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "human_culture",
+            "travel",
+            "landscape",
+            "season_weather"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+      "sequence": 21,
+      "terms": [
+        "岸",
+        "春",
+        "樓",
+        "江",
+        "雪",
+        "風"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "岸",
+          "江"
+        ],
+        "celestial": [],
+        "season_weather": [
+          "雪",
+          "風",
+          "春"
+        ],
+        "flora": [],
+        "fauna": [],
+        "travel": [],
+        "frontier": [],
+        "human_culture": [
+          "樓"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.5,
+        "evidence": {
+          "unique_imagery_terms": 6,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 1.5,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "season_weather",
+            "landscape",
+            "human_culture"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+      "sequence": 22,
+      "terms": [
+        "客",
+        "戰",
+        "旌",
+        "春",
+        "書",
+        "柳",
+        "歌",
+        "營",
+        "白日",
+        "花",
+        "虜",
+        "門",
+        "雞",
+        "風",
+        "馬"
+      ],
+      "terms_by_category": {
+        "landscape": [],
+        "celestial": [
+          "白日"
+        ],
+        "season_weather": [
+          "春",
+          "風"
+        ],
+        "flora": [
+          "花",
+          "柳"
+        ],
+        "fauna": [
+          "雞",
+          "馬"
+        ],
+        "travel": [
+          "客"
+        ],
+        "frontier": [
+          "虜",
+          "戰",
+          "旌",
+          "營"
+        ],
+        "human_culture": [
+          "書",
+          "門",
+          "歌"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.588,
+        "evidence": {
+          "unique_imagery_terms": 15,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 1.875,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "frontier",
+            "human_culture",
+            "season_weather",
+            "flora"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+      "sequence": 23,
+      "terms": [
+        "別",
+        "山",
+        "林",
+        "王",
+        "草"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "山"
+        ],
+        "celestial": [],
+        "season_weather": [],
+        "flora": [
+          "林",
+          "草"
+        ],
+        "fauna": [],
+        "travel": [
+          "別"
+        ],
+        "frontier": [],
+        "human_culture": [
+          "王"
+        ]
+      },
+      "computed": {
+        "value": "medium",
+        "confidence": 0.733,
+        "evidence": {
+          "unique_imagery_terms": 5,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 1.25,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "flora",
+            "landscape",
+            "travel",
+            "human_culture"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+      "sequence": 24,
+      "terms": [
+        "城",
+        "客",
+        "山",
+        "月",
+        "枕",
+        "歸",
+        "池",
+        "海",
+        "王",
+        "花",
+        "蘿",
+        "詩",
+        "雨",
+        "鳥"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "池",
+          "海",
+          "山"
+        ],
+        "celestial": [
+          "月"
+        ],
+        "season_weather": [
+          "雨"
+        ],
+        "flora": [
+          "蘿",
+          "花"
+        ],
+        "fauna": [
+          "鳥"
+        ],
+        "travel": [
+          "客",
+          "歸"
+        ],
+        "frontier": [],
+        "human_culture": [
+          "城",
+          "枕",
+          "詩",
+          "王"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.558,
+        "evidence": {
+          "unique_imagery_terms": 14,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 1.75,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "human_culture",
+            "landscape",
+            "flora",
+            "travel"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-cf19cbe0-2ec7-4f4b-823f-c21646165b82",
+      "sequence": 25,
+      "terms": [
+        "山",
+        "庭",
+        "月",
+        "路",
+        "錦"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "山"
+        ],
+        "celestial": [
+          "月"
+        ],
+        "season_weather": [],
+        "flora": [],
+        "fauna": [],
+        "travel": [
+          "路"
+        ],
+        "frontier": [],
+        "human_culture": [
+          "錦",
+          "庭"
+        ]
+      },
+      "computed": {
+        "value": "medium",
+        "confidence": 0.733,
+        "evidence": {
+          "unique_imagery_terms": 5,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 1.25,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "human_culture",
+            "landscape",
+            "celestial",
+            "travel"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+      "sequence": 26,
+      "terms": [
+        "亭",
+        "春",
+        "煙",
+        "畫",
+        "絮",
+        "舞",
+        "閣",
+        "露",
+        "風"
+      ],
+      "terms_by_category": {
+        "landscape": [],
+        "celestial": [],
+        "season_weather": [
+          "露",
+          "煙",
+          "風",
+          "春"
+        ],
+        "flora": [
+          "絮"
+        ],
+        "fauna": [],
+        "travel": [],
+        "frontier": [],
+        "human_culture": [
+          "畫",
+          "舞",
+          "閣",
+          "亭"
+        ]
+      },
+      "computed": {
+        "value": "medium",
+        "confidence": 0.85,
+        "evidence": {
+          "unique_imagery_terms": 9,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 1.125,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "season_weather",
+            "human_culture",
+            "flora"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-08bc5154-ff91-4308-9b25-134908d248d4",
+      "sequence": 27,
+      "terms": [
+        "寺",
+        "山",
+        "月",
+        "林",
+        "歸",
+        "浪",
+        "錦",
+        "鐘",
+        "霞"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "山",
+          "浪"
+        ],
+        "celestial": [
+          "月",
+          "霞"
+        ],
+        "season_weather": [],
+        "flora": [
+          "林"
+        ],
+        "fauna": [],
+        "travel": [
+          "歸"
+        ],
+        "frontier": [],
+        "human_culture": [
+          "寺",
+          "鐘",
+          "錦"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.675,
+        "evidence": {
+          "unique_imagery_terms": 9,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 2.25,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "human_culture",
+            "landscape",
+            "celestial",
+            "flora"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-36164dcf-cc54-4fbe-8a1c-010f4076b182",
+      "sequence": 28,
+      "terms": [
+        "山",
+        "巖",
+        "松",
+        "王",
+        "琴",
+        "花",
+        "藤",
+        "蘿",
+        "野",
+        "雲",
+        "鳥",
+        "龍"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "山",
+          "野",
+          "巖"
+        ],
+        "celestial": [
+          "雲"
+        ],
+        "season_weather": [],
+        "flora": [
+          "松",
+          "蘿",
+          "藤",
+          "花"
+        ],
+        "fauna": [
+          "龍",
+          "鳥"
+        ],
+        "travel": [],
+        "frontier": [],
+        "human_culture": [
+          "琴",
+          "王"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.5,
+        "evidence": {
+          "unique_imagery_terms": 12,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 1.5,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "flora",
+            "landscape",
+            "fauna",
+            "human_culture"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+      "sequence": 29,
+      "terms": [
+        "山",
+        "鶯"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "山"
+        ],
+        "celestial": [],
+        "season_weather": [],
+        "flora": [],
+        "fauna": [
+          "鶯"
+        ],
+        "travel": [],
+        "frontier": [],
+        "human_culture": []
+      },
+      "computed": {
+        "value": "sparse",
+        "confidence": 0.617,
+        "evidence": {
+          "unique_imagery_terms": 2,
+          "line_count": 4,
+          "unique_imagery_terms_per_line": 0.5,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "landscape",
+            "fauna"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    },
+    {
+      "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+      "sequence": 30,
+      "terms": [
+        "亭",
+        "別",
+        "台",
+        "山",
+        "巖",
+        "杯",
+        "林",
+        "歸",
+        "畫",
+        "花",
+        "蕉",
+        "藤",
+        "詩",
+        "酒",
+        "鏡",
+        "鳥"
+      ],
+      "terms_by_category": {
+        "landscape": [
+          "巖",
+          "山"
+        ],
+        "celestial": [],
+        "season_weather": [],
+        "flora": [
+          "林",
+          "蕉",
+          "藤",
+          "花"
+        ],
+        "fauna": [
+          "鳥"
+        ],
+        "travel": [
+          "別",
+          "歸"
+        ],
+        "frontier": [],
+        "human_culture": [
+          "亭",
+          "畫",
+          "台",
+          "詩",
+          "酒",
+          "杯",
+          "鏡"
+        ]
+      },
+      "computed": {
+        "value": "dense",
+        "confidence": 0.617,
+        "evidence": {
+          "unique_imagery_terms": 16,
+          "line_count": 8,
+          "unique_imagery_terms_per_line": 2.0,
+          "thresholds": {
+            "sparse_to_medium": 0.75,
+            "medium_to_dense": 1.5
+          },
+          "selected_imagery_labels": [
+            "human_culture",
+            "flora",
+            "landscape",
+            "travel"
+          ],
+          "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+        },
+        "method": "lexicon_heuristic_v1_1",
+        "status": "prelabeled"
+      },
+      "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d"
+    }
+  ]
+}

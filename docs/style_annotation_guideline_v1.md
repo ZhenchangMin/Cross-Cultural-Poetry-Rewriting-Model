@@ -128,9 +128,11 @@ Primary proxy:
 - `medium`: 0.75 <= score < 1.5
 - `dense`: score >= 1.5
 
-Review rule:
-- Keep the deterministic proxy unless obvious lexicon noise or missed multi-character terms materially changes the interpretation.
-- If overridden, record the reason explicitly.
+Review rule (updated 2026-09-23, source-assisted V2):
+- Freeze the imagery lexicon and `lexicon_heuristic_v1_1` code by SHA-256. Reproduce this proxy for every reviewed poem; do not override individual density values using literary impressions.
+- Record ambiguous matches and omissions separately. A lexicon or algorithm change requires a new version and a complete recomputation before train/test use.
+- This field measures dictionary-cue concentration, not semantic imagery richness, number of imagery categories, or literary quality.
+- See [source-assisted V2 adjudication and review policy](source_adjudication_policy_v2.md) and `density_audit_v2.json` for term lists and limitations.
 
 ## 8. Confidence
 
@@ -186,3 +188,66 @@ python scripts/human_review.py promote
 ```
 
 After all decisions are completed, promotion copies only the human-reviewed `final_style` into canonical `style`, records reviewer/provenance, and re-runs the canonical Gold validator. This promoted file is the first artifact eligible for supervised training.
+
+## 11. Source-assisted V2 review inputs (2026-09-23)
+
+The active source-assisted candidate pack is `data/processed/style_annotation/review_candidates24_v2.jsonl`, paired only with `human_review_state24_v2.json`. The original 30-record state is retained for history. Do not mix these states or run the default promotion command against the wrong input. At initialization, all 24 decisions were pending. The completed state now contains 21 accepts and 3 edits; preserve that history. Suggested values alone are not human judgments.
+
+Inspect V2 explicitly:
+
+```bash
+python scripts/human_review.py status --state data/processed/style_annotation/human_review_state24_v2.json
+```
+
+After actual human decisions, use explicit V2 input, state and new output/report paths. Keep the default refusal of incomplete review. The source-adjudication policy documents three held and three proposed out-of-scope/fragment records. Near-duplicate groups are a manifest for future splitting, not an implemented leakage guarantee.
+
+
+## 12. Calibration Gold V1 freeze and next review round (2026-09-24)
+
+The original 30-record state is an initialization snapshot, not the latest review.
+`human_review_state30_reconciled_v1.json` combines the completed 24-record state with
+six unresolved records. Original state files and human-written review notes are not
+rewritten. Three assistant exclusion proposals remain **pending**, not human exclusions.
+
+The explicit partial promotion is:
+
+```bash
+python scripts/human_review.py promote --input data/processed/style_annotation/calibration_promotion_input_v1.jsonl --state data/processed/style_annotation/human_review_state30_reconciled_v1.json --allow-partial --output data/processed/style_annotation/gold_calibration_v1.jsonl --report data/processed/style_annotation/gold_calibration_report_v1.json
+```
+
+Use `prepare_gold_calibration.py` to reproduce the full export and audit. It refuses
+changed existing outputs. The 24-record artifact is calibration Gold, not a sufficiently
+large training dataset or an independent evaluation set. Do not start formal B0 training
+until the pilot review and consistency checks are complete.
+
+Clarifications supported by the completed review:
+
+- **Emotion:** do not add `serene` simply because a poem describes a quiet scene or
+  religious withdrawal. The reviews of 贈頭陀僧 and 丁元和詩 removed this secondary
+  label while retaining the dominant feeling. These are two observed edits, not a
+  general inter-reviewer disagreement rate.
+- **Diction:** allusions alone do not establish `ornate`; sustained decorative verbal
+  texture is required. 登越王樓見喬公詩偶題 was confirmed as `refined`.
+- **Expression and energy:** explicit feeling in one line does not automatically make
+  the whole poem `direct`, and military vocabulary does not automatically make it
+  `vigorous`. Examine the overall development and ending. The questioned energy of
+  秋日經潼關感寓 was confirmed as `balanced`, not changed. Record uncertainty without
+  inventing new label values.
+- **Imagery:** inspect the semantic role of each cue. 瑟瑟波 does not denote a musical
+  instrument merely because 瑟 matches; mythic/emblematic 龍 or 青鳥 need not denote
+  animals in the scene. Select at most four central systems, not the four most frequent
+  character matches. In this Gold24, 17 rule imagery sets differ from the final set.
+- **Density:** zero disagreement with the frozen proxy is expected by policy and is
+  not independent validation of literary density. The six density overrides in the old
+  assistant report are historical proposals superseded by the frozen-proxy rule.
+- **Script forms:** keep original characters in the reviewed text. Simplification may
+  change tokenization and lexicon matches; any normalization experiment needs separate
+  versioned text and lexicon treatment. Never silently convert canonical source text.
+
+For the next 100 records, perform quality review before style review. A title of 句 is
+an elevated-risk cue, not an automatic exclusion. Confirm coherent whole-poem status,
+genre and unresolved textual variants before accepting style. If the reviewer cannot
+resolve these, leave the record pending. Blank canonical styles and rule cues must
+remain separate until an explicit human decision. This risk-enriched batch is not an
+unbiased sample of the corpus; a later independent test split must consider authors
+and variant families.

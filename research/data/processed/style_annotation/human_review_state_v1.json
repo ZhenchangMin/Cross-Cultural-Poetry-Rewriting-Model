@@ -1,0 +1,624 @@
+{
+  "version": "v1",
+  "status": "human_review_in_progress",
+  "records": {
+    "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "joyful"
+        ],
+        "imagery": [
+          "flora",
+          "landscape",
+          "celestial",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "implicit",
+        "energy": "balanced",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic",
+          "lonely"
+        ],
+        "imagery": [
+          "landscape",
+          "travel",
+          "human_culture",
+          "flora"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "landscape",
+          "flora",
+          "travel"
+        ],
+        "diction": "plain",
+        "expression": "direct",
+        "energy": "balanced",
+        "density": "medium"
+      },
+      "notes": ""
+    },
+    "tang-4e7818af-b432-424d-b011-21180f6e9053": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "serene"
+        ],
+        "imagery": [
+          "flora",
+          "human_culture",
+          "season_weather",
+          "fauna"
+        ],
+        "diction": "refined",
+        "expression": "implicit",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-f7973e61-9631-48b9-853d-839a9b51da9c": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "human_culture",
+          "landscape"
+        ],
+        "diction": "refined",
+        "expression": "direct",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": ""
+    },
+    "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "serene"
+        ],
+        "imagery": [
+          "human_culture",
+          "celestial",
+          "landscape"
+        ],
+        "diction": "ornate",
+        "expression": "balanced",
+        "energy": "balanced",
+        "density": "medium"
+      },
+      "notes": ""
+    },
+    "tang-740c1743-61f4-4694-908b-6737af54523d": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "serene"
+        ],
+        "imagery": [
+          "human_culture",
+          "landscape",
+          "celestial"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": ""
+    },
+    "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "joyful"
+        ],
+        "imagery": [
+          "season_weather",
+          "flora",
+          "human_culture"
+        ],
+        "diction": "ornate",
+        "expression": "balanced",
+        "energy": "vigorous",
+        "density": "medium"
+      },
+      "notes": ""
+    },
+    "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "landscape",
+          "travel",
+          "celestial"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic",
+          "lonely"
+        ],
+        "imagery": [
+          "landscape",
+          "travel",
+          "season_weather",
+          "fauna"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic",
+          "heroic"
+        ],
+        "imagery": [
+          "frontier",
+          "landscape",
+          "season_weather",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "vigorous",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic",
+          "indignant"
+        ],
+        "imagery": [
+          "landscape",
+          "flora",
+          "travel",
+          "frontier"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "balanced",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "human_culture"
+        ],
+        "diction": "plain",
+        "expression": "direct",
+        "energy": "gentle",
+        "density": "sparse"
+      },
+      "notes": ""
+    },
+    "tang-e95c7ae1-b846-4b76-b889-3b8ab60bfa15": {
+      "decision": "pending",
+      "suggested_decision": "exclude",
+      "reviewer": "",
+      "final_style": null,
+      "notes": ""
+    },
+    "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "heroic",
+          "serene"
+        ],
+        "imagery": [
+          "human_culture",
+          "landscape",
+          "travel",
+          "celestial"
+        ],
+        "diction": "refined",
+        "expression": "direct",
+        "energy": "vigorous",
+        "density": "medium"
+      },
+      "notes": ""
+    },
+    "tang-fce06ca0-8b8f-4ce9-b83b-425e062ecbce": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "serene",
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "landscape",
+          "travel",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": ""
+    },
+    "tang-a39ebbbd-8626-4de4-a582-23146a31e189": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "joyful"
+        ],
+        "imagery": [
+          "season_weather",
+          "human_culture",
+          "celestial",
+          "flora"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "balanced",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-88020cd6-c877-4632-a3d0-174216653e83": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "serene",
+          "heroic"
+        ],
+        "imagery": [
+          "landscape",
+          "celestial",
+          "season_weather"
+        ],
+        "diction": "ornate",
+        "expression": "balanced",
+        "energy": "vigorous",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-e5980c45-6386-4d47-a777-3855fe8c70a7": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "season_weather",
+          "flora",
+          "fauna",
+          "landscape"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-5dead6b4-9462-4e8c-9e70-cd1801b9eab8": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic",
+          "lonely"
+        ],
+        "imagery": [
+          "landscape",
+          "season_weather",
+          "travel",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "season_weather",
+          "landscape",
+          "flora",
+          "human_culture"
+        ],
+        "diction": "ornate",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-7887d2d9-3655-45b1-a556-349d95304058": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "heroic",
+          "joyful"
+        ],
+        "imagery": [
+          "frontier",
+          "human_culture",
+          "season_weather",
+          "fauna"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "vigorous",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "landscape",
+          "travel",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "direct",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": ""
+    },
+    "tang-0a84422b-f228-4263-8d6f-281b1606d605": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "joyful",
+          "serene"
+        ],
+        "imagery": [
+          "landscape",
+          "flora",
+          "season_weather",
+          "fauna"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-cf19cbe0-2ec7-4f4b-823f-c21646165b82": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic",
+          "lonely"
+        ],
+        "imagery": [
+          "human_culture",
+          "celestial",
+          "landscape",
+          "travel"
+        ],
+        "diction": "refined",
+        "expression": "implicit",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": ""
+    },
+    "tang-95477829-6273-4f85-a0b8-d5bf3c07e507": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "season_weather",
+          "human_culture",
+          "celestial"
+        ],
+        "diction": "ornate",
+        "expression": "implicit",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-08bc5154-ff91-4308-9b25-134908d248d4": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "serene"
+        ],
+        "imagery": [
+          "human_culture",
+          "landscape",
+          "celestial",
+          "travel"
+        ],
+        "diction": "refined",
+        "expression": "implicit",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-36164dcf-cc54-4fbe-8a1c-010f4076b182": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "joyful"
+        ],
+        "imagery": [
+          "landscape",
+          "flora",
+          "fauna",
+          "celestial"
+        ],
+        "diction": "ornate",
+        "expression": "balanced",
+        "energy": "balanced",
+        "density": "dense"
+      },
+      "notes": ""
+    },
+    "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "landscape",
+          "fauna"
+        ],
+        "diction": "plain",
+        "expression": "implicit",
+        "energy": "gentle",
+        "density": "sparse"
+      },
+      "notes": ""
+    },
+    "tang-805df95b-c30d-4773-ac47-68f6574f6d81": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": {
+        "emotion": [
+          "serene",
+          "joyful"
+        ],
+        "imagery": [
+          "human_culture",
+          "flora",
+          "landscape",
+          "fauna"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": "gold_calibration24_v1",
+  "frozen_on": "2026-09-24",
+  "records": 24,
+  "gold_sha256": "440ff4eaa61b534b14b53b15ee6659e63f7ab4dda9605c5bdfa99514034e1cd2",
+  "review_state_sha256": "757adb47997b99960e355ceec78950eb76573709379dff82752c5386520c9b34",
+  "input_sha256": "85885502a92cba7a584ac9e856e1e5efbada4a2bc63b90fa4429a11a47cf38f3",
+  "schema_sha256": "534709a70b833833e065a72fe77fce994649beeb412263cbfbe4f2c1fbcb48f3",
+  "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+  "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "text_policy": "source_preserved_v1",
+  "allowed_use": "tiny pipeline/learning feasibility; not independent quality benchmark",
+  "split_status": "no train/validation/test split yet",
+  "annotation": "single-user source-assisted; not independent expert Gold",
+  "prosody": "automatic_structure_only; strict rhyme/tone certification outstanding"
+}

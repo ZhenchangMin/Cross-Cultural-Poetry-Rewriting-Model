@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "input_records": 24,
+  "gold_records": 24,
+  "accepted": 21,
+  "edited": 3,
+  "excluded": 0,
+  "pending": 0,
+  "gold_complete": true
+}

@@ -1,0 +1,912 @@
+{
+  "version": "v1",
+  "status": "human_review_in_progress",
+  "records": {
+    "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "serene",
+          "joyful"
+        ],
+        "imagery": [
+          "flora",
+          "landscape",
+          "celestial",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "implicit",
+        "energy": "balanced",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 1,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38": {
+      "decision": "edit",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "landscape",
+          "travel",
+          "human_culture",
+          "flora"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。候选表内修改已逐项导入。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 2,
+        "raw_decision": "已修改",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {
+          "emotion": {
+            "before": [
+              "serene",
+              "melancholic"
+            ],
+            "after": [
+              "melancholic"
+            ]
+          }
+        }
+      }
+    },
+    "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "landscape",
+          "flora",
+          "travel"
+        ],
+        "diction": "plain",
+        "expression": "direct",
+        "energy": "balanced",
+        "density": "medium"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 3,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-4e7818af-b432-424d-b011-21180f6e9053": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "serene"
+        ],
+        "imagery": [
+          "flora",
+          "human_culture",
+          "season_weather",
+          "fauna"
+        ],
+        "diction": "refined",
+        "expression": "implicit",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 4,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-f7973e61-9631-48b9-853d-839a9b51da9c": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "human_culture",
+          "landscape"
+        ],
+        "diction": "refined",
+        "expression": "direct",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 5,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def": {
+      "decision": "edit",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "serene"
+        ],
+        "imagery": [
+          "human_culture",
+          "celestial",
+          "landscape"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "balanced",
+        "density": "medium"
+      },
+      "notes": "绮丽暂缓；用户在看到第6首改典雅、第11首保留平稳的复核建议后明确回复“好的，我接受，然后进行下一步”，本次将对应整组完成确认。",
+      "pending_dimensions": [],
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 6,
+        "raw_decision": "绮丽暂缓",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      },
+      "reviewed_on": "2026-09-24",
+      "resolution": {
+        "previous_style": {
+          "emotion": [
+            "serene"
+          ],
+          "imagery": [
+            "human_culture",
+            "celestial",
+            "landscape"
+          ],
+          "diction": "ornate",
+          "expression": "balanced",
+          "energy": "balanced",
+          "density": "medium"
+        },
+        "source": "explicit_user_confirmation_of_two_proposals",
+        "date": "2026-09-24"
+      }
+    },
+    "tang-740c1743-61f4-4694-908b-6737af54523d": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "serene"
+        ],
+        "imagery": [
+          "human_culture",
+          "landscape",
+          "celestial"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": "用户在看到本诗原文及六维候选后回复：“我觉得你判断的对。接着做”。本次确认仅适用于《春夜宿云际寺》。密度为固定词典代理；来源辅助、非盲审、非专家独立标注。",
+      "reviewed_on": "2026-09-24",
+      "confirmation_source": "explicit_user_message_in_current_conversation"
+    },
+    "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "joyful"
+        ],
+        "imagery": [
+          "season_weather",
+          "flora",
+          "human_culture"
+        ],
+        "diction": "ornate",
+        "expression": "balanced",
+        "energy": "vigorous",
+        "density": "sparse"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 8,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "landscape",
+          "travel",
+          "celestial"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 9,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "landscape",
+          "travel",
+          "season_weather",
+          "fauna"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 10,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "frontier",
+          "landscape",
+          "season_weather",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "balanced",
+        "density": "dense"
+      },
+      "notes": "气势暂缓；用户在看到第6首改典雅、第11首保留平稳的复核建议后明确回复“好的，我接受，然后进行下一步”，本次将对应整组完成确认。",
+      "pending_dimensions": [],
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 11,
+        "raw_decision": "气势暂缓",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      },
+      "reviewed_on": "2026-09-24",
+      "resolution": {
+        "previous_style": {
+          "emotion": [
+            "melancholic"
+          ],
+          "imagery": [
+            "frontier",
+            "landscape",
+            "season_weather",
+            "human_culture"
+          ],
+          "diction": "refined",
+          "expression": "balanced",
+          "energy": "balanced",
+          "density": "dense"
+        },
+        "source": "explicit_user_confirmation_of_two_proposals",
+        "date": "2026-09-24"
+      }
+    },
+    "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "landscape",
+          "flora",
+          "travel",
+          "frontier"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "balanced",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 12,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "human_culture"
+        ],
+        "diction": "plain",
+        "expression": "direct",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 13,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-e95c7ae1-b846-4b76-b889-3b8ab60bfa15": {
+      "decision": "pending",
+      "suggested_decision": "exclude",
+      "reviewer": "",
+      "final_style": null,
+      "notes": "",
+      "unconfirmed_style_suggestion": null
+    },
+    "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419": {
+      "decision": "edit",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "heroic"
+        ],
+        "imagery": [
+          "human_culture",
+          "landscape",
+          "travel",
+          "celestial"
+        ],
+        "diction": "refined",
+        "expression": "direct",
+        "energy": "vigorous",
+        "density": "sparse"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。候选表内修改已逐项导入。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 15,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {
+          "emotion": {
+            "before": [
+              "heroic",
+              "serene"
+            ],
+            "after": [
+              "heroic"
+            ]
+          }
+        }
+      }
+    },
+    "tang-fce06ca0-8b8f-4ce9-b83b-425e062ecbce": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": null,
+      "notes": "",
+      "unconfirmed_style_suggestion": {
+        "emotion": [
+          "serene",
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "landscape",
+          "travel",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "medium"
+      }
+    },
+    "tang-a39ebbbd-8626-4de4-a582-23146a31e189": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "joyful"
+        ],
+        "imagery": [
+          "season_weather",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "balanced",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 17,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-88020cd6-c877-4632-a3d0-174216653e83": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "serene",
+          "heroic"
+        ],
+        "imagery": [
+          "landscape",
+          "celestial",
+          "season_weather"
+        ],
+        "diction": "ornate",
+        "expression": "balanced",
+        "energy": "vigorous",
+        "density": "sparse"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 18,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-e5980c45-6386-4d47-a777-3855fe8c70a7": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "season_weather",
+          "flora",
+          "fauna",
+          "landscape"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 19,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-5dead6b4-9462-4e8c-9e70-cd1801b9eab8": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": null,
+      "notes": "",
+      "unconfirmed_style_suggestion": {
+        "emotion": [
+          "melancholic",
+          "lonely"
+        ],
+        "imagery": [
+          "landscape",
+          "season_weather",
+          "travel",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      }
+    },
+    "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "season_weather",
+          "landscape",
+          "flora",
+          "human_culture"
+        ],
+        "diction": "ornate",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 21,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-7887d2d9-3655-45b1-a556-349d95304058": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "heroic",
+          "joyful"
+        ],
+        "imagery": [
+          "frontier",
+          "human_culture",
+          "season_weather",
+          "fauna"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "vigorous",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 22,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "landscape",
+          "travel",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "direct",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 23,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-0a84422b-f228-4263-8d6f-281b1606d605": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "joyful",
+          "serene"
+        ],
+        "imagery": [
+          "landscape",
+          "flora",
+          "season_weather",
+          "fauna"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 24,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-cf19cbe0-2ec7-4f4b-823f-c21646165b82": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": null,
+      "notes": "",
+      "unconfirmed_style_suggestion": {
+        "emotion": [
+          "melancholic",
+          "lonely"
+        ],
+        "imagery": [
+          "human_culture",
+          "celestial",
+          "landscape",
+          "travel"
+        ],
+        "diction": "refined",
+        "expression": "implicit",
+        "energy": "gentle",
+        "density": "medium"
+      }
+    },
+    "tang-95477829-6273-4f85-a0b8-d5bf3c07e507": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "season_weather",
+          "human_culture",
+          "celestial"
+        ],
+        "diction": "ornate",
+        "expression": "implicit",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 26,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-08bc5154-ff91-4308-9b25-134908d248d4": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": null,
+      "notes": "",
+      "unconfirmed_style_suggestion": {
+        "emotion": [
+          "serene"
+        ],
+        "imagery": [
+          "human_culture",
+          "landscape",
+          "celestial",
+          "travel"
+        ],
+        "diction": "refined",
+        "expression": "implicit",
+        "energy": "gentle",
+        "density": "dense"
+      }
+    },
+    "tang-36164dcf-cc54-4fbe-8a1c-010f4076b182": {
+      "decision": "pending",
+      "suggested_decision": "accept",
+      "reviewer": "",
+      "final_style": null,
+      "notes": "",
+      "unconfirmed_style_suggestion": {
+        "emotion": [
+          "joyful"
+        ],
+        "imagery": [
+          "landscape",
+          "flora",
+          "fauna",
+          "celestial"
+        ],
+        "diction": "ornate",
+        "expression": "balanced",
+        "energy": "balanced",
+        "density": "dense"
+      }
+    },
+    "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "landscape",
+          "fauna"
+        ],
+        "diction": "plain",
+        "expression": "implicit",
+        "energy": "gentle",
+        "density": "sparse"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 29,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    },
+    "tang-805df95b-c30d-4773-ac47-68f6574f6d81": {
+      "decision": "accept",
+      "suggested_decision": "accept",
+      "reviewer": "本对话用户",
+      "final_style": {
+        "emotion": [
+          "serene",
+          "joyful"
+        ],
+        "imagery": [
+          "human_culture",
+          "flora",
+          "landscape",
+          "fauna"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+      "document_review": {
+        "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+        "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+        "sequence": 30,
+        "raw_decision": "接受",
+        "recorded_on": "2026-09-24",
+        "method": "user_edited_review_document",
+        "changes": {}
+      }
+    }
+  },
+  "provenance": {
+    "method": "merge_by_id_without_modifying_source_reviews",
+    "input_sha256": {
+      "assistant_calibrated_v1_1.jsonl": "7f74f3fcca8cd4d84122f4583edcbdbaaaaed04f4151b903aeb17cee7abd1caf",
+      "calibration_sample_v1.jsonl": "1b1b555f36845326c650918ff4006cc88a50fb3e904069b1993081b195965269",
+      "review_candidates24_v2.jsonl": "85885502a92cba7a584ac9e856e1e5efbada4a2bc63b90fa4429a11a47cf38f3",
+      "human_review_state_v1.json": "24d68eef5bc52da10282f62b88adcd6cf65ad2227424a12bb11fa85af52e759e",
+      "human_review_state24_v2.json": "757adb47997b99960e355ceec78950eb76573709379dff82752c5386520c9b34",
+      "source_reference_all30_v2.jsonl": "9c3db75a57a7f56865d2da72748a20e1fa5b08ea767a03c7fa6622db11b6cb02",
+      "calibration_rule_v1_1.jsonl": "fe840f00e7cde05c57d558663d796b0a3887f63682db8d23bc14cbbc9cb9c83c",
+      "preannotated_v1_1.jsonl": "952d443e7ecd1b69d9e9a8eb48af8500a9b5c1a6044cd9d5fe3399b932db6dd9",
+      "quality_flags_v1.jsonl": "b5281a3bd97bd1fa9aa62213fdf442adc1aae69af130a310a035a4e31cbdeb27",
+      "configs\\style_schema.json": "534709a70b833833e065a72fe77fce994649beeb412263cbfbe4f2c1fbcb48f3",
+      "configs\\imagery_lexicon_v1.json": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+      "src\\data\\preannotate_style.py": "f881d301465662debf4dd44bdef45bd303d1e2f924fb3ab68db554b512697391",
+      "src\\data\\calibration_gold.py": "9f50eff3e778e8abf01523f6ed9f31aa4f1545b605ce2e600bf19ebfb87227b2"
+    }
+  }
+}

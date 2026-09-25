@@ -1,0 +1,20 @@
+RUN calibration n= 16 few_shot_ids= ['tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b', 'tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def', 'tang-88020cd6-c877-4632-a3d0-174216653e83', 'tang-f240f42f-4bf0-4463-8026-4bb19f4db3af']
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+calibration 1/16 first=True final=True repaired=False
+calibration 2/16 first=False final=False repaired=True
+calibration 3/16 first=False final=False repaired=True
+calibration 4/16 first=False final=False repaired=True
+calibration 5/16 first=False final=False repaired=True
+calibration 6/16 first=False final=False repaired=True
+calibration 7/16 first=True final=True repaired=False
+calibration 8/16 first=False final=False repaired=True
+calibration 9/16 first=False final=False repaired=True
+calibration 10/16 first=False final=False repaired=True
+calibration 11/16 first=False final=False repaired=True
+calibration 12/16 first=False final=False repaired=True
+calibration 13/16 first=False final=False repaired=True
+calibration 14/16 first=False final=False repaired=True
+calibration 15/16 first=False final=False repaired=True
+calibration 16/16 first=False final=False repaired=True
+{"phase": "calibration", "first_protocol": {"json_parse_success_rate": 1.0, "schema_success_rate": 0.125, "type_success_rate": 1.0, "evidence_verbatim_success_rate": 0.625, "full_protocol_success_rate": 0.125}, "final_protocol": {"json_parse_success_rate": 1.0, "schema_success_rate": 0.1875, "type_success_rate": 0.9375, "evidence_verbatim_success_rate": 0.5, "full_protocol_success_rate": 0.125}, "semantic": {"emotion": {"label_coverage": 1.0, "valid_labels": 16, "n": 16, "exact_match_accuracy_all": 0.5625, "accuracy_on_legal_predictions": 0.5625, "confusion": {"missed:joyful": 2, "missed:serene": 1, "extra:melancholic": 1, "missed:melancholic": 1, "extra:serene": 2, "missed:heroic": 3, "extra:joyful": 1}, "precision": 0.75, "recall": 0.631578947368421, "f1": 0.6857142857142857, "averaging": "micro"}, "diction": {"label_coverage": 1.0, "valid_labels": 16, "n": 16, "exact_match_accuracy_all": 0.5, "accuracy_on_legal_predictions": 0.5, "confusion": {"refined->plain": 7, "ornate->refined": 1}, "accuracy": 0.5}, "expression": {"label_coverage": 0.375, "valid_labels": 6, "n": 16, "exact_match_accuracy_all": 0.1875, "accuracy_on_legal_predictions": 0.5, "confusion": {"implicit->balanced": 1, "balanced->None": 5, "implicit->None": 2, "direct->balanced": 2, "direct->None": 3}, "accuracy": 0.1875}, "energy": {"label_coverage": 0.6875, "valid_labels": 11, "n": 16, "exact_match_accuracy_all": 0.125, "accuracy_on_legal_predictions": 0.18181818181818182, "confusion": {"balanced->gentle": 2, "gentle->balanced": 1, "balanced->vigorous": 2, "gentle->None": 2, "gentle->vigorous": 3, "vigorous->gentle": 1, "balanced->None": 2, "vigorous->None": 1}, "accuracy": 0.125}}, "normalizations": {"emotion": 0, "diction": 0, "expression": 0, "energy": 0}, "silver_gate": null}

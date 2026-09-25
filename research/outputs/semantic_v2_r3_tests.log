@@ -1,0 +1,9 @@
+........................................................................ [ 64%]
+.......................................                                  [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/jieba/_compat.py:18
+  /mnt/e/study/Cross-Cultural-Poetry-Rewriting-Model/research/.venv/lib/python3.12/site-packages/jieba/_compat.py:18: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    import pkg_resources
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+111 passed, 1 warning in 131.86s (0:02:11)

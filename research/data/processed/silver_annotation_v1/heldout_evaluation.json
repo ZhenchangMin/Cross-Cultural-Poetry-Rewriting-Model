@@ -1,0 +1,648 @@
+{
+  "dimensions": {
+    "emotion": {
+      "n": 8,
+      "missing_predictions": 8,
+      "exact_match_accuracy": 0.0,
+      "mean_confidence": null,
+      "confusion": {
+        "missed:melancholic": 5,
+        "missed:joyful": 3,
+        "missed:serene": 2
+      },
+      "confidence_bins": [
+        {
+          "lower": 0,
+          "upper": 0.6,
+          "count": 0,
+          "exact_matches": 0
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "count": 0,
+          "exact_matches": 0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.000001,
+          "count": 0,
+          "exact_matches": 0
+        }
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "averaging": "micro",
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 10
+      },
+      "per_label": {
+        "serene": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "joyful": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "melancholic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "lonely": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "heroic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "indignant": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "imagery": {
+      "n": 8,
+      "missing_predictions": 0,
+      "exact_match_accuracy": 0.125,
+      "mean_confidence": 0.8675,
+      "confusion": {
+        "extra:travel": 3,
+        "missed:season_weather": 2,
+        "missed:fauna": 2,
+        "missed:landscape": 2,
+        "missed:flora": 2,
+        "extra:human_culture": 1,
+        "extra:season_weather": 1,
+        "extra:celestial": 1
+      },
+      "confidence_bins": [
+        {
+          "lower": 0,
+          "upper": 0.6,
+          "count": 0,
+          "exact_matches": 0
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "count": 2,
+          "exact_matches": 1
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.000001,
+          "count": 6,
+          "exact_matches": 0
+        }
+      ],
+      "precision": 0.7777777777777778,
+      "recall": 0.7241379310344828,
+      "f1": 0.75,
+      "averaging": "micro",
+      "counts": {
+        "tp": 21,
+        "fp": 6,
+        "fn": 8
+      },
+      "per_label": {
+        "landscape": {
+          "precision": 1.0,
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333334
+        },
+        "celestial": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        },
+        "season_weather": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285714
+        },
+        "flora": {
+          "precision": 1.0,
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333334
+        },
+        "fauna": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "travel": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1": 0.5714285714285714
+        },
+        "frontier": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "human_culture": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8888888888888888
+        }
+      }
+    },
+    "diction": {
+      "n": 8,
+      "missing_predictions": 8,
+      "exact_match_accuracy": 0.0,
+      "mean_confidence": null,
+      "confusion": {
+        "refined->None": 5,
+        "ornate->None": 2,
+        "plain->None": 1
+      },
+      "confidence_bins": [
+        {
+          "lower": 0,
+          "upper": 0.6,
+          "count": 0,
+          "exact_matches": 0
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "count": 0,
+          "exact_matches": 0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.000001,
+          "count": 0,
+          "exact_matches": 0
+        }
+      ],
+      "accuracy": 0.0
+    },
+    "expression": {
+      "n": 8,
+      "missing_predictions": 8,
+      "exact_match_accuracy": 0.0,
+      "mean_confidence": null,
+      "confusion": {
+        "balanced->None": 7,
+        "implicit->None": 1
+      },
+      "confidence_bins": [
+        {
+          "lower": 0,
+          "upper": 0.6,
+          "count": 0,
+          "exact_matches": 0
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "count": 0,
+          "exact_matches": 0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.000001,
+          "count": 0,
+          "exact_matches": 0
+        }
+      ],
+      "accuracy": 0.0
+    },
+    "energy": {
+      "n": 8,
+      "missing_predictions": 8,
+      "exact_match_accuracy": 0.0,
+      "mean_confidence": null,
+      "confusion": {
+        "gentle->None": 7,
+        "vigorous->None": 1
+      },
+      "confidence_bins": [
+        {
+          "lower": 0,
+          "upper": 0.6,
+          "count": 0,
+          "exact_matches": 0
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "count": 0,
+          "exact_matches": 0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.000001,
+          "count": 0,
+          "exact_matches": 0
+        }
+      ],
+      "accuracy": 0.0
+    },
+    "density": {
+      "n": 8,
+      "missing_predictions": 0,
+      "exact_match_accuracy": 1.0,
+      "mean_confidence": 0.5875,
+      "confusion": {},
+      "confidence_bins": [
+        {
+          "lower": 0,
+          "upper": 0.6,
+          "count": 4,
+          "exact_matches": 4
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "count": 4,
+          "exact_matches": 4
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.000001,
+          "count": 0,
+          "exact_matches": 0
+        }
+      ],
+      "accuracy": 1.0
+    }
+  },
+  "errors": [
+    {
+      "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+      "dimension": "emotion",
+      "gold": [
+        "joyful",
+        "serene"
+      ],
+      "predicted": [],
+      "confidence": null
+    },
+    {
+      "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+      "dimension": "emotion",
+      "gold": [
+        "melancholic"
+      ],
+      "predicted": [],
+      "confidence": null
+    },
+    {
+      "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+      "dimension": "emotion",
+      "gold": [
+        "melancholic"
+      ],
+      "predicted": [],
+      "confidence": null
+    },
+    {
+      "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+      "dimension": "emotion",
+      "gold": [
+        "serene",
+        "joyful"
+      ],
+      "predicted": [],
+      "confidence": null
+    },
+    {
+      "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+      "dimension": "emotion",
+      "gold": [
+        "joyful"
+      ],
+      "predicted": [],
+      "confidence": null
+    },
+    {
+      "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+      "dimension": "emotion",
+      "gold": [
+        "melancholic"
+      ],
+      "predicted": [],
+      "confidence": null
+    },
+    {
+      "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+      "dimension": "emotion",
+      "gold": [
+        "melancholic"
+      ],
+      "predicted": [],
+      "confidence": null
+    },
+    {
+      "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+      "dimension": "emotion",
+      "gold": [
+        "melancholic"
+      ],
+      "predicted": [],
+      "confidence": null
+    },
+    {
+      "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+      "dimension": "imagery",
+      "gold": [
+        "landscape",
+        "flora",
+        "season_weather",
+        "fauna"
+      ],
+      "predicted": [
+        "human_culture",
+        "landscape",
+        "flora",
+        "travel"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+      "dimension": "imagery",
+      "gold": [
+        "flora",
+        "landscape",
+        "travel",
+        "celestial"
+      ],
+      "predicted": [
+        "travel",
+        "celestial",
+        "season_weather",
+        "flora"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+      "dimension": "imagery",
+      "gold": [
+        "season_weather",
+        "landscape",
+        "flora",
+        "human_culture"
+      ],
+      "predicted": [
+        "season_weather",
+        "landscape",
+        "human_culture"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+      "dimension": "imagery",
+      "gold": [
+        "human_culture",
+        "flora",
+        "landscape",
+        "fauna"
+      ],
+      "predicted": [
+        "human_culture",
+        "flora",
+        "landscape",
+        "travel"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+      "dimension": "imagery",
+      "gold": [
+        "season_weather",
+        "flora",
+        "human_culture"
+      ],
+      "predicted": [
+        "flora",
+        "human_culture"
+      ],
+      "confidence": 0.78
+    },
+    {
+      "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+      "dimension": "imagery",
+      "gold": [
+        "season_weather",
+        "flora",
+        "fauna",
+        "landscape"
+      ],
+      "predicted": [
+        "flora",
+        "season_weather",
+        "fauna",
+        "travel"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+      "dimension": "imagery",
+      "gold": [
+        "landscape",
+        "travel",
+        "human_culture",
+        "flora"
+      ],
+      "predicted": [
+        "landscape",
+        "travel",
+        "human_culture",
+        "celestial"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+      "dimension": "diction",
+      "gold": "refined",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+      "dimension": "diction",
+      "gold": "refined",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+      "dimension": "diction",
+      "gold": "ornate",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+      "dimension": "diction",
+      "gold": "refined",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+      "dimension": "diction",
+      "gold": "ornate",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+      "dimension": "diction",
+      "gold": "plain",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+      "dimension": "diction",
+      "gold": "refined",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+      "dimension": "diction",
+      "gold": "refined",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+      "dimension": "expression",
+      "gold": "balanced",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+      "dimension": "expression",
+      "gold": "balanced",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+      "dimension": "expression",
+      "gold": "balanced",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+      "dimension": "expression",
+      "gold": "balanced",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+      "dimension": "expression",
+      "gold": "balanced",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+      "dimension": "expression",
+      "gold": "implicit",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+      "dimension": "expression",
+      "gold": "balanced",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+      "dimension": "expression",
+      "gold": "balanced",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+      "dimension": "energy",
+      "gold": "gentle",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+      "dimension": "energy",
+      "gold": "gentle",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+      "dimension": "energy",
+      "gold": "gentle",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+      "dimension": "energy",
+      "gold": "gentle",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+      "dimension": "energy",
+      "gold": "vigorous",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+      "dimension": "energy",
+      "gold": "gentle",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+      "dimension": "energy",
+      "gold": "gentle",
+      "predicted": null,
+      "confidence": null
+    },
+    {
+      "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+      "dimension": "energy",
+      "gold": "gentle",
+      "predicted": null,
+      "confidence": null
+    }
+  ],
+  "annotation_failures": 8,
+  "confidence_note": "LLM self-report and rule heuristics are not calibrated probabilities",
+  "contract_sha256": "089c397b8cdb772de5c24f3d55deb2aa5061f9082c6b13fab5bff641dfd98566",
+  "historical_exposure": "All 24 Gold previously informed guideline/calibration work; prospective label holdout only, NOT historically untouched validation."
+}

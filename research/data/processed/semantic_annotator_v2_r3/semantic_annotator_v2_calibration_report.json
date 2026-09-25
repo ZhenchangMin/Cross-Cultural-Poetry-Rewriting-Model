@@ -1,0 +1,1170 @@
+{
+  "scope": "development diagnosis; not a final test estimate",
+  "first_pass": {
+    "n": 16,
+    "semantic": {
+      "emotion": {
+        "label_coverage": 1.0,
+        "valid_labels": 16,
+        "n": 16,
+        "exact_match_accuracy_all": 0.5625,
+        "accuracy_on_legal_predictions": 0.5625,
+        "confusion": {
+          "missed:joyful": 2,
+          "missed:serene": 1,
+          "extra:melancholic": 1,
+          "missed:melancholic": 1,
+          "extra:serene": 2,
+          "missed:heroic": 3,
+          "extra:joyful": 1
+        },
+        "precision": 0.75,
+        "recall": 0.631578947368421,
+        "f1": 0.6857142857142857,
+        "averaging": "micro"
+      },
+      "diction": {
+        "label_coverage": 1.0,
+        "valid_labels": 16,
+        "n": 16,
+        "exact_match_accuracy_all": 0.5,
+        "accuracy_on_legal_predictions": 0.5,
+        "confusion": {
+          "refined->plain": 7,
+          "ornate->refined": 1
+        },
+        "accuracy": 0.5
+      },
+      "expression": {
+        "label_coverage": 0.375,
+        "valid_labels": 6,
+        "n": 16,
+        "exact_match_accuracy_all": 0.1875,
+        "accuracy_on_legal_predictions": 0.5,
+        "confusion": {
+          "implicit->balanced": 1,
+          "balanced->None": 5,
+          "implicit->None": 2,
+          "direct->balanced": 2,
+          "direct->None": 3
+        },
+        "accuracy": 0.1875
+      },
+      "energy": {
+        "label_coverage": 0.5,
+        "valid_labels": 8,
+        "n": 16,
+        "exact_match_accuracy_all": 0.0625,
+        "accuracy_on_legal_predictions": 0.125,
+        "confusion": {
+          "balanced->gentle": 1,
+          "balanced->None": 3,
+          "gentle->balanced": 1,
+          "balanced->vigorous": 2,
+          "gentle->None": 3,
+          "gentle->vigorous": 3,
+          "vigorous->None": 2
+        },
+        "accuracy": 0.0625
+      }
+    },
+    "protocol": {
+      "json_parse_success_rate": 1.0,
+      "schema_success_rate": 0.125,
+      "type_success_rate": 1.0,
+      "evidence_verbatim_success_rate": 0.625,
+      "full_protocol_success_rate": 0.125
+    },
+    "per_dimension_protocol": {
+      "emotion": {
+        "label_valid_rate": 1.0,
+        "type_valid_rate": 1.0,
+        "confidence_valid_rate": 1.0,
+        "evidence_valid_rate": 0.875,
+        "full_protocol_valid_rate": 0.875
+      },
+      "diction": {
+        "label_valid_rate": 1.0,
+        "type_valid_rate": 1.0,
+        "confidence_valid_rate": 1.0,
+        "evidence_valid_rate": 0.75,
+        "full_protocol_valid_rate": 0.75
+      },
+      "expression": {
+        "label_valid_rate": 0.375,
+        "type_valid_rate": 1.0,
+        "confidence_valid_rate": 1.0,
+        "evidence_valid_rate": 0.875,
+        "full_protocol_valid_rate": 0.3125
+      },
+      "energy": {
+        "label_valid_rate": 0.5,
+        "type_valid_rate": 1.0,
+        "confidence_valid_rate": 1.0,
+        "evidence_valid_rate": 0.9375,
+        "full_protocol_valid_rate": 0.5
+      }
+    },
+    "semantic_failures": [
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "dimension": "emotion",
+        "gold": [
+          "serene",
+          "joyful"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "dimension": "emotion",
+        "gold": [
+          "serene"
+        ],
+        "prediction": [
+          "melancholic"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+        "dimension": "emotion",
+        "gold": [
+          "heroic",
+          "joyful"
+        ],
+        "prediction": [
+          "joyful"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "dimension": "emotion",
+        "gold": [
+          "serene",
+          "heroic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "dimension": "emotion",
+        "gold": [
+          "joyful"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "dimension": "emotion",
+        "gold": [
+          "heroic"
+        ],
+        "prediction": [
+          "joyful"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "dimension": "diction",
+        "gold": "ornate",
+        "prediction": "refined",
+        "label_valid": true
+      },
+      {
+        "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "dimension": "expression",
+        "gold": "implicit",
+        "prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "dimension": "expression",
+        "gold": "implicit",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "dimension": "expression",
+        "gold": "implicit",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": "gentle",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "dimension": "energy",
+        "gold": "vigorous",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "dimension": "energy",
+        "gold": "vigorous",
+        "prediction": null,
+        "label_valid": false
+      }
+    ],
+    "protocol_failures": [
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "errors": [
+          "expression.label_valid=false",
+          "energy.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "errors": [
+          "diction.evidence_valid=false",
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "errors": [
+          "diction.evidence_valid=false",
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "errors": [
+          "expression.evidence_valid=false",
+          "energy.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "errors": [
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "errors": [
+          "emotion.evidence_valid=false",
+          "diction.evidence_valid=false",
+          "expression.label_valid=false",
+          "expression.evidence_valid=false",
+          "energy.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "errors": [
+          "energy.label_valid=false",
+          "energy.evidence_valid=false"
+        ]
+      },
+      {
+        "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "errors": [
+          "expression.label_valid=false",
+          "energy.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "errors": [
+          "energy.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "errors": [
+          "emotion.evidence_valid=false",
+          "diction.evidence_valid=false",
+          "expression.label_valid=false",
+          "energy.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "errors": [
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "errors": [
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "errors": [
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "errors": [
+          "energy.label_valid=false"
+        ]
+      }
+    ],
+    "metric_note": "semantic labels survive evidence/confidence/type failures; illegal labels count as missing, never dropped from denominator"
+  },
+  "final": {
+    "n": 16,
+    "semantic": {
+      "emotion": {
+        "label_coverage": 1.0,
+        "valid_labels": 16,
+        "n": 16,
+        "exact_match_accuracy_all": 0.5625,
+        "accuracy_on_legal_predictions": 0.5625,
+        "confusion": {
+          "missed:joyful": 2,
+          "missed:serene": 1,
+          "extra:melancholic": 1,
+          "missed:melancholic": 1,
+          "extra:serene": 2,
+          "missed:heroic": 3,
+          "extra:joyful": 1
+        },
+        "precision": 0.75,
+        "recall": 0.631578947368421,
+        "f1": 0.6857142857142857,
+        "averaging": "micro"
+      },
+      "diction": {
+        "label_coverage": 1.0,
+        "valid_labels": 16,
+        "n": 16,
+        "exact_match_accuracy_all": 0.5,
+        "accuracy_on_legal_predictions": 0.5,
+        "confusion": {
+          "refined->plain": 7,
+          "ornate->refined": 1
+        },
+        "accuracy": 0.5
+      },
+      "expression": {
+        "label_coverage": 0.375,
+        "valid_labels": 6,
+        "n": 16,
+        "exact_match_accuracy_all": 0.1875,
+        "accuracy_on_legal_predictions": 0.5,
+        "confusion": {
+          "implicit->balanced": 1,
+          "balanced->None": 5,
+          "implicit->None": 2,
+          "direct->balanced": 2,
+          "direct->None": 3
+        },
+        "accuracy": 0.1875
+      },
+      "energy": {
+        "label_coverage": 0.6875,
+        "valid_labels": 11,
+        "n": 16,
+        "exact_match_accuracy_all": 0.125,
+        "accuracy_on_legal_predictions": 0.18181818181818182,
+        "confusion": {
+          "balanced->gentle": 2,
+          "gentle->balanced": 1,
+          "balanced->vigorous": 2,
+          "gentle->None": 2,
+          "gentle->vigorous": 3,
+          "vigorous->gentle": 1,
+          "balanced->None": 2,
+          "vigorous->None": 1
+        },
+        "accuracy": 0.125
+      }
+    },
+    "protocol": {
+      "json_parse_success_rate": 1.0,
+      "schema_success_rate": 0.1875,
+      "type_success_rate": 0.9375,
+      "evidence_verbatim_success_rate": 0.5,
+      "full_protocol_success_rate": 0.125
+    },
+    "per_dimension_protocol": {
+      "emotion": {
+        "label_valid_rate": 1.0,
+        "type_valid_rate": 1.0,
+        "confidence_valid_rate": 1.0,
+        "evidence_valid_rate": 0.8125,
+        "full_protocol_valid_rate": 0.8125
+      },
+      "diction": {
+        "label_valid_rate": 1.0,
+        "type_valid_rate": 1.0,
+        "confidence_valid_rate": 1.0,
+        "evidence_valid_rate": 0.75,
+        "full_protocol_valid_rate": 0.75
+      },
+      "expression": {
+        "label_valid_rate": 0.375,
+        "type_valid_rate": 1.0,
+        "confidence_valid_rate": 1.0,
+        "evidence_valid_rate": 0.875,
+        "full_protocol_valid_rate": 0.3125
+      },
+      "energy": {
+        "label_valid_rate": 0.6875,
+        "type_valid_rate": 0.9375,
+        "confidence_valid_rate": 0.9375,
+        "evidence_valid_rate": 0.875,
+        "full_protocol_valid_rate": 0.625
+      }
+    },
+    "semantic_failures": [
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "dimension": "emotion",
+        "gold": [
+          "serene",
+          "joyful"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "dimension": "emotion",
+        "gold": [
+          "serene"
+        ],
+        "prediction": [
+          "melancholic"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "dimension": "emotion",
+        "gold": [
+          "melancholic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+        "dimension": "emotion",
+        "gold": [
+          "heroic",
+          "joyful"
+        ],
+        "prediction": [
+          "joyful"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "dimension": "emotion",
+        "gold": [
+          "serene",
+          "heroic"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "dimension": "emotion",
+        "gold": [
+          "joyful"
+        ],
+        "prediction": [
+          "serene"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "dimension": "emotion",
+        "gold": [
+          "heroic"
+        ],
+        "prediction": [
+          "joyful"
+        ],
+        "label_valid": true
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "dimension": "diction",
+        "gold": "ornate",
+        "prediction": "refined",
+        "label_valid": true
+      },
+      {
+        "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "dimension": "diction",
+        "gold": "refined",
+        "prediction": "plain",
+        "label_valid": true
+      },
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "dimension": "expression",
+        "gold": "implicit",
+        "prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "dimension": "expression",
+        "gold": "implicit",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "dimension": "expression",
+        "gold": "implicit",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "dimension": "expression",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "dimension": "expression",
+        "gold": "direct",
+        "prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": "gentle",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": "gentle",
+        "label_valid": true
+      },
+      {
+        "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "balanced",
+        "label_valid": true
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "dimension": "energy",
+        "gold": "vigorous",
+        "prediction": "gentle",
+        "label_valid": true
+      },
+      {
+        "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": null,
+        "label_valid": false
+      },
+      {
+        "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "dimension": "energy",
+        "gold": "balanced",
+        "prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "dimension": "energy",
+        "gold": "gentle",
+        "prediction": "vigorous",
+        "label_valid": true
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "dimension": "energy",
+        "gold": "vigorous",
+        "prediction": null,
+        "label_valid": false
+      }
+    ],
+    "protocol_failures": [
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "errors": [
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+        "errors": [
+          "diction.evidence_valid=false",
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "errors": [
+          "diction.evidence_valid=false",
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+        "errors": [
+          "expression.evidence_valid=false",
+          "energy.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+        "errors": [
+          "emotion.evidence_valid=false",
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+        "errors": [
+          "emotion.evidence_valid=false",
+          "diction.evidence_valid=false",
+          "expression.label_valid=false",
+          "expression.evidence_valid=false",
+          "energy.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "errors": [
+          "energy.evidence_valid=false"
+        ]
+      },
+      {
+        "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "errors": [
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+        "errors": [
+          "energy.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+        "errors": [
+          "emotion.evidence_valid=false",
+          "diction.evidence_valid=false",
+          "expression.label_valid=false",
+          "energy.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "errors": [
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "errors": [
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+        "errors": [
+          "expression.label_valid=false"
+        ]
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "errors": [
+          "energy.schema_valid=false",
+          "energy.label_valid=false",
+          "energy.type_valid=false",
+          "energy.confidence_valid=false",
+          "energy.evidence_valid=false",
+          "schema: root keys must equal four dimensions"
+        ]
+      }
+    ],
+    "metric_note": "semantic labels survive evidence/confidence/type failures; illegal labels count as missing, never dropped from denominator"
+  },
+  "deterministic_normalization_counts": {
+    "emotion": 0,
+    "diction": 0,
+    "expression": 0,
+    "energy": 0
+  },
+  "records_with_normalization": 0,
+  "repair_attempts": 14,
+  "repair_successes": 0,
+  "repair_semantic_change_rejections": 0,
+  "selection": {
+    "objective": "max total dimension-label coverage, then min dimension coverage, then form diversity; lexicographic IDs break ties",
+    "score": [
+      13,
+      3,
+      2
+    ],
+    "coverage": {
+      "emotion": [
+        "heroic",
+        "joyful",
+        "melancholic",
+        "serene"
+      ],
+      "diction": [
+        "ornate",
+        "plain",
+        "refined"
+      ],
+      "expression": [
+        "balanced",
+        "direct",
+        "implicit"
+      ],
+      "energy": [
+        "balanced",
+        "gentle",
+        "vigorous"
+      ]
+    },
+    "reasons": [
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "labels": {
+          "emotion": [
+            "serene",
+            "joyful"
+          ],
+          "diction": "refined",
+          "expression": "implicit",
+          "energy": "balanced"
+        }
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "labels": {
+          "emotion": [
+            "serene"
+          ],
+          "diction": "refined",
+          "expression": "balanced",
+          "energy": "balanced"
+        }
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "labels": {
+          "emotion": [
+            "serene",
+            "heroic"
+          ],
+          "diction": "ornate",
+          "expression": "balanced",
+          "energy": "vigorous"
+        }
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "labels": {
+          "emotion": [
+            "melancholic"
+          ],
+          "diction": "plain",
+          "expression": "direct",
+          "energy": "gentle"
+        }
+      }
+    ]
+  },
+  "target_example_leakage": false
+}

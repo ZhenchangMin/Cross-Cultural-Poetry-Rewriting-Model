@@ -1,0 +1,21 @@
+{
+  "assistant_calibrated_v1_1.jsonl": true,
+  "calibration_sample_v1.jsonl": true,
+  "review_candidates24_v2.jsonl": true,
+  "human_review_state_v1.json": true,
+  "human_review_state24_v2.json": true,
+  "source_reference_all30_v2.jsonl": true,
+  "calibration_rule_v1_1.jsonl": true,
+  "preannotated_v1_1.jsonl": true,
+  "quality_flags_v1.jsonl": true,
+  "configs\\style_schema.json": true,
+  "configs\\imagery_lexicon_v1.json": true,
+  "src\\data\\preannotate_style.py": true,
+  "src\\data\\calibration_gold.py": true,
+  "gold_calibration_v1.jsonl": true,
+  "gold_calibration24_v1.jsonl_matches_committed_content": true,
+  "annotation_calibration.jsonl": true,
+  "annotation_validation.jsonl": true,
+  "few_shot_examples.jsonl": true,
+  "silver_candidates.jsonl": true
+}

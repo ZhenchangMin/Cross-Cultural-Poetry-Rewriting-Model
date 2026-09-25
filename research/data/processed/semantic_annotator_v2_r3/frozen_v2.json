@@ -1,0 +1,8 @@
+{
+  "config_sha256": "f91807c0fb787547797540ce1eeaff700cbac79954406df995b58fd0b69ad6d0",
+  "calibration_report_sha256": "283228eeb93d2c54b0e194b17f5f78048025cbdea8e666f7c97f3b32795c9fea",
+  "calibration_predictions_sha256": "d43f0d3088754e2584cb8bdf760f4887b0feb2f2221389df40b288ccaf8b49f2",
+  "validation_source_sha256": "ff667718902e10cda6469aec4b18e4a8ae5321d9a0c756f3b0e3586a9078b5c5",
+  "v1_predictions_sha256": "7b28f54635b0b9168c1a40a1434184f1f353eadf1eeceab6a3f9ba6c3a379a31",
+  "note": "Frozen after calibration inspection, before reading validation labels for evaluation"
+}

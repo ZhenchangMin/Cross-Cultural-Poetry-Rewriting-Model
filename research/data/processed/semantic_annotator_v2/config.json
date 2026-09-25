@@ -1,0 +1,115 @@
+{
+  "version": "semantic_annotator_v2",
+  "code_hashes": {
+    "src/data/semantic_annotator_v2.py": "2fa465c773833522d5a3a96884addaacfd0340d62c4c2e39192d52dea8ed87b1",
+    "scripts/semantic_v2.py": "09dca5e496a1eab9fcb7155c4ba4812e41b91b1d27b8950c16853b492404611a",
+    "configs/style_schema.json": "534709a70b833833e065a72fe77fce994649beeb412263cbfbe4f2c1fbcb48f3"
+  },
+  "calibration_sha256": "06c7eb06c9e14838309367aa1073fb864700b5ae1f6ea3239dbb17f2493c3445",
+  "selection": {
+    "objective": "max total dimension-label coverage, then min dimension coverage, then form diversity; lexicographic IDs break ties",
+    "score": [
+      13,
+      3,
+      2
+    ],
+    "coverage": {
+      "emotion": [
+        "heroic",
+        "joyful",
+        "melancholic",
+        "serene"
+      ],
+      "diction": [
+        "ornate",
+        "plain",
+        "refined"
+      ],
+      "expression": [
+        "balanced",
+        "direct",
+        "implicit"
+      ],
+      "energy": [
+        "balanced",
+        "gentle",
+        "vigorous"
+      ]
+    },
+    "reasons": [
+      {
+        "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+        "labels": {
+          "emotion": [
+            "serene",
+            "joyful"
+          ],
+          "diction": "refined",
+          "expression": "implicit",
+          "energy": "balanced"
+        }
+      },
+      {
+        "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+        "labels": {
+          "emotion": [
+            "serene"
+          ],
+          "diction": "refined",
+          "expression": "balanced",
+          "energy": "balanced"
+        }
+      },
+      {
+        "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+        "labels": {
+          "emotion": [
+            "serene",
+            "heroic"
+          ],
+          "diction": "ornate",
+          "expression": "balanced",
+          "energy": "vigorous"
+        }
+      },
+      {
+        "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+        "labels": {
+          "emotion": [
+            "melancholic"
+          ],
+          "diction": "plain",
+          "expression": "direct",
+          "energy": "gentle"
+        }
+      }
+    ]
+  },
+  "few_shot_ids": [
+    "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+    "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+    "tang-88020cd6-c877-4632-a3d0-174216653e83",
+    "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af"
+  ],
+  "calibration_policy": "exclude target from its own few-shot examples; deterministic re-selection when necessary",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 800
+  },
+  "max_repair_attempts": 1,
+  "semantic_gate": {
+    "emotion_f1": 0.7,
+    "diction_accuracy": 0.6,
+    "expression_accuracy": 0.6,
+    "energy_accuracy": 0.6
+  },
+  "protocol_gate": {
+    "final_full_protocol_success_rate": 0.9
+  },
+  "imagery_density_gate": "unchanged v1: imagery micro F1 >= .70; density accuracy >= .95",
+  "validation_limit": "existing 8 are development validation with historical guideline exposure",
+  "silver_batch_forbidden": true,
+  "training_forbidden": true
+}

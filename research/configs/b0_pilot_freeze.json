@@ -1,0 +1,36 @@
+{
+  "protocol_version": "b0_pilot_v1",
+  "configs": [
+    "configs/b0_pilot_gold_only.json",
+    "configs/b0_pilot_gold_partial_silver.json"
+  ],
+  "sha256": {
+    "configs/b0_pilot_gold_only.json": "8611d1bed13d09e559f7b6427088c96dd3b2e3e507c506cd7b7c961564761593",
+    "configs/b0_pilot_gold_partial_silver.json": "f6b14ccf9ad4b52ffdd4c40ec1c58a0f81f8c52911bbfaa7842c4f252dd32b98",
+    "configs/b0_pilot_split.json": "eade76629c7e9a77c9d0d97171618d350718d6ddf254b382f90e83d0486c800c",
+    "data/processed/style_annotation/gold_calibration_v1.jsonl": "c0963756ec12c77852ed56818bb5934086833810d2a0da495966b47d89df8d43",
+    "data/processed/b0_pilot_20260926/gold_train18.jsonl": "e0f4dcb8848cb7f1f75cdec61085f16ecc4cdf575d68d0f6c42f6028cb882e98",
+    "data/processed/b0_pilot_20260926/gold_eval6.jsonl": "c3da047ebba9d552788aebdd9964f67f9c5e47a42b79ed4efdea5ebec4ba126a",
+    "data/processed/partial_silver_v1/partial_silver_v1.jsonl": "e88f0c317a972811b64e911a220c90c646efe0fbac8fb87b8e855ba5577dabfe",
+    "data/processed/style_annotation/adjudication_pending_v1.jsonl": "f853df2173dae3c7cb8ecbfc1fcf0508d1f6c712a39410688d214406c2b721d5",
+    "data/processed/style_annotation/quality_flags_v1.jsonl": "b5281a3bd97bd1fa9aa62213fdf442adc1aae69af130a310a035a4e31cbdeb27",
+    "data/processed/style_annotation/variant_groups_v2.json": "3cc2f469ca7bdfd4ff0ee239723f1bce3ca0bea8e95beeb13734e8a065c20ff7",
+    "configs/style_schema.json": "534709a70b833833e065a72fe77fce994649beeb412263cbfbe4f2c1fbcb48f3",
+    "configs/imagery_lexicon_v1.json": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+    "scripts/run_frozen_b0_pilot.py": "0c1f7d0a9d80e591094b39c1f1a190c0fc4000b2f2d165fe913904f88da45666",
+    "scripts/freeze_b0_protocol.py": "0d9bd36d9ca8bc65869d91688eef5d70c314e82c2f05bf30bf897c87f5f8ea31",
+    "src/training/frozen_pilot.py": "2db7b04c06001e85e0cbec7b8e6511a648b2ddad80560027b23cf24d7dbb45c6",
+    "src/training/pilot_evaluation.py": "37b3ea6c42842add85cd0cb1f119130f237ae9196df090f7e963ebc36e566ad5",
+    "src/training/pilot_protocol.py": "76410c01d62c72912f7916bde252746ba8d65b3e53fd5300a4349980f613426f",
+    "src/data/dataset.py": "7fd70bdd54f6120fdc4932e5e4ec2a6ff5e71ee7306b104457b0b045480f3413",
+    "src/data/mixed_dataset.py": "5ea864aee920f77b4f76afbe1ab1ae836c052600519c0153dfac936754912380",
+    "src/data/tokenization.py": "04818c90e967b2613cf2cfc938840d39fa22e788289dac455d356163e2f313bc",
+    "src/data/validate_dataset.py": "ec0e8a6be465fe392cbd956e7f5996c9c53e64c9c523d4e11138d867582f7388",
+    "src/data/preannotate_style.py": "f881d301465662debf4dd44bdef45bd303d1e2f924fb3ab68db554b512697391",
+    "src/data/partial_silver.py": "243d81f5edd95d135880f558106d6ed3e37b6f476d3ec3e3bd052c233797535f"
+  },
+  "execution_status": "prepared_only_not_started",
+  "budget_reason": "100 updates x 8 examples; smoke measured 3.20 s/update, approximately 5.3 min training-only plus evaluation/save/load overhead per arm",
+  "matching_scope": "same optimizer updates/effective batch/hyperparameters; not exact token FLOPs or wall-clock due to sequence lengths",
+  "dropout_clock": "optimizer_step-1, per-record per-dimension hash, form retained; evaluation always disabled"
+}

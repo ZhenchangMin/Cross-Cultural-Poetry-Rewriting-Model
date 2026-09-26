@@ -1,0 +1,39 @@
+{
+  "protocol": "b0_pilot_v1",
+  "formal_training_started": false,
+  "smoke_repeated": false,
+  "gold_train": 18,
+  "gold_evaluation": 6,
+  "partial_silver_train": 825,
+  "seed": 20260926,
+  "optimizer_steps_per_arm": 100,
+  "effective_batch_size": 8,
+  "planned_A": {
+    "gold": 800
+  },
+  "planned_B": {
+    "gold": 232,
+    "partial-silver": 568
+  },
+  "evaluation_scope": "development holdout",
+  "isolation": {
+    "train_records": 843,
+    "evaluation_records": 6,
+    "id_overlap": 0,
+    "text_overlap": 0,
+    "variant_overlap": 0,
+    "prohibited_overlap": 0
+  },
+  "tests": {
+    "command": "pytest tests/ -q",
+    "passed": 162,
+    "warnings": 1,
+    "seconds": 121.05
+  },
+  "configs": [
+    "configs/b0_pilot_gold_only.json",
+    "configs/b0_pilot_gold_partial_silver.json"
+  ],
+  "split": "configs/b0_pilot_split.json",
+  "freeze": "configs/b0_pilot_freeze.json"
+}

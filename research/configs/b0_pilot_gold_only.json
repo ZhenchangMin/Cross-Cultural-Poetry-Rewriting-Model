@@ -1,0 +1,79 @@
+{
+  "model": {
+    "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "precision": "bf16",
+    "gradient_checkpointing": true,
+    "max_length": 512,
+    "local_path": "models/_cache/Qwen2.5-1.5B-Instruct",
+    "weights_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "attention_implementation": "eager"
+  },
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "training": {
+    "batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "seed": 20260926,
+    "log_every_steps": 1,
+    "save_every_steps": 10,
+    "checkpoint_interval_unit": "optimizer_steps",
+    "max_optimizer_steps": 100,
+    "eval_every_steps": 10,
+    "scheduler": "constant",
+    "effective_batch_size": 8
+  },
+  "generation": {
+    "max_new_tokens": 128,
+    "do_sample": false,
+    "num_beams": 1
+  },
+  "data": {
+    "mode": "gold-only",
+    "gold_path": "data/processed/b0_pilot_20260926/gold_train18.jsonl",
+    "partial_silver_path": null,
+    "source_weights": {
+      "gold": 1.0
+    },
+    "control_dropout": 0.1,
+    "records": 18
+  },
+  "experiment_name": "b0_pilot_gold_only",
+  "output_dir": "outputs/b0_pilot_gold_only",
+  "split_path": "configs/b0_pilot_split.json",
+  "evaluation": {
+    "gold_path": "data/processed/b0_pilot_20260926/gold_eval6.jsonl",
+    "records": 6,
+    "control_dropout": 0.0,
+    "sampling": "all records once",
+    "cadence": "step 0 and every 10 optimizer updates including final",
+    "checkpoint_selection": "fixed final step 100; no best-checkpoint selection",
+    "teacher_forced": [
+      "completion_token_weighted_loss",
+      "completion_token_accuracy"
+    ],
+    "generation": [
+      "line_and_character_form_compliance",
+      "imagery_rule_micro_precision_recall_F1",
+      "density_rule_accuracy"
+    ],
+    "semantic_style_scoring": "disabled",
+    "rule_version": "lexicon_heuristic_v1_1",
+    "invalid_form_policy": "imagery empty / density null; keep all six in metric accounting",
+    "interpretation": "development holdout; rule metrics are controllability proxies, not independent quality truth"
+  }
+}

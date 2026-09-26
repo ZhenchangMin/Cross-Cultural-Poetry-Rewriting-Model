@@ -34,3 +34,7 @@ research/models/_cache/
 
 # Local engineering diagnostic adapters (hashes/results are tracked)
 research/outputs/b0_training_pilot_20260926/*_not_experiment_result/adapter_smoke_not_experiment_result/
+
+# Frozen B0 Pilot adapter checkpoints (base cache remains separate)
+research/outputs/b0_pilot_gold_only/adapter_step_*/
+research/outputs/b0_pilot_gold_partial_silver/adapter_step_*/

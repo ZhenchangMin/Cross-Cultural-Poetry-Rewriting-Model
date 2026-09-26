@@ -1,0 +1,11 @@
+[
+  {
+    "optimizer_step": 20,
+    "teacher_forced": {
+      "loss": 0.011333588303021782,
+      "token_accuracy": 0.9962825278810409,
+      "supervised_tokens": 269
+    },
+    "generation_exact_matches": 7
+  }
+]

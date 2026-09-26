@@ -31,3 +31,6 @@ research/data/raw/tang_candidates_smoke.jsonl
 
 # Local model/tokenizer cache
 research/models/_cache/
+
+# Local engineering diagnostic adapters (hashes/results are tracked)
+research/outputs/b0_training_pilot_20260926/*_not_experiment_result/adapter_smoke_not_experiment_result/

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+    "source": "gold",
+    "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n情感：感伤惆怅\n意象：植物、山水自然、行旅、天象\n辞藻：典雅\n表达：情景交融\n气势：舒缓\n密度：适中\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+    "target": "木葉紛紛湘水濱\n此中何事往頻頻\n臨風自笑歸時晚\n更送浮雲逐故人",
+    "output": "山川静默水长流，落叶归根思悠悠。\n行人独步云深处，月明风清夜未休。",
+    "metrics": {
+      "nonempty": true,
+      "form_compliance": false,
+      "character_exact_match": false,
+      "character_lcs_recall": 0.07142857142857142,
+      "repeated_line_fraction": 0.0
+    }
+  },
+  {
+    "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+    "source": "gold",
+    "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n情感：感伤惆怅\n意象：边塞军旅、山水自然、时令气候、人文文化\n辞藻：典雅\n表达：情景交融\n气势：平稳\n密度：密集\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+    "target": "昔年曾逐漢征東\n三授兵符百戰中\n力保山河嗟下世\n秋風牢落故營空",
+    "output": "边塞秋风起，黄沙漫天飞。\n孤城独守夜，月落乌啼稀。\n山川静如水，人文古迹稀。\n时序更迭急，心事付流离。",
+    "metrics": {
+      "nonempty": true,
+      "form_compliance": false,
+      "character_exact_match": false,
+      "character_lcs_recall": 0.07142857142857142,
+      "repeated_line_fraction": 0.0
+    }
+  },
+  {
+    "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+    "source": "gold",
+    "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n情感：清宁平和\n意象：人文文化、山水自然、天象\n辞藻：典雅\n表达：情景交融\n气势：舒缓\n密度：适中\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+    "target": "境靜聞鐘聲易響\n庭高見月影難沈\n青山解隔塵中事\n流水能清物外心",
+    "output": "山川静默映人文，碧水潺湲润古今。\n月挂高天照人心，风拂绿柳醉游人。",
+    "metrics": {
+      "nonempty": true,
+      "form_compliance": false,
+      "character_exact_match": false,
+      "character_lcs_recall": 0.10714285714285714,
+      "repeated_line_fraction": 0.0
+    }
+  },
+  {
+    "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+    "source": "gold",
+    "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n情感：感伤惆怅\n意象：时令气候、山水自然、植物、人文文化\n辞藻：绮丽\n表达：情景交融\n气势：舒缓\n密度：密集\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+    "target": "灞岸江頭臘雪消\n東風偷軟入纖條\n春來不忍登樓望\n萬架金絲著地嬌",
+    "output": "秋风萧瑟叶飘零，山河依旧水东流。\n孤舟独影映寒月，满目荒凉思故楼。",
+    "metrics": {
+      "nonempty": true,
+      "form_compliance": false,
+      "character_exact_match": false,
+      "character_lcs_recall": 0.0,
+      "repeated_line_fraction": 0.0
+    }
+  },
+  {
+    "id": "tang-0043d602-6f92-4761-ba75-92691019f99d",
+    "source": "partial-silver",
+    "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n意象：时令气候、天象、植物、行旅\n密度：密集\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+    "target": "瑤琴夜久弦秋清\n楚客一奏湘煙生\n曲中聲盡意不盡\n月照竹軒紅葉明",
+    "output": "秋风萧瑟叶纷飞，黄沙漫漫映日辉。\n行人独步山径远，寒露滴落草木微。",
+    "metrics": {
+      "nonempty": true,
+      "form_compliance": false,
+      "character_exact_match": false,
+      "character_lcs_recall": 0.03571428571428571,
+      "repeated_line_fraction": 0.0
+    }
+  },
+  {
+    "id": "tang-00a09c6e-99bd-4d5d-8bb5-a55d580673be",
+    "source": "partial-silver",
+    "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n意象：山水自然、时令气候、植物、人文文化\n密度：适中\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+    "target": "草堂無物伴身閑\n惟有屏風枕簟間\n本向他山求得石\n却於石上看他山",
+    "output": "山川静默待春归，绿树成荫鸟语稀。\n江水悠悠映日落，渔舟唱晚人依稀。",
+    "metrics": {
+      "nonempty": true,
+      "form_compliance": false,
+      "character_exact_match": false,
+      "character_lcs_recall": 0.03571428571428571,
+      "repeated_line_fraction": 0.0
+    }
+  },
+  {
+    "id": "tang-00cb362d-2814-40dc-a7e7-c75d1dcdf307",
+    "source": "partial-silver",
+    "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n意象：人文文化、天象、时令气候、植物\n密度：适中\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+    "target": "佳人一去無消息\n夢覺香殘愁復入\n空庭悄悄月如霜\n獨倚闌干伴花立",
+    "output": "秋风送爽叶飘零，人文荟萃古韵生。\n月挂枝头夜未央，稻香四溢丰收情。",
+    "metrics": {
+      "nonempty": true,
+      "form_compliance": false,
+      "character_exact_match": false,
+      "character_lcs_recall": 0.07142857142857142,
+      "repeated_line_fraction": 0.0
+    }
+  },
+  {
+    "id": "tang-01200a90-c853-442b-9718-e331b49a883f",
+    "source": "partial-silver",
+    "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n意象：山水自然、天象、时令气候、人文文化\n密度：适中\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+    "target": "函罷家音又拆看\n添書絕句報平安\n豐溪漁叟生涯定\n明月清風一釣竿",
+    "output": "山川静默待云归，碧水悠悠映日辉。\n风拂柳梢春色满，人间烟火暖如围。",
+    "metrics": {
+      "nonempty": true,
+      "form_compliance": false,
+      "character_exact_match": false,
+      "character_lcs_recall": 0.0,
+      "repeated_line_fraction": 0.0
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "preflight_suitable": true,
+  "smoke_success": true,
+  "overfit_success": true,
+  "configs": {
+    "b0_gold_only.json": "e4defbbd54aa47273cf594387a6e35f5dd7893cb221004a6d854a858b1e38d4e",
+    "b0_gold_partial_silver.json": "776e06dcaf617c8b844bc451073b17f31df84222e1e014c752f1ee31c95293ef"
+  },
+  "long_pilot_training_started": false
+}

@@ -1,0 +1,60 @@
+{
+  "experiment_name": "b0_gold_only",
+  "model": {
+    "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "precision": "bf16",
+    "gradient_checkpointing": true,
+    "max_length": 512
+  },
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "training": {
+    "batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "seed": 20260926,
+    "log_every_steps": 1,
+    "save_every_steps": 10,
+    "output_dir": "outputs/b0_gold_only",
+    "checkpoint_interval_unit": "optimizer_steps"
+  },
+  "generation": {
+    "max_new_tokens": 128,
+    "do_sample": false,
+    "temperature": 1.0,
+    "top_p": 1.0
+  },
+  "data": {
+    "mode": "gold-only",
+    "gold_path": "data/processed/style_annotation/gold_calibration_v1.jsonl",
+    "partial_silver_path": null,
+    "source_weights": {
+      "gold": 1.0
+    },
+    "control_dropout": 0.1,
+    "records": 24
+  },
+  "evaluation": {
+    "scope": "all-source reconstruction pilot; no held-out claim for these full-data configs",
+    "formal_training_authorized": false,
+    "development_cv_manifest": "data/processed/semantic_annotator_v3/frozen_cv.json",
+    "cv_requires_filtering_gold_to_fold_calibration_ids": true,
+    "semantic_generated_style_scorer": "disabled; v1/v2/v3 are not valid evaluation truth"
+  },
+  "checkpoint_interval_unit": "optimizer_steps"
+}

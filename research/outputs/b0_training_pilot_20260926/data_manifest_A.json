@@ -1,0 +1,574 @@
+{
+  "mode": "gold-only",
+  "records": 24,
+  "sources": [
+    {
+      "source": "gold",
+      "path": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\style_annotation\\gold_calibration_v1.jsonl",
+      "sha256": "c0963756ec12c77852ed56818bb5934086833810d2a0da495966b47d89df8d43",
+      "records": 24,
+      "source_sampling_mass": 1.0,
+      "per_record_sampling_weight": 0.041666666666666664
+    }
+  ],
+  "training": true,
+  "control_dropout": 0.1,
+  "effective_dropout": 0.1,
+  "seed": 20260926,
+  "sampling_policy": "training only: per-record weight = source mass / source record count; replacement sampling",
+  "form_only_interface_unpopulated": false,
+  "examples": [
+    {
+      "id": "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-e68d7f43-5046-4c5a-a7b6-074e1783ba38",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-4e7818af-b432-424d-b011-21180f6e9053",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-f7973e61-9631-48b9-853d-839a9b51da9c",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-4c612a51-0ac3-4166-bad1-90d6e4cb6def",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-ba01a06a-d48f-4b98-bdc7-ffb5dd200438",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-f240f42f-4bf0-4463-8026-4bb19f4db3af",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-a39ebbbd-8626-4de4-a582-23146a31e189",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-88020cd6-c877-4632-a3d0-174216653e83",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-7887d2d9-3655-45b1-a556-349d95304058",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    },
+    {
+      "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+      "source": "gold",
+      "supervision_type": {
+        "form": "human_gold",
+        "emotion": "human_gold",
+        "imagery": "human_gold",
+        "diction": "human_gold",
+        "expression": "human_gold",
+        "energy": "human_gold",
+        "density": "human_gold"
+      },
+      "available_controls": [
+        "form",
+        "emotion",
+        "imagery",
+        "diction",
+        "expression",
+        "energy",
+        "density"
+      ],
+      "sampling_weight": 0.041666666666666664
+    }
+  ]
+}

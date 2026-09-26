@@ -1,0 +1,24 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+overfit optimizer 1/160 loss=4.7277 seconds=1.88
+overfit optimizer 2/160 loss=4.1497 seconds=1.19
+overfit optimizer 3/160 loss=2.8143 seconds=1.19
+overfit optimizer 4/160 loss=2.7074 seconds=1.12
+overfit optimizer 5/160 loss=1.5963 seconds=1.08
+overfit optimizer 6/160 loss=1.3009 seconds=1.13
+overfit optimizer 7/160 loss=0.4815 seconds=1.27
+overfit optimizer 8/160 loss=0.5311 seconds=1.10
+overfit optimizer 9/160 loss=0.0812 seconds=1.13
+overfit optimizer 10/160 loss=0.2313 seconds=1.10
+overfit optimizer 11/160 loss=0.2101 seconds=1.18
+overfit optimizer 12/160 loss=0.0741 seconds=1.06
+overfit optimizer 13/160 loss=0.1472 seconds=1.09
+overfit optimizer 14/160 loss=0.1527 seconds=1.06
+overfit optimizer 15/160 loss=0.0271 seconds=1.18
+overfit optimizer 16/160 loss=0.1107 seconds=1.07
+overfit optimizer 17/160 loss=0.0027 seconds=1.18
+overfit optimizer 18/160 loss=0.0584 seconds=1.14
+overfit optimizer 19/160 loss=0.0100 seconds=1.15
+overfit optimizer 20/160 loss=0.0504 seconds=1.22
+SANITY_CHECK {"optimizer_step": 20, "teacher_forced": {"loss": 0.011333588303021782, "token_accuracy": 0.9962825278810409, "supervised_tokens": 269}, "generation_exact_matches": 7}
+DIAGNOSTIC_RESULT {"purpose": "engineering diagnostic only; not B0 experiment result", "success": true, "phase": "overfit", "initial_teacher_forced": {"loss": 4.845846273642048, "token_accuracy": 0.3048327137546468, "supervised_tokens": 269}, "final_teacher_forced": {"loss": 0.011333588303021782, "token_accuracy": 0.9962825278810409, "supervised_tokens": 269}, "first_training_batch_loss": 4.727678060531616, "last_training_batch_loss": 0.050426086090737954, "optimizer_steps": 20, "gradient_accumulation": 4, "learning_rate": 0.0005, "trainable_parameters": 18464768, "total_parameters": 1562179072, "trainable_ratio": 0.011819879251333359, "peak_allocated_mib": 3596.81591796875, "peak_reserved_mib": 3852.0, "training_seconds": 23.53445549798562, "tokens_per_training_second": 524.3376036915838, "mean_optimizer_step_seconds": 1.176722774899281, "trained_source_counts": {"gold": 40, "partial-silver": 40}, "unique_trained_ids": ["tang-0043d602-6f92-4761-ba75-92691019f99d", "tang-00a09c6e-99bd-4d5d-8bb5-a55d580673be", "tang-00cb362d-2814-40dc-a7e7-c75d1dcdf307", "tang-01200a90-c853-442b-9718-e331b49a883f", "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03", "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4", "tang-740c1743-61f4-4694-908b-6737af54523d", "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36"], "reserved_eval_leakage": false, "checkpoint": "outputs/b0_training_pilot_20260926/overfit_not_experiment_result/adapter_smoke_not_experiment_result", "checkpoint_reload_ok": true, "reload_loss_abs_difference": 0.0, "reload_generation_identical": true, "generation_exact_matches": 7, "generation_examples": 8, "long_pilot_training_started": false}

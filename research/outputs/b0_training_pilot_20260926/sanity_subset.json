@@ -1,0 +1,1880 @@
+[
+  {
+    "source": "gold",
+    "record": {
+      "id": "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+      "text": "木葉紛紛湘水濱\n此中何事往頻頻\n臨風自笑歸時晚\n更送浮雲逐故人",
+      "form": "qijue7",
+      "style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "flora",
+          "landscape",
+          "travel",
+          "celestial"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "culture": {
+        "adaptation": null
+      },
+      "metadata": {
+        "title": "別張員外",
+        "author": "戴叔倫",
+        "dynasty": "唐",
+        "source": "chinese-poetry/chinese-poetry:全唐诗",
+        "collection": "全唐诗",
+        "source_id": "3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+        "source_file": "poet.tang.14000.json",
+        "source_url": "https://github.com/chinese-poetry/chinese-poetry",
+        "source_license": "MIT",
+        "script": "traditional",
+        "form_detection": "automatic_structure_only",
+        "annotation_method": "hybrid_preannotation_v1",
+        "review_status": "gold_adjudicated",
+        "sampling": {
+          "sample_version": "v1",
+          "method": "uniform_author_then_uniform_poem_within_form",
+          "seed": 20260823,
+          "form_target": 500,
+          "max_per_author_per_form": 1
+        },
+        "calibration_selection": {
+          "version": "v1",
+          "seed": 20260920,
+          "per_form": 15,
+          "unique_author_across_batch": true
+        },
+        "variant_group": null,
+        "text_policy": "source_preserved_v1",
+        "density_policy": "frozen_lexicon_proxy_v1_1_on_original_text",
+        "annotation_scope": "single_user_source_assisted_style_review_not_expert_or_full_prosody_certification",
+        "reviewer": "本对话用户"
+      },
+      "annotation": {
+        "version": "v1",
+        "prelabel": {
+          "emotion": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "imagery": {
+            "value": [
+              "travel",
+              "celestial",
+              "season_weather",
+              "flora"
+            ],
+            "confidence": 0.92,
+            "evidence": {
+              "travel": [
+                "歸",
+                "送"
+              ],
+              "celestial": [
+                "雲"
+              ],
+              "season_weather": [
+                "風"
+              ],
+              "flora": [
+                "木"
+              ]
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled"
+          },
+          "diction": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "expression": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "energy": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "density": {
+            "value": "medium",
+            "confidence": 0.733,
+            "evidence": {
+              "unique_imagery_terms": 5,
+              "line_count": 4,
+              "unique_imagery_terms_per_line": 1.25,
+              "thresholds": {
+                "sparse_to_medium": 0.75,
+                "medium_to_dense": 1.5
+              },
+              "selected_imagery_labels": [
+                "travel",
+                "celestial",
+                "season_weather",
+                "flora"
+              ],
+              "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled"
+          }
+        },
+        "review": {
+          "status": "pending_human_review",
+          "reviewer": null,
+          "notes": null
+        },
+        "assistant_calibration": {
+          "version": "source_assisted_v2",
+          "reviewer": "Codex assistant",
+          "status": "assistant_calibrated_pending_human",
+          "quality": {
+            "status": "include",
+            "reason": ""
+          },
+          "style_proposal": {
+            "emotion": {
+              "value": [
+                "melancholic"
+              ],
+              "evidence": [
+                "歸時晚",
+                "送浮雲逐故人"
+              ],
+              "rationale": "歸時晚与送浮雲逐故人支撑惜别惆怅；自笑不自动代表欢愉。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "imagery": {
+              "value": [
+                "flora",
+                "landscape",
+                "travel",
+                "celestial"
+              ],
+              "evidence": [
+                "木葉",
+                "湘水濱",
+                "浮雲"
+              ],
+              "rationale": "木葉、湘水濱、浮雲、归送支持植物、山水、天象、行旅；风为备选，受四类上限约束。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "diction": {
+              "value": "refined",
+              "evidence": [
+                "木葉紛紛湘水濱",
+                "浮雲逐故人"
+              ],
+              "rationale": "以木叶湘水浮云组织景情，refined为助手细读。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "expression": {
+              "value": "balanced",
+              "evidence": [
+                "臨風自笑歸時晚",
+                "更送浮雲逐故人"
+              ],
+              "rationale": "自问、自笑与景物惜别并置，balanced暂留；末句单独看较含蓄。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "energy": {
+              "value": "gentle",
+              "evidence": [
+                "臨風",
+                "浮雲"
+              ],
+              "rationale": "浮云与送别的舒缓节奏支持gentle。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "density": {
+              "value": "medium",
+              "evidence": [
+                "木葉",
+                "湘水",
+                "浮雲"
+              ],
+              "rationale": "固定词典命中5个去重词项 / 4行，值为medium。仅指词典线索浓度，不是文学密度或意象类别数；词项清单见density_audit_v2.json。",
+              "basis": "frozen_lexicon_proxy_v1_1",
+              "confidence": null
+            }
+          },
+          "previous_style_proposal": {
+            "emotion": {
+              "value": [
+                "melancholic"
+              ],
+              "confidence": 0.9,
+              "evidence": [
+                "歸時晚",
+                "送浮雲逐故人"
+              ]
+            },
+            "imagery": {
+              "value": [
+                "flora",
+                "landscape",
+                "travel",
+                "celestial"
+              ],
+              "confidence": 0.88,
+              "evidence": [
+                "木葉",
+                "湘水濱",
+                "浮雲"
+              ]
+            },
+            "diction": {
+              "value": "refined",
+              "confidence": 0.88,
+              "evidence": [
+                "木葉紛紛湘水濱",
+                "浮雲逐故人"
+              ]
+            },
+            "expression": {
+              "value": "balanced",
+              "confidence": 0.9,
+              "evidence": [
+                "臨風自笑歸時晚",
+                "更送浮雲逐故人"
+              ]
+            },
+            "energy": {
+              "value": "gentle",
+              "confidence": 0.88,
+              "evidence": [
+                "臨風",
+                "浮雲"
+              ]
+            },
+            "density": {
+              "value": "dense",
+              "confidence": 0.72,
+              "evidence": [
+                "木葉",
+                "湘水",
+                "浮雲"
+              ]
+            }
+          }
+        },
+        "source_reference": {
+          "version": "source_reference_all30_v2",
+          "sources": [
+            {
+              "title": "戴叔伦诗集：别张员外索引",
+              "url": "https://gushi.4qx.net/gushici/585/84.html",
+              "kind": "index_and_general_author_commentary",
+              "assessment": "只核对末联及作者索引；作者通论不当作本诗赏析。",
+              "access": "search_text_read"
+            }
+          ],
+          "adjudication": {
+            "status": "assistant_decision_pending_human",
+            "reason": "未发现本轮阻断问题，继续人工风格审核；不代表诗体格律已认证。",
+            "version": "v2",
+            "date": "2026-09-23",
+            "variant_group": null
+          },
+          "density_policy": "frozen_lexicon_proxy_v1_1"
+        },
+        "human_review": {
+          "decision": "accept",
+          "reviewer": "本对话用户",
+          "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+          "status": "gold_adjudicated",
+          "confirmation_provenance": {
+            "decision": "accept",
+            "suggested_decision": "accept",
+            "reviewer": "本对话用户",
+            "final_style": {
+              "emotion": [
+                "melancholic"
+              ],
+              "imagery": [
+                "flora",
+                "landscape",
+                "travel",
+                "celestial"
+              ],
+              "diction": "refined",
+              "expression": "balanced",
+              "energy": "gentle",
+              "density": "medium"
+            },
+            "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+            "document_review": {
+              "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+              "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+              "sequence": 9,
+              "raw_decision": "接受",
+              "recorded_on": "2026-09-24",
+              "method": "user_edited_review_document",
+              "changes": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "source": "gold",
+    "record": {
+      "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+      "text": "昔年曾逐漢征東\n三授兵符百戰中\n力保山河嗟下世\n秋風牢落故營空",
+      "form": "qijue7",
+      "style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "frontier",
+          "landscape",
+          "season_weather",
+          "human_culture"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "balanced",
+        "density": "dense"
+      },
+      "culture": {
+        "adaptation": null
+      },
+      "metadata": {
+        "title": "秋日經潼關感寓",
+        "author": "武元衡",
+        "dynasty": "唐",
+        "source": "chinese-poetry/chinese-poetry:全唐诗",
+        "collection": "全唐诗",
+        "source_id": "599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "source_file": "poet.tang.17000.json",
+        "source_url": "https://github.com/chinese-poetry/chinese-poetry",
+        "source_license": "MIT",
+        "script": "traditional",
+        "form_detection": "automatic_structure_only",
+        "annotation_method": "hybrid_preannotation_v1",
+        "review_status": "gold_adjudicated",
+        "sampling": {
+          "sample_version": "v1",
+          "method": "uniform_author_then_uniform_poem_within_form",
+          "seed": 20260823,
+          "form_target": 500,
+          "max_per_author_per_form": 1
+        },
+        "calibration_selection": {
+          "version": "v1",
+          "seed": 20260920,
+          "per_form": 15,
+          "unique_author_across_batch": true
+        },
+        "variant_group": null,
+        "text_policy": "source_preserved_v1",
+        "density_policy": "frozen_lexicon_proxy_v1_1_on_original_text",
+        "annotation_scope": "single_user_source_assisted_style_review_not_expert_or_full_prosody_certification",
+        "reviewer": "本对话用户"
+      },
+      "annotation": {
+        "version": "v1",
+        "prelabel": {
+          "emotion": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "imagery": {
+            "value": [
+              "frontier",
+              "landscape",
+              "season_weather",
+              "travel"
+            ],
+            "confidence": 0.92,
+            "evidence": {
+              "frontier": [
+                "征",
+                "兵",
+                "戰",
+                "營"
+              ],
+              "landscape": [
+                "山",
+                "河"
+              ],
+              "season_weather": [
+                "秋",
+                "風"
+              ],
+              "travel": [
+                "征"
+              ]
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled"
+          },
+          "diction": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "expression": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "energy": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "density": {
+            "value": "dense",
+            "confidence": 0.617,
+            "evidence": {
+              "unique_imagery_terms": 8,
+              "line_count": 4,
+              "unique_imagery_terms_per_line": 2.0,
+              "thresholds": {
+                "sparse_to_medium": 0.75,
+                "medium_to_dense": 1.5
+              },
+              "selected_imagery_labels": [
+                "frontier",
+                "landscape",
+                "season_weather",
+                "travel"
+              ],
+              "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled"
+          }
+        },
+        "review": {
+          "status": "pending_human_review",
+          "reviewer": null,
+          "notes": null
+        },
+        "assistant_calibration": {
+          "version": "source_assisted_v2",
+          "reviewer": "Codex assistant",
+          "status": "assistant_calibrated_pending_human",
+          "quality": {
+            "status": "include",
+            "reason": ""
+          },
+          "style_proposal": {
+            "emotion": {
+              "value": [
+                "melancholic"
+              ],
+              "evidence": [
+                "嗟下世",
+                "故營空"
+              ],
+              "rationale": "追怀功业而以嗟下世、故营空收束；暂收紧为感伤，不能由军旅名词自动添加豪迈。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "imagery": {
+              "value": [
+                "frontier",
+                "landscape",
+                "season_weather",
+                "human_culture"
+              ],
+              "evidence": [
+                "兵符",
+                "山河",
+                "秋風"
+              ],
+              "rationale": "兵符故营是军旅，山河与秋风支撑另两类；人文保留兵符器物，存在与军旅重叠。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "diction": {
+              "value": "refined",
+              "evidence": [
+                "三授兵符百戰中",
+                "秋風牢落故營空"
+              ],
+              "rationale": "兵符、牢落等措辞凝练典雅。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "expression": {
+              "value": "balanced",
+              "evidence": [
+                "嗟下世",
+                "故營空"
+              ],
+              "rationale": "叙昔年功业、直接嗟叹与秋景并置。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "energy": {
+              "value": "balanced",
+              "evidence": [
+                "百戰中",
+                "秋風牢落故營空"
+              ],
+              "rationale": "前半有力、后半低回，整体暂由强劲改平稳，需复核。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "density": {
+              "value": "dense",
+              "evidence": [
+                "兵符",
+                "山河",
+                "秋風"
+              ],
+              "rationale": "固定词典命中8个去重词项 / 4行，值为dense。仅指词典线索浓度，不是文学密度或意象类别数；词项清单见density_audit_v2.json。",
+              "basis": "frozen_lexicon_proxy_v1_1",
+              "confidence": null
+            }
+          },
+          "previous_style_proposal": {
+            "emotion": {
+              "value": [
+                "melancholic",
+                "heroic"
+              ],
+              "confidence": 0.88,
+              "evidence": [
+                "百戰中",
+                "力保山河",
+                "故營空"
+              ]
+            },
+            "imagery": {
+              "value": [
+                "frontier",
+                "landscape",
+                "season_weather",
+                "human_culture"
+              ],
+              "confidence": 0.9,
+              "evidence": [
+                "兵符",
+                "山河",
+                "秋風"
+              ]
+            },
+            "diction": {
+              "value": "refined",
+              "confidence": 0.88,
+              "evidence": [
+                "三授兵符百戰中",
+                "秋風牢落故營空"
+              ]
+            },
+            "expression": {
+              "value": "balanced",
+              "confidence": 0.87,
+              "evidence": [
+                "嗟下世",
+                "故營空"
+              ]
+            },
+            "energy": {
+              "value": "vigorous",
+              "confidence": 0.9,
+              "evidence": [
+                "百戰中",
+                "力保山河"
+              ]
+            },
+            "density": {
+              "value": "dense",
+              "confidence": 0.76,
+              "evidence": [
+                "兵符",
+                "山河",
+                "秋風"
+              ]
+            }
+          }
+        },
+        "source_reference": {
+          "version": "source_reference_all30_v2",
+          "sources": [
+            {
+              "title": "百度汉语：秋日经潼关感寓",
+              "url": "https://dict.baidu.com/shici/detail?pid=5b47df4e6f5d43709f97b64b887fa58f",
+              "kind": "text_only",
+              "assessment": "核对诗文；本次未找到可用的逐首赏析。",
+              "access": "full_text_read"
+            }
+          ],
+          "adjudication": {
+            "status": "assistant_decision_pending_human",
+            "reason": "未发现本轮阻断问题，继续人工风格审核；不代表诗体格律已认证。",
+            "version": "v2",
+            "date": "2026-09-23",
+            "variant_group": null
+          },
+          "density_policy": "frozen_lexicon_proxy_v1_1"
+        },
+        "human_review": {
+          "decision": "accept",
+          "reviewer": "本对话用户",
+          "notes": "气势暂缓；用户在看到第6首改典雅、第11首保留平稳的复核建议后明确回复“好的，我接受，然后进行下一步”，本次将对应整组完成确认。",
+          "status": "gold_adjudicated",
+          "confirmation_provenance": {
+            "decision": "accept",
+            "suggested_decision": "accept",
+            "reviewer": "本对话用户",
+            "final_style": {
+              "emotion": [
+                "melancholic"
+              ],
+              "imagery": [
+                "frontier",
+                "landscape",
+                "season_weather",
+                "human_culture"
+              ],
+              "diction": "refined",
+              "expression": "balanced",
+              "energy": "balanced",
+              "density": "dense"
+            },
+            "notes": "气势暂缓；用户在看到第6首改典雅、第11首保留平稳的复核建议后明确回复“好的，我接受，然后进行下一步”，本次将对应整组完成确认。",
+            "pending_dimensions": [],
+            "document_review": {
+              "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+              "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+              "sequence": 11,
+              "raw_decision": "气势暂缓",
+              "recorded_on": "2026-09-24",
+              "method": "user_edited_review_document",
+              "changes": {}
+            },
+            "reviewed_on": "2026-09-24",
+            "resolution": {
+              "previous_style": {
+                "emotion": [
+                  "melancholic"
+                ],
+                "imagery": [
+                  "frontier",
+                  "landscape",
+                  "season_weather",
+                  "human_culture"
+                ],
+                "diction": "refined",
+                "expression": "balanced",
+                "energy": "balanced",
+                "density": "dense"
+              },
+              "source": "explicit_user_confirmation_of_two_proposals",
+              "date": "2026-09-24"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "source": "gold",
+    "record": {
+      "id": "tang-740c1743-61f4-4694-908b-6737af54523d",
+      "text": "境靜聞鐘聲易響\n庭高見月影難沈\n青山解隔塵中事\n流水能清物外心",
+      "form": "qijue7",
+      "style": {
+        "emotion": [
+          "serene"
+        ],
+        "imagery": [
+          "human_culture",
+          "landscape",
+          "celestial"
+        ],
+        "diction": "refined",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "medium"
+      },
+      "culture": {
+        "adaptation": null
+      },
+      "metadata": {
+        "title": "春夜宿雲際寺",
+        "author": "斐公衍",
+        "dynasty": "唐",
+        "source": "chinese-poetry/chinese-poetry:全唐诗",
+        "collection": "全唐诗",
+        "source_id": "740c1743-61f4-4694-908b-6737af54523d",
+        "source_file": "poet.tang.50000.json",
+        "source_url": "https://github.com/chinese-poetry/chinese-poetry",
+        "source_license": "MIT",
+        "script": "traditional",
+        "form_detection": "automatic_structure_only",
+        "annotation_method": "hybrid_preannotation_v1",
+        "review_status": "gold_adjudicated",
+        "sampling": {
+          "sample_version": "v1",
+          "method": "uniform_author_then_uniform_poem_within_form",
+          "seed": 20260823,
+          "form_target": 500,
+          "max_per_author_per_form": 1
+        },
+        "calibration_selection": {
+          "version": "v1",
+          "seed": 20260920,
+          "per_form": 15,
+          "unique_author_across_batch": true
+        },
+        "variant_group": null,
+        "text_policy": "source_preserved_v1",
+        "density_policy": "frozen_lexicon_proxy_v1_1_on_original_text",
+        "annotation_scope": "single_user_source_assisted_style_review_not_expert_or_full_prosody_certification",
+        "reviewer": "本对话用户"
+      },
+      "annotation": {
+        "version": "v1",
+        "prelabel": {
+          "emotion": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "imagery": {
+            "value": [
+              "human_culture",
+              "landscape",
+              "celestial"
+            ],
+            "confidence": 0.82,
+            "evidence": {
+              "human_culture": [
+                "鐘",
+                "庭"
+              ],
+              "landscape": [
+                "山"
+              ],
+              "celestial": [
+                "月"
+              ]
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled"
+          },
+          "diction": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "expression": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "energy": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "density": {
+            "value": "medium",
+            "confidence": 0.733,
+            "evidence": {
+              "unique_imagery_terms": 4,
+              "line_count": 4,
+              "unique_imagery_terms_per_line": 1.0,
+              "thresholds": {
+                "sparse_to_medium": 0.75,
+                "medium_to_dense": 1.5
+              },
+              "selected_imagery_labels": [
+                "human_culture",
+                "landscape",
+                "celestial"
+              ],
+              "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled"
+          }
+        },
+        "review": {
+          "status": "pending_human_review",
+          "reviewer": null,
+          "notes": null
+        },
+        "assistant_calibration": {
+          "version": "source_assisted_v2",
+          "reviewer": "Codex assistant",
+          "status": "assistant_calibrated_pending_human",
+          "quality": {
+            "status": "include",
+            "reason": ""
+          },
+          "style_proposal": {
+            "emotion": {
+              "value": [
+                "serene"
+              ],
+              "evidence": [
+                "境靜",
+                "流水能清物外心"
+              ],
+              "rationale": "境靜与清物外心直接支撑清宁，文本证据较明确。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "imagery": {
+              "value": [
+                "human_culture",
+                "landscape",
+                "celestial"
+              ],
+              "evidence": [
+                "鐘聲",
+                "庭高",
+                "月影",
+                "青山",
+                "流水"
+              ],
+              "rationale": "鐘聲、庭、月影、青山、流水分别支持人文、天象和山水。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "diction": {
+              "value": "refined",
+              "evidence": [
+                "塵中事",
+                "物外心"
+              ],
+              "rationale": "塵中事、物外心表达凝练，典雅是助手映射。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "expression": {
+              "value": "balanced",
+              "evidence": [
+                "青山解隔塵中事",
+                "流水能清物外心"
+              ],
+              "rationale": "前两句景物，后两句借山水表达出尘心境，balanced；哲理性不等同于强烈直抒。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "energy": {
+              "value": "gentle",
+              "evidence": [
+                "境靜",
+                "流水能清"
+              ],
+              "rationale": "境靜、流水能清支撑舒缓。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "density": {
+              "value": "medium",
+              "evidence": [
+                "鐘",
+                "月",
+                "青山"
+              ],
+              "rationale": "固定词典命中4个去重词项 / 4行，值为medium。仅指词典线索浓度，不是文学密度或意象类别数；词项清单见density_audit_v2.json。",
+              "basis": "frozen_lexicon_proxy_v1_1",
+              "confidence": null
+            }
+          },
+          "previous_style_proposal": {
+            "emotion": {
+              "value": [
+                "serene"
+              ],
+              "confidence": 0.97,
+              "evidence": [
+                "境靜",
+                "流水能清物外心"
+              ]
+            },
+            "imagery": {
+              "value": [
+                "human_culture",
+                "landscape",
+                "celestial"
+              ],
+              "confidence": 0.94,
+              "evidence": [
+                "鐘聲",
+                "青山",
+                "月影"
+              ]
+            },
+            "diction": {
+              "value": "refined",
+              "confidence": 0.9,
+              "evidence": [
+                "塵中事",
+                "物外心"
+              ]
+            },
+            "expression": {
+              "value": "balanced",
+              "confidence": 0.86,
+              "evidence": [
+                "青山解隔塵中事",
+                "流水能清物外心"
+              ]
+            },
+            "energy": {
+              "value": "gentle",
+              "confidence": 0.97,
+              "evidence": [
+                "境靜",
+                "流水能清"
+              ]
+            },
+            "density": {
+              "value": "medium",
+              "confidence": 0.9,
+              "evidence": [
+                "鐘",
+                "月",
+                "青山"
+              ]
+            }
+          }
+        },
+        "source_reference": {
+          "version": "source_reference_all30_v2",
+          "sources": [
+            {
+              "title": "全唐诗补编卷902：春夜宿云际寺",
+              "url": "https://yinlu.org/reference/view.php?id=19351",
+              "kind": "primary_text_transcription",
+              "assessment": "文本与斐公衍署名核对；尚无逐首赏析。排除温庭筠的同近题作品，不能串用其赏析。",
+              "access": "search_text_read"
+            }
+          ],
+          "adjudication": {
+            "status": "assistant_decision_pending_human",
+            "reason": "未发现本轮阻断问题，继续人工风格审核；不代表诗体格律已认证。",
+            "version": "v2",
+            "date": "2026-09-23",
+            "variant_group": null
+          },
+          "density_policy": "frozen_lexicon_proxy_v1_1"
+        },
+        "human_review": {
+          "decision": "accept",
+          "reviewer": "本对话用户",
+          "notes": "用户在看到本诗原文及六维候选后回复：“我觉得你判断的对。接着做”。本次确认仅适用于《春夜宿云际寺》。密度为固定词典代理；来源辅助、非盲审、非专家独立标注。",
+          "status": "gold_adjudicated",
+          "confirmation_provenance": {
+            "decision": "accept",
+            "suggested_decision": "accept",
+            "reviewer": "本对话用户",
+            "final_style": {
+              "emotion": [
+                "serene"
+              ],
+              "imagery": [
+                "human_culture",
+                "landscape",
+                "celestial"
+              ],
+              "diction": "refined",
+              "expression": "balanced",
+              "energy": "gentle",
+              "density": "medium"
+            },
+            "notes": "用户在看到本诗原文及六维候选后回复：“我觉得你判断的对。接着做”。本次确认仅适用于《春夜宿云际寺》。密度为固定词典代理；来源辅助、非盲审、非专家独立标注。",
+            "reviewed_on": "2026-09-24",
+            "confirmation_source": "explicit_user_message_in_current_conversation"
+          }
+        }
+      }
+    }
+  },
+  {
+    "source": "gold",
+    "record": {
+      "id": "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+      "text": "灞岸江頭臘雪消\n東風偷軟入纖條\n春來不忍登樓望\n萬架金絲著地嬌",
+      "form": "qijue7",
+      "style": {
+        "emotion": [
+          "melancholic"
+        ],
+        "imagery": [
+          "season_weather",
+          "landscape",
+          "flora",
+          "human_culture"
+        ],
+        "diction": "ornate",
+        "expression": "balanced",
+        "energy": "gentle",
+        "density": "dense"
+      },
+      "culture": {
+        "adaptation": null
+      },
+      "metadata": {
+        "title": "柳十首 一",
+        "author": "李山甫",
+        "dynasty": "唐",
+        "source": "chinese-poetry/chinese-poetry:全唐诗",
+        "collection": "全唐诗",
+        "source_id": "7ca86906-05b4-4767-b25b-d01fbd0ead36",
+        "source_file": "poet.tang.35000.json",
+        "source_url": "https://github.com/chinese-poetry/chinese-poetry",
+        "source_license": "MIT",
+        "script": "traditional",
+        "form_detection": "automatic_structure_only",
+        "annotation_method": "hybrid_preannotation_v1",
+        "review_status": "gold_adjudicated",
+        "sampling": {
+          "sample_version": "v1",
+          "method": "uniform_author_then_uniform_poem_within_form",
+          "seed": 20260823,
+          "form_target": 500,
+          "max_per_author_per_form": 1
+        },
+        "calibration_selection": {
+          "version": "v1",
+          "seed": 20260920,
+          "per_form": 15,
+          "unique_author_across_batch": true
+        },
+        "variant_group": null,
+        "text_policy": "source_preserved_v1",
+        "density_policy": "frozen_lexicon_proxy_v1_1_on_original_text",
+        "annotation_scope": "single_user_source_assisted_style_review_not_expert_or_full_prosody_certification",
+        "reviewer": "本对话用户"
+      },
+      "annotation": {
+        "version": "v1",
+        "prelabel": {
+          "emotion": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "imagery": {
+            "value": [
+              "season_weather",
+              "landscape",
+              "human_culture"
+            ],
+            "confidence": 0.92,
+            "evidence": {
+              "season_weather": [
+                "雪",
+                "風",
+                "春"
+              ],
+              "landscape": [
+                "岸",
+                "江"
+              ],
+              "human_culture": [
+                "樓"
+              ]
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled"
+          },
+          "diction": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "expression": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "energy": {
+            "value": null,
+            "confidence": null,
+            "evidence": [],
+            "method": "deepseek_semantic_v1",
+            "status": "pending_llm"
+          },
+          "density": {
+            "value": "dense",
+            "confidence": 0.5,
+            "evidence": {
+              "unique_imagery_terms": 6,
+              "line_count": 4,
+              "unique_imagery_terms_per_line": 1.5,
+              "thresholds": {
+                "sparse_to_medium": 0.75,
+                "medium_to_dense": 1.5
+              },
+              "selected_imagery_labels": [
+                "season_weather",
+                "landscape",
+                "human_culture"
+              ],
+              "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled"
+          }
+        },
+        "review": {
+          "status": "pending_human_review",
+          "reviewer": null,
+          "notes": null
+        },
+        "assistant_calibration": {
+          "version": "source_assisted_v2",
+          "reviewer": "Codex assistant",
+          "status": "assistant_calibrated_pending_human",
+          "quality": {
+            "status": "include",
+            "reason": ""
+          },
+          "style_proposal": {
+            "emotion": {
+              "value": [
+                "melancholic"
+              ],
+              "evidence": [
+                "不忍登樓望"
+              ],
+              "rationale": "不忍登楼望可支持惆怅，但偷软、娇又显爱赏；感伤候选低确定度，不能仅由柳推送别。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "imagery": {
+              "value": [
+                "season_weather",
+                "landscape",
+                "flora",
+                "human_culture"
+              ],
+              "evidence": [
+                "臘雪消",
+                "灞岸江頭",
+                "纖條"
+              ],
+              "rationale": "雪东风、灞岸江头、纤条金丝与楼有据；金丝在此是柳条的比喻。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "diction": {
+              "value": "ornate",
+              "evidence": [
+                "萬架金絲著地嬌",
+                "東風偷軟"
+              ],
+              "rationale": "偷软、金丝、娇修饰纤细，绮丽暂留。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "expression": {
+              "value": "balanced",
+              "evidence": [
+                "春來不忍登樓望",
+                "萬架金絲著地嬌"
+              ],
+              "rationale": "写柳与不忍这一感受并置，平衡暂留。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "energy": {
+              "value": "gentle",
+              "evidence": [
+                "東風偷軟",
+                "纖條"
+              ],
+              "rationale": "柔条春风的语势轻柔。",
+              "basis": "assistant_close_reading",
+              "confidence": null
+            },
+            "density": {
+              "value": "dense",
+              "evidence": [
+                "臘雪",
+                "東風",
+                "纖條"
+              ],
+              "rationale": "固定词典命中6个去重词项 / 4行，值为dense。仅指词典线索浓度，不是文学密度或意象类别数；词项清单见density_audit_v2.json。",
+              "basis": "frozen_lexicon_proxy_v1_1",
+              "confidence": null
+            }
+          },
+          "previous_style_proposal": {
+            "emotion": {
+              "value": [
+                "melancholic"
+              ],
+              "confidence": 0.76,
+              "evidence": [
+                "不忍登樓望"
+              ]
+            },
+            "imagery": {
+              "value": [
+                "season_weather",
+                "landscape",
+                "flora",
+                "human_culture"
+              ],
+              "confidence": 0.88,
+              "evidence": [
+                "臘雪消",
+                "灞岸江頭",
+                "纖條"
+              ]
+            },
+            "diction": {
+              "value": "ornate",
+              "confidence": 0.82,
+              "evidence": [
+                "萬架金絲著地嬌",
+                "東風偷軟"
+              ]
+            },
+            "expression": {
+              "value": "balanced",
+              "confidence": 0.82,
+              "evidence": [
+                "春來不忍登樓望",
+                "萬架金絲著地嬌"
+              ]
+            },
+            "energy": {
+              "value": "gentle",
+              "confidence": 0.88,
+              "evidence": [
+                "東風偷軟",
+                "纖條"
+              ]
+            },
+            "density": {
+              "value": "dense",
+              "confidence": 0.76,
+              "evidence": [
+                "臘雪",
+                "東風",
+                "纖條"
+              ]
+            }
+          }
+        },
+        "source_reference": {
+          "version": "source_reference_all30_v2",
+          "sources": [
+            {
+              "title": "搜韵：柳十首其一前联索引",
+              "url": "https://www.sou-yun.cn/CharInClause.aspx?c=%E8%85%8A&p=4&t=QiJue",
+              "kind": "partial_text_index",
+              "assessment": "核前联及作者。",
+              "access": "search_text_read"
+            },
+            {
+              "title": "古诗词网：骈字类编引用柳十首其一后联",
+              "url": "https://www.gushici.net/mingju/15/59413/392722.html",
+              "kind": "partial_text_index",
+              "assessment": "仅使用页面中李山甫后联引文，不使用该页主作品的解说。",
+              "access": "search_text_read"
+            }
+          ],
+          "adjudication": {
+            "status": "assistant_decision_pending_human",
+            "reason": "未发现本轮阻断问题，继续人工风格审核；不代表诗体格律已认证。",
+            "version": "v2",
+            "date": "2026-09-23",
+            "variant_group": null
+          },
+          "density_policy": "frozen_lexicon_proxy_v1_1"
+        },
+        "human_review": {
+          "decision": "accept",
+          "reviewer": "本对话用户",
+          "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+          "status": "gold_adjudicated",
+          "confirmation_provenance": {
+            "decision": "accept",
+            "suggested_decision": "accept",
+            "reviewer": "本对话用户",
+            "final_style": {
+              "emotion": [
+                "melancholic"
+              ],
+              "imagery": [
+                "season_weather",
+                "landscape",
+                "flora",
+                "human_culture"
+              ],
+              "diction": "ornate",
+              "expression": "balanced",
+              "energy": "gentle",
+              "density": "dense"
+            },
+            "notes": "用户填写审核文档并在对话中告知已完成。接受当前六维候选。",
+            "document_review": {
+              "document": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\docs\\诗歌标注_待审核23首.md",
+              "document_sha256": "0083017e00f725e5d4c695a2deca65321139cd618192e83494a9c8607ef07936",
+              "sequence": 21,
+              "raw_decision": "接受",
+              "recorded_on": "2026-09-24",
+              "method": "user_edited_review_document",
+              "changes": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "source": "partial-silver",
+    "record": {
+      "id": "tang-0043d602-6f92-4761-ba75-92691019f99d",
+      "text": "瑤琴夜久弦秋清\n楚客一奏湘煙生\n曲中聲盡意不盡\n月照竹軒紅葉明",
+      "form": "qijue7",
+      "style": {
+        "emotion": null,
+        "imagery": [
+          "season_weather",
+          "celestial",
+          "flora",
+          "travel"
+        ],
+        "diction": null,
+        "expression": null,
+        "energy": null,
+        "density": "dense"
+      },
+      "culture": {
+        "adaptation": null
+      },
+      "dataset_stage": "partial-silver",
+      "available_controls": [
+        "form",
+        "imagery",
+        "density"
+      ],
+      "supervision": {
+        "form": "structural_v1",
+        "imagery": "silver_rule_v1_1",
+        "density": "silver_rule_v1_1"
+      },
+      "metadata": {
+        "title": "夜聽李山人彈琴",
+        "author": "司馬扎",
+        "dynasty": "唐",
+        "source": "chinese-poetry/chinese-poetry:全唐诗",
+        "label_source": "automatic_partial_silver",
+        "review_status": "automatic_partial_silver_accepted"
+      },
+      "annotation": {
+        "version": "partial_silver_v1",
+        "label_source": "automatic_partial_silver",
+        "per_dimension": {
+          "form": {
+            "value": "qijue7",
+            "label_source": "structural",
+            "method": "structural_v1",
+            "confidence": 1.0,
+            "evidence": {
+              "line_count": 4,
+              "line_lengths": [
+                7,
+                7,
+                7,
+                7
+              ],
+              "scope": "line/character counts only; not tonal or rhyme certification"
+            }
+          },
+          "imagery": {
+            "value": [
+              "season_weather",
+              "celestial",
+              "flora",
+              "travel"
+            ],
+            "confidence": 0.92,
+            "evidence": {
+              "season_weather": [
+                "秋",
+                "煙"
+              ],
+              "celestial": [
+                "月"
+              ],
+              "flora": [
+                "竹"
+              ],
+              "travel": [
+                "客"
+              ]
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled",
+            "label_source": "rule"
+          },
+          "density": {
+            "value": "dense",
+            "confidence": 0.5,
+            "evidence": {
+              "unique_imagery_terms": 6,
+              "line_count": 4,
+              "unique_imagery_terms_per_line": 1.5,
+              "thresholds": {
+                "sparse_to_medium": 0.75,
+                "medium_to_dense": 1.5
+              },
+              "selected_imagery_labels": [
+                "season_weather",
+                "celestial",
+                "flora",
+                "travel"
+              ],
+              "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled",
+            "label_source": "rule"
+          }
+        },
+        "provenance": {
+          "source_file": "data/processed/style_annotation/preannotated_v1_1.jsonl",
+          "source_sha256": "952d443e7ecd1b69d9e9a8eb48af8500a9b5c1a6044cd9d5fe3399b932db6dd9",
+          "rule_version": "lexicon_heuristic_v1_1",
+          "rule_code_sha256": "f881d301465662debf4dd44bdef45bd303d1e2f924fb3ab68db554b512697391",
+          "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+          "gate_report_sha256": "ee10ca1997e73a460857f8f7c68ae8d705df2935a71456478177e7ed7f94fadc",
+          "text_policy": "source_preserved_v1",
+          "source_record_id": "tang-0043d602-6f92-4761-ba75-92691019f99d",
+          "source_record_sha256": "aa1dccf700bf7d98fe3f8cd644f1cd8f1c117e2c86e2b8609d5290d2b1690908"
+        }
+      }
+    }
+  },
+  {
+    "source": "partial-silver",
+    "record": {
+      "id": "tang-00a09c6e-99bd-4d5d-8bb5-a55d580673be",
+      "text": "草堂無物伴身閑\n惟有屏風枕簟間\n本向他山求得石\n却於石上看他山",
+      "form": "qijue7",
+      "style": {
+        "emotion": null,
+        "imagery": [
+          "landscape",
+          "season_weather",
+          "flora",
+          "human_culture"
+        ],
+        "diction": null,
+        "expression": null,
+        "energy": null,
+        "density": "medium"
+      },
+      "culture": {
+        "adaptation": null
+      },
+      "dataset_stage": "partial-silver",
+      "available_controls": [
+        "form",
+        "imagery",
+        "density"
+      ],
+      "supervision": {
+        "form": "structural_v1",
+        "imagery": "silver_rule_v1_1",
+        "density": "silver_rule_v1_1"
+      },
+      "metadata": {
+        "title": "寒林石屏",
+        "author": "無悶",
+        "dynasty": "唐",
+        "source": "chinese-poetry/chinese-poetry:全唐诗",
+        "label_source": "automatic_partial_silver",
+        "review_status": "automatic_partial_silver_accepted"
+      },
+      "annotation": {
+        "version": "partial_silver_v1",
+        "label_source": "automatic_partial_silver",
+        "per_dimension": {
+          "form": {
+            "value": "qijue7",
+            "label_source": "structural",
+            "method": "structural_v1",
+            "confidence": 1.0,
+            "evidence": {
+              "line_count": 4,
+              "line_lengths": [
+                7,
+                7,
+                7,
+                7
+              ],
+              "scope": "line/character counts only; not tonal or rhyme certification"
+            }
+          },
+          "imagery": {
+            "value": [
+              "landscape",
+              "season_weather",
+              "flora",
+              "human_culture"
+            ],
+            "confidence": 0.92,
+            "evidence": {
+              "landscape": [
+                "山",
+                "石"
+              ],
+              "season_weather": [
+                "風"
+              ],
+              "flora": [
+                "草"
+              ],
+              "human_culture": [
+                "枕"
+              ]
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled",
+            "label_source": "rule"
+          },
+          "density": {
+            "value": "medium",
+            "confidence": 0.733,
+            "evidence": {
+              "unique_imagery_terms": 5,
+              "line_count": 4,
+              "unique_imagery_terms_per_line": 1.25,
+              "thresholds": {
+                "sparse_to_medium": 0.75,
+                "medium_to_dense": 1.5
+              },
+              "selected_imagery_labels": [
+                "landscape",
+                "season_weather",
+                "flora",
+                "human_culture"
+              ],
+              "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled",
+            "label_source": "rule"
+          }
+        },
+        "provenance": {
+          "source_file": "data/processed/style_annotation/preannotated_v1_1.jsonl",
+          "source_sha256": "952d443e7ecd1b69d9e9a8eb48af8500a9b5c1a6044cd9d5fe3399b932db6dd9",
+          "rule_version": "lexicon_heuristic_v1_1",
+          "rule_code_sha256": "f881d301465662debf4dd44bdef45bd303d1e2f924fb3ab68db554b512697391",
+          "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+          "gate_report_sha256": "ee10ca1997e73a460857f8f7c68ae8d705df2935a71456478177e7ed7f94fadc",
+          "text_policy": "source_preserved_v1",
+          "source_record_id": "tang-00a09c6e-99bd-4d5d-8bb5-a55d580673be",
+          "source_record_sha256": "3a8f3aef16af455b2ea6c1ec6c700b027431c4da2ddc6940a688997631a6fa79"
+        }
+      }
+    }
+  },
+  {
+    "source": "partial-silver",
+    "record": {
+      "id": "tang-00cb362d-2814-40dc-a7e7-c75d1dcdf307",
+      "text": "佳人一去無消息\n夢覺香殘愁復入\n空庭悄悄月如霜\n獨倚闌干伴花立",
+      "form": "qijue7",
+      "style": {
+        "emotion": null,
+        "imagery": [
+          "human_culture",
+          "celestial",
+          "season_weather",
+          "flora"
+        ],
+        "diction": null,
+        "expression": null,
+        "energy": null,
+        "density": "medium"
+      },
+      "culture": {
+        "adaptation": null
+      },
+      "dataset_stage": "partial-silver",
+      "available_controls": [
+        "form",
+        "imagery",
+        "density"
+      ],
+      "supervision": {
+        "form": "structural_v1",
+        "imagery": "silver_rule_v1_1",
+        "density": "silver_rule_v1_1"
+      },
+      "metadata": {
+        "title": "獨夜作",
+        "author": "李建勳",
+        "dynasty": "唐",
+        "source": "chinese-poetry/chinese-poetry:全唐诗",
+        "label_source": "automatic_partial_silver",
+        "review_status": "automatic_partial_silver_accepted"
+      },
+      "annotation": {
+        "version": "partial_silver_v1",
+        "label_source": "automatic_partial_silver",
+        "per_dimension": {
+          "form": {
+            "value": "qijue7",
+            "label_source": "structural",
+            "method": "structural_v1",
+            "confidence": 1.0,
+            "evidence": {
+              "line_count": 4,
+              "line_lengths": [
+                7,
+                7,
+                7,
+                7
+              ],
+              "scope": "line/character counts only; not tonal or rhyme certification"
+            }
+          },
+          "imagery": {
+            "value": [
+              "human_culture",
+              "celestial",
+              "season_weather",
+              "flora"
+            ],
+            "confidence": 0.92,
+            "evidence": {
+              "human_culture": [
+                "夢",
+                "庭"
+              ],
+              "celestial": [
+                "月"
+              ],
+              "season_weather": [
+                "霜"
+              ],
+              "flora": [
+                "花"
+              ]
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled",
+            "label_source": "rule"
+          },
+          "density": {
+            "value": "medium",
+            "confidence": 0.733,
+            "evidence": {
+              "unique_imagery_terms": 5,
+              "line_count": 4,
+              "unique_imagery_terms_per_line": 1.25,
+              "thresholds": {
+                "sparse_to_medium": 0.75,
+                "medium_to_dense": 1.5
+              },
+              "selected_imagery_labels": [
+                "human_culture",
+                "celestial",
+                "season_weather",
+                "flora"
+              ],
+              "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled",
+            "label_source": "rule"
+          }
+        },
+        "provenance": {
+          "source_file": "data/processed/style_annotation/preannotated_v1_1.jsonl",
+          "source_sha256": "952d443e7ecd1b69d9e9a8eb48af8500a9b5c1a6044cd9d5fe3399b932db6dd9",
+          "rule_version": "lexicon_heuristic_v1_1",
+          "rule_code_sha256": "f881d301465662debf4dd44bdef45bd303d1e2f924fb3ab68db554b512697391",
+          "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+          "gate_report_sha256": "ee10ca1997e73a460857f8f7c68ae8d705df2935a71456478177e7ed7f94fadc",
+          "text_policy": "source_preserved_v1",
+          "source_record_id": "tang-00cb362d-2814-40dc-a7e7-c75d1dcdf307",
+          "source_record_sha256": "eea7b6c3a827b11bf1071701eea6ac7081a2ab1e9d4c0058f4e30f53eb630588"
+        }
+      }
+    }
+  },
+  {
+    "source": "partial-silver",
+    "record": {
+      "id": "tang-01200a90-c853-442b-9718-e331b49a883f",
+      "text": "函罷家音又拆看\n添書絕句報平安\n豐溪漁叟生涯定\n明月清風一釣竿",
+      "form": "qijue7",
+      "style": {
+        "emotion": null,
+        "imagery": [
+          "landscape",
+          "celestial",
+          "season_weather",
+          "human_culture"
+        ],
+        "diction": null,
+        "expression": null,
+        "energy": null,
+        "density": "medium"
+      },
+      "culture": {
+        "adaptation": null
+      },
+      "dataset_stage": "partial-silver",
+      "available_controls": [
+        "form",
+        "imagery",
+        "density"
+      ],
+      "supervision": {
+        "form": "structural_v1",
+        "imagery": "silver_rule_v1_1",
+        "density": "silver_rule_v1_1"
+      },
+      "metadata": {
+        "title": "寄弟",
+        "author": "呂從慶",
+        "dynasty": "唐",
+        "source": "chinese-poetry/chinese-poetry:全唐诗",
+        "label_source": "automatic_partial_silver",
+        "review_status": "automatic_partial_silver_accepted"
+      },
+      "annotation": {
+        "version": "partial_silver_v1",
+        "label_source": "automatic_partial_silver",
+        "per_dimension": {
+          "form": {
+            "value": "qijue7",
+            "label_source": "structural",
+            "method": "structural_v1",
+            "confidence": 1.0,
+            "evidence": {
+              "line_count": 4,
+              "line_lengths": [
+                7,
+                7,
+                7,
+                7
+              ],
+              "scope": "line/character counts only; not tonal or rhyme certification"
+            }
+          },
+          "imagery": {
+            "value": [
+              "landscape",
+              "celestial",
+              "season_weather",
+              "human_culture"
+            ],
+            "confidence": 0.86,
+            "evidence": {
+              "landscape": [
+                "溪"
+              ],
+              "celestial": [
+                "月"
+              ],
+              "season_weather": [
+                "風"
+              ],
+              "human_culture": [
+                "書"
+              ]
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled",
+            "label_source": "rule"
+          },
+          "density": {
+            "value": "medium",
+            "confidence": 0.733,
+            "evidence": {
+              "unique_imagery_terms": 4,
+              "line_count": 4,
+              "unique_imagery_terms_per_line": 1.0,
+              "thresholds": {
+                "sparse_to_medium": 0.75,
+                "medium_to_dense": 1.5
+              },
+              "selected_imagery_labels": [
+                "landscape",
+                "celestial",
+                "season_weather",
+                "human_culture"
+              ],
+              "scope_note": "weak proxy: all lexicon imagery-cue concentration only"
+            },
+            "method": "lexicon_heuristic_v1_1",
+            "status": "prelabeled",
+            "label_source": "rule"
+          }
+        },
+        "provenance": {
+          "source_file": "data/processed/style_annotation/preannotated_v1_1.jsonl",
+          "source_sha256": "952d443e7ecd1b69d9e9a8eb48af8500a9b5c1a6044cd9d5fe3399b932db6dd9",
+          "rule_version": "lexicon_heuristic_v1_1",
+          "rule_code_sha256": "f881d301465662debf4dd44bdef45bd303d1e2f924fb3ab68db554b512697391",
+          "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+          "gate_report_sha256": "ee10ca1997e73a460857f8f7c68ae8d705df2935a71456478177e7ed7f94fadc",
+          "text_policy": "source_preserved_v1",
+          "source_record_id": "tang-01200a90-c853-442b-9718-e331b49a883f",
+          "source_record_sha256": "c247fffbb574cdb0cd8d4ddce504ebb6964267f0901d1f76989cc6792d5579da"
+        }
+      }
+    }
+  }
+]

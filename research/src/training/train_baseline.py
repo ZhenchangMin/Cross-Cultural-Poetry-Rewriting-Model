@@ -144,7 +144,8 @@ def train_baseline(
                     f"mean_loss={mean_loss:.6f}"
                 )
 
-            if global_step % config.training.save_every_steps == 0:
+            checkpoint_due = (should_step and optimizer_steps % config.training.save_every_steps == 0) if config.training.checkpoint_interval_unit == 'optimizer_steps' else global_step % config.training.save_every_steps == 0
+            if checkpoint_due:
                 save_adapter_checkpoint(
                     model,
                     tokenizer,

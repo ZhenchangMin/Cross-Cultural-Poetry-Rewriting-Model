@@ -1,0 +1,134 @@
+{
+  "purpose": "engineering smoke and tiny overfit sanity only; not an experiment result",
+  "seed": 20260926,
+  "smoke_optimizer_steps": 10,
+  "smoke_gradient_accumulation": 8,
+  "smoke_gold_path": "outputs/b0_training_pilot_20260926/diagnostic_gold18.jsonl",
+  "smoke_source_weights": {
+    "gold": 0.3,
+    "partial-silver": 0.7
+  },
+  "smoke_control_dropout": 0.1,
+  "overfit_records": 8,
+  "overfit_learning_rate": 0.0005,
+  "overfit_max_optimizer_steps": 160,
+  "overfit_gradient_accumulation": 4,
+  "overfit_check_every_optimizer_steps": 20,
+  "overfit_control_dropout": 0.0,
+  "overfit_stop_criteria": {
+    "loss_ratio_max": 0.4,
+    "teacher_forced_token_accuracy_min": 0.9,
+    "generation_character_exact_match_min": 0.5
+  },
+  "reserved_eval_ids": [
+    "tang-32fe3d88-fe52-4d0e-8431-2ff060e5c20b",
+    "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+    "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e",
+    "tang-7cb201dc-c6ee-45c2-a3e8-55f422fe789b",
+    "tang-e5980c45-6386-4d47-a777-3855fe8c70a7",
+    "tang-6084b90d-8dd5-4cde-92de-f0b7b59e7959"
+  ],
+  "reserved_eval_used_for_tuning_or_diagnostics": false,
+  "cv_leakage_checks": [
+    {
+      "fold": 0,
+      "gold_only": {
+        "train_records": 18,
+        "evaluation_records": 6,
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "variant_overlap": 0,
+        "prohibited_overlap": 0
+      },
+      "gold_partial": {
+        "train_records": 843,
+        "evaluation_records": 6,
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "variant_overlap": 0,
+        "prohibited_overlap": 0
+      }
+    },
+    {
+      "fold": 1,
+      "gold_only": {
+        "train_records": 18,
+        "evaluation_records": 6,
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "variant_overlap": 0,
+        "prohibited_overlap": 0
+      },
+      "gold_partial": {
+        "train_records": 843,
+        "evaluation_records": 6,
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "variant_overlap": 0,
+        "prohibited_overlap": 0
+      }
+    },
+    {
+      "fold": 2,
+      "gold_only": {
+        "train_records": 18,
+        "evaluation_records": 6,
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "variant_overlap": 0,
+        "prohibited_overlap": 0
+      },
+      "gold_partial": {
+        "train_records": 843,
+        "evaluation_records": 6,
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "variant_overlap": 0,
+        "prohibited_overlap": 0
+      }
+    },
+    {
+      "fold": 3,
+      "gold_only": {
+        "train_records": 18,
+        "evaluation_records": 6,
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "variant_overlap": 0,
+        "prohibited_overlap": 0
+      },
+      "gold_partial": {
+        "train_records": 843,
+        "evaluation_records": 6,
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "variant_overlap": 0,
+        "prohibited_overlap": 0
+      }
+    }
+  ],
+  "all_source_configs_evaluation_scope": "in-sample reconstruction only; use separately filtered CV training for held-out evaluation",
+  "protected_inputs": {
+    "data/processed/style_annotation/gold_calibration_v1.jsonl": "c0963756ec12c77852ed56818bb5934086833810d2a0da495966b47d89df8d43",
+    "data/processed/partial_silver_v1/partial_silver_v1.jsonl": "e88f0c317a972811b64e911a220c90c646efe0fbac8fb87b8e855ba5577dabfe",
+    "data/processed/style_annotation/adjudication_pending_v1.jsonl": "f853df2173dae3c7cb8ecbfc1fcf0508d1f6c712a39410688d214406c2b721d5",
+    "data/processed/style_annotation/quality_flags_v1.jsonl": "b5281a3bd97bd1fa9aa62213fdf442adc1aae69af130a310a035a4e31cbdeb27",
+    "data/processed/style_annotation/variant_groups_v2.json": "3cc2f469ca7bdfd4ff0ee239723f1bce3ca0bea8e95beeb13734e8a065c20ff7",
+    "configs/style_schema.json": "534709a70b833833e065a72fe77fce994649beeb412263cbfbe4f2c1fbcb48f3"
+  },
+  "proposals": {
+    "A": "proposed_b0_A.json",
+    "B": "proposed_b0_B.json"
+  },
+  "subset_ids": [
+    "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03",
+    "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+    "tang-740c1743-61f4-4694-908b-6737af54523d",
+    "tang-7ca86906-05b4-4767-b25b-d01fbd0ead36",
+    "tang-0043d602-6f92-4761-ba75-92691019f99d",
+    "tang-00a09c6e-99bd-4d5d-8bb5-a55d580673be",
+    "tang-00cb362d-2814-40dc-a7e7-c75d1dcdf307",
+    "tang-01200a90-c853-442b-9718-e331b49a883f"
+  ],
+  "long_pilot_training_started": false
+}

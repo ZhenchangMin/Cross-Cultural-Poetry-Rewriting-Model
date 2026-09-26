@@ -40,6 +40,7 @@ class TrainingSettings:
     log_every_steps: int
     save_every_steps: int
     output_dir: str
+    checkpoint_interval_unit: str = 'micro_batches'
 
 
 @dataclass(frozen=True)
@@ -85,6 +86,8 @@ class BaselineConfig:
             raise ValueError("training.learning_rate must be positive")
         if self.training.max_grad_norm <= 0:
             raise ValueError("training.max_grad_norm must be positive")
+        if self.training.checkpoint_interval_unit not in ('micro_batches', 'optimizer_steps'):
+            raise ValueError('Unsupported checkpoint interval unit')
         if self.training.log_every_steps <= 0 or self.training.save_every_steps <= 0:
             raise ValueError("log/save intervals must be positive")
         if self.generation.max_new_tokens <= 0:

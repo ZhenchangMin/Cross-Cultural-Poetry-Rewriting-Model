@@ -29,7 +29,7 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Mapping, Sequence, Tuple
 
 DEFAULT_SCHEMA = Path("configs/style_schema.json")
-SUPPORTED_STAGES = ("candidate", "preannotated", "gold")
+SUPPORTED_STAGES = ("candidate", "preannotated", "gold", "partial-silver", "form-only")
 STYLE_DIMS = ("emotion", "imagery", "diction", "expression", "energy", "density")
 
 
@@ -267,7 +267,12 @@ def validate_record(
         _add(issues, line, rid, "id", "must be a non-empty string")
 
     _validate_form_structure(record, schema, line, rid, issues)
-    _validate_style(record.get("style"), schema, stage=stage, line=line, rid=rid, issues=issues)
+    if stage in ('partial-silver', 'form-only'):
+        from .partial_supervision import partial_issues
+        for field, message in partial_issues(record, schema, stage):
+            _add(issues, line, rid, field, message)
+    else:
+        _validate_style(record.get("style"), schema, stage=stage, line=line, rid=rid, issues=issues)
     _validate_culture(record.get("culture"), schema, line, rid, issues)
 
     metadata = record.get("metadata")

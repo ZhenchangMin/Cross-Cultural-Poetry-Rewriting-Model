@@ -7,6 +7,7 @@ from typing import Sequence
 from torch.utils.data import DataLoader, Dataset
 
 from src.data.dataset import PoetryTrainingDataset, TrainingExample
+from src.data.mixed_dataset import MixedPoetryDataset
 from src.data.tokenization import TokenizedExample, encode_training_example, resolve_pad_token_id
 from src.training.collator import CausalLMCollator
 
@@ -41,7 +42,7 @@ def build_training_dataloader(
     # runs before tokenizer/model loading. A path is still supported for convenience.
     gold_dataset = (
         gold_source
-        if isinstance(gold_source, PoetryTrainingDataset)
+        if isinstance(gold_source, (PoetryTrainingDataset, MixedPoetryDataset))
         else PoetryTrainingDataset(gold_source, validate=True)
     )
     tokenized = TokenizedPoetryDataset(gold_dataset, tokenizer, max_length=max_length)
@@ -50,6 +51,9 @@ def build_training_dataloader(
 
     generator = torch.Generator()
     generator.manual_seed(seed)
+    sampler = None
+    if isinstance(gold_dataset, MixedPoetryDataset) and gold_dataset.training:
+        sampler = torch.utils.data.WeightedRandomSampler(gold_dataset.sampling_weights, len(gold_dataset), replacement=True, generator=generator)
     collator = CausalLMCollator(
         pad_token_id=resolve_pad_token_id(tokenizer),
         pad_to_multiple_of=8,
@@ -57,7 +61,8 @@ def build_training_dataloader(
     loader = DataLoader(
         tokenized,
         batch_size=batch_size,
-        shuffle=shuffle,
+        shuffle=shuffle if sampler is None else False,
+        sampler=sampler,
         collate_fn=collator,
         generator=generator if shuffle else None,
     )

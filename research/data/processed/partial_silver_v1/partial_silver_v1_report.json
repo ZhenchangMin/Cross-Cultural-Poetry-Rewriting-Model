@@ -1,0 +1,136 @@
+{
+  "version": "partial_silver_v1",
+  "input_count": 1000,
+  "retained": 825,
+  "filtered": 175,
+  "gold_excluded_total": 24,
+  "unresolved_preserved": 6,
+  "filter_reasons_overlapping": {
+    "low_confidence:imagery": 132,
+    "no_imagery_labels": 21,
+    "existing_gold": 24,
+    "high_risk_quality": 14,
+    "source_fragment": 14,
+    "unresolved_calibration": 6
+  },
+  "primary_filter_reasons_disjoint": {
+    "low_confidence:imagery": 111,
+    "no_imagery_labels": 21,
+    "existing_gold": 24,
+    "high_risk_quality": 13,
+    "unresolved_calibration": 6
+  },
+  "filter_detail_file": "partial_silver_v1_rejected.jsonl",
+  "forms": {
+    "qilv7": 467,
+    "qijue7": 358
+  },
+  "imagery_distribution": {
+    "landscape": 540,
+    "celestial": 351,
+    "season_weather": 510,
+    "flora": 438,
+    "fauna": 216,
+    "travel": 282,
+    "frontier": 109,
+    "human_culture": 526
+  },
+  "density_distribution": {
+    "sparse": 65,
+    "medium": 485,
+    "dense": 275
+  },
+  "confidence_thresholds": {
+    "imagery": 0.7,
+    "density": 0.5
+  },
+  "rule_version": "lexicon_heuristic_v1_1",
+  "provenance": {
+    "source_file": "data/processed/style_annotation/preannotated_v1_1.jsonl",
+    "source_sha256": "952d443e7ecd1b69d9e9a8eb48af8500a9b5c1a6044cd9d5fe3399b932db6dd9",
+    "rule_version": "lexicon_heuristic_v1_1",
+    "rule_code_sha256": "f881d301465662debf4dd44bdef45bd303d1e2f924fb3ab68db554b512697391",
+    "lexicon_sha256": "f2b3689554aff1982b8098248e9e146efccd0e0d93bea1eb614b3e4d452aae3d",
+    "gate_report_sha256": "ee10ca1997e73a460857f8f7c68ae8d705df2935a71456478177e7ed7f94fadc",
+    "text_policy": "source_preserved_v1"
+  },
+  "validation": {
+    "path": "E:\\study\\Cross-Cultural-Poetry-Rewriting-Model\\research\\data\\processed\\partial_silver_v1\\partial_silver_v1.jsonl",
+    "stage": "partial-silver",
+    "records": 825,
+    "valid_records": 825,
+    "invalid_records": 0,
+    "duplicate_ids": 0,
+    "issues": [],
+    "ok": true
+  },
+  "output_sha256": "e88f0c317a972811b64e911a220c90c646efe0fbac8fb87b8e855ba5577dabfe",
+  "trusted_dimensions": [
+    "form",
+    "imagery",
+    "density"
+  ],
+  "unknown_semantic_dimensions": [
+    "emotion",
+    "diction",
+    "expression",
+    "energy"
+  ],
+  "unknown_representation": "explicit JSON null, never a style label",
+  "full_silver_gate": "fail",
+  "partial_release_authorization": "user-approved trusted dimensions only",
+  "gate_scope": "development evidence: imagery F1=.8 and density accuracy=1; not independent test proof",
+  "new_human_review_tasks": 0,
+  "llm_calls": 0,
+  "training_started": false,
+  "protected_input_hashes": {
+    "data/processed/style_annotation/adjudication_pending_v1.jsonl": "f853df2173dae3c7cb8ecbfc1fcf0508d1f6c712a39410688d214406c2b721d5",
+    "data/processed/style_annotation/annotation_sample_v1.jsonl": "898a52e620a4c03295f684851b00c0461de13f5113ce98007c100b83d07975c5",
+    "data/processed/style_annotation/assistant_calibrated_v1_1.jsonl": "7f74f3fcca8cd4d84122f4583edcbdbaaaaed04f4151b903aeb17cee7abd1caf",
+    "data/processed/style_annotation/assistant_calibration_labels_v1.json": "166ca6cee19825f1aef09a46a9bb480dab7d301e7a4f770513347ca8d8748870",
+    "data/processed/style_annotation/assistant_calibration_report_v1_1.json": "c10b292a334dfcc4003fb1ad3f861092926e009a23e0e59b7bd403fff2dc0f96",
+    "data/processed/style_annotation/calibration_promotion_input_v1.jsonl": "805fc795a4e4d56f2745b3259b3c966659f192832b7d4a8e87bff36e2b64d2a0",
+    "data/processed/style_annotation/calibration_report_v1.json": "5d11dea700f85fb6199ef75b0c357b3697017137a9f06f498952645fb7ab8305",
+    "data/processed/style_annotation/calibration_rule_v1_1.jsonl": "fe840f00e7cde05c57d558663d796b0a3887f63682db8d23bc14cbbc9cb9c83c",
+    "data/processed/style_annotation/calibration_rule_v1_1_report.json": "d800c4b4308df9587d63fe25d900961e9d4b4854ddf182d10354b937946a2084",
+    "data/processed/style_annotation/calibration_sample_v1.jsonl": "1b1b555f36845326c650918ff4006cc88a50fb3e904069b1993081b195965269",
+    "data/processed/style_annotation/density_audit_v2.json": "bf9b79bc7852384746e85c50d123fe04d2175d1972333ce3f54c0389cad98d11",
+    "data/processed/style_annotation/gold_calibration24_manifest_v1.json": "0a0d0b05b8ed02bcfd9f280f61074f66a4dc8905b8d1ac3c0fdd42eb295c3c18",
+    "data/processed/style_annotation/gold_calibration24_report_v1.json": "2c4abedb1948e71cccb3861150ac5cce4480def94eae48a37c4d6570014940b8",
+    "data/processed/style_annotation/gold_calibration24_v1.jsonl": "440ff4eaa61b534b14b53b15ee6659e63f7ab4dda9605c5bdfa99514034e1cd2",
+    "data/processed/style_annotation/gold_calibration_audit_v1.json": "a828dc7e38be7a990acf6db69db27dfef68618198b14a840edc0af7f0ee17052",
+    "data/processed/style_annotation/gold_calibration_loader_check_v1.json": "af4a9fae3e1431040884e14377f6ab04129b7cf600b0a3ee3f6f096b094b1e3f",
+    "data/processed/style_annotation/gold_calibration_report_v1.json": "d1fb133f819d64987b322581fd6a1d637fc1e782d8bcff35c684ce9a4f040765",
+    "data/processed/style_annotation/gold_calibration_v1.jsonl": "c0963756ec12c77852ed56818bb5934086833810d2a0da495966b47d89df8d43",
+    "data/processed/style_annotation/human_review_state24_v2.json": "757adb47997b99960e355ceec78950eb76573709379dff82752c5386520c9b34",
+    "data/processed/style_annotation/human_review_state30_reconciled_v1.json": "aa3fe809514c9a4a8fe82ebdb5280dc4476c823cd45d9cbad2b9cd8d24b81d62",
+    "data/processed/style_annotation/human_review_state_v1.json": "24d68eef5bc52da10282f62b88adcd6cf65ad2227424a12bb11fa85af52e759e",
+    "data/processed/style_annotation/preannotated_v1.jsonl": "b7e161d9090316d31e0ee7c47ac8d76c659711eb0cf961027ff9a39538accfcc",
+    "data/processed/style_annotation/preannotated_v1_1.jsonl": "952d443e7ecd1b69d9e9a8eb48af8500a9b5c1a6044cd9d5fe3399b932db6dd9",
+    "data/processed/style_annotation/preannotation_report_v1.json": "f89b5d3e7c78ce58c865a8fc7600768e98f69d2ae1239ed2cea7d50c364f2edf",
+    "data/processed/style_annotation/preannotation_report_v1_1.json": "ee49045a0327435c58c7dd72f5ba8defb0899ccb7db2529de67d98c6e52968c9",
+    "data/processed/style_annotation/quality_flags_report_v1.json": "32f02b2efd6f8da9d45fda543c21310c543e9a1bc43bd09a1b5101d8b5963b14",
+    "data/processed/style_annotation/quality_flags_v1.jsonl": "b5281a3bd97bd1fa9aa62213fdf442adc1aae69af130a310a035a4e31cbdeb27",
+    "data/processed/style_annotation/review_batch_v2_100.jsonl": "fc136c790c28c003a73767afd40fff04882d68751cf8a624b3551316622ba8c1",
+    "data/processed/style_annotation/review_batch_v2_report.json": "5520067f03f197027bc31d70851e3d6394afed7cda730b9c6873942088157136",
+    "data/processed/style_annotation/review_candidates24_v2.jsonl": "85885502a92cba7a584ac9e856e1e5efbada4a2bc63b90fa4429a11a47cf38f3",
+    "data/processed/style_annotation/review_document_snapshot_v1.json": "e8dd2fdee03c115afbb575d018995e012bbe37e67a63fd2b44509aded1e6b106",
+    "data/processed/style_annotation/review_import_20260924.json": "c296da640f79d9f7eeb7545b9ed805e0c39cdd108ba610ddca77503b23a3a4bd",
+    "data/processed/style_annotation/review_preparation_validation_v2.json": "fcf47dc2c3ec855c835bbe442852655a76b8bf743f0b06a5100fd9140edc90e1",
+    "data/processed/style_annotation/sampling_report_v1.json": "82c83719c115e7c18529d9813da41da2416503e3f249121d74468eb00b1bbdaa",
+    "data/processed/style_annotation/source_reference_all30_v1.jsonl": "6b7cc768757419009f7a9949cc8a10f7b8f34dfa1a0a5182bf57fd8352bed4fa",
+    "data/processed/style_annotation/source_reference_all30_v2.jsonl": "9c3db75a57a7f56865d2da72748a20e1fa5b08ea767a03c7fa6622db11b6cb02",
+    "data/processed/style_annotation/source_reference_all30_validation_v1.json": "61b63643a163b5543818d669090fcdb7a59e7511718a24f114365844000cd0a5",
+    "data/processed/style_annotation/source_reference_batch01_v1.jsonl": "5808b0badc14dc7d826b8558756edf3d63969b1fd97fe8b2e011854cdc588042",
+    "data/processed/style_annotation/source_reference_batch02_v1.jsonl": "d5cc4aff04897ca5dc2c637528124ce0893e5cd27d03b8ccff95a127a1147bf5",
+    "data/processed/style_annotation/source_reference_first10_v1.jsonl": "a47e4bd1948e83fdcd2e9c9efb4f23e27f93a3179e7de597c307974264a94b7e",
+    "data/processed/style_annotation/source_reference_remaining20_v1.jsonl": "b85392f9fac7c93764610f9a7a33258f11fa19b5ae5a63e199b32e04a8165538",
+    "data/processed/style_annotation/variant_groups_v2.json": "3cc2f469ca7bdfd4ff0ee239723f1bce3ca0bea8e95beeb13734e8a065c20ff7"
+  },
+  "build_code_hashes": {
+    "scripts/build_partial_silver.py": "87e8ed1dba52ef8bd1bf175d48effcd2b6abb0e878e6261737dfd8f86db31c03",
+    "src/data/partial_silver.py": "243d81f5edd95d135880f558106d6ed3e37b6f476d3ec3e3bd052c233797535f",
+    "src/data/partial_supervision.py": "cb95d90b105f0225974b717e8455d50a8c073962fd562e0e6578fa28f324091f",
+    "src/data/validate_dataset.py": "ec0e8a6be465fe392cbd956e7f5996c9c53e64c9c523d4e11138d867582f7388"
+  }
+}

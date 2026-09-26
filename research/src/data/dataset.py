@@ -17,11 +17,14 @@ we want to verify the basic Dataset -> tokenizer -> LoRA -> loss pipeline first.
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass
+import hashlib
+import math
+from copy import deepcopy
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, Iterator, List, Mapping, Optional, Sequence
 
-from .validate_dataset import DEFAULT_SCHEMA, load_schema, validate_jsonl
+from .validate_dataset import DEFAULT_SCHEMA, STYLE_DIMS, load_schema, validate_jsonl
 
 
 FORM_NAMES = {
@@ -62,6 +65,12 @@ class TrainingExample:
     style: Mapping[str, Any]
     target_text: str
     prompt_text: str
+    available_controls: tuple[str, ...] = ()
+    active_controls: tuple[str, ...] = ()
+    source: str = 'gold'
+    supervision_type: Mapping[str, str] = field(default_factory=dict)
+    sampling_weight: float = 1.0
+    provenance: Mapping[str, Any] = field(default_factory=dict)
 
 
 def _load_jsonl(path: Path) -> List[Dict[str, Any]]:
@@ -82,7 +91,30 @@ def _join_labels(values: Sequence[str], mapping: Mapping[str, str]) -> str:
     return "、".join(mapping[x] for x in values)
 
 
-def build_control_summary(record: Mapping[str, Any]) -> str:
+def available_controls(record: Mapping[str, Any]) -> tuple[str, ...]:
+    declared = record.get('available_controls')
+    allowed = ('form',) + STYLE_DIMS
+    inferred = tuple(d for d in allowed if d == 'form' or record['style'].get(d) is not None)
+    if declared is None:
+        return inferred
+    if len(set(declared)) != len(declared) or 'form' not in declared or any(d not in inferred for d in declared):
+        raise ValueError('Invalid available_controls')
+    return tuple(d for d in allowed if d in declared)
+
+
+def dropout_controls(record, probability=0., seed=0, epoch=0, training=False):
+    if not math.isfinite(probability) or not 0 <= probability <= 1:
+        raise ValueError('control dropout probability must be in [0,1]')
+    controls = available_controls(record)
+    if not training or probability == 0: return controls
+    # 按seed/epoch/id/维度生成稳定随机数，不依赖读取顺序或worker全局RNG。
+    def keep(d):
+        digest = hashlib.sha256(f'{seed}:{epoch}:{record["id"]}:{d}'.encode()).digest()
+        return int.from_bytes(digest[:8], 'big') / 2**64 >= probability
+    return tuple(d for d in controls if d == 'form' or keep(d))
+
+
+def build_control_summary(record: Mapping[str, Any], controls=None) -> str:
     """Turn the structured V1 control labels into deterministic readable text.
 
     For baseline B0 we intentionally expose controls as text. Later B1/M1 can replace
@@ -91,26 +123,26 @@ def build_control_summary(record: Mapping[str, Any]) -> str:
     """
     form = str(record["form"])
     style = record["style"]
-    return "\n".join(
-        [
-            f"诗体：{FORM_NAMES[form]}",
-            f"情感：{_join_labels(style['emotion'], STYLE_ZH['emotion'])}",
-            f"意象：{_join_labels(style['imagery'], STYLE_ZH['imagery'])}",
-            f"辞藻：{STYLE_ZH['diction'][style['diction']]}",
-            f"表达：{STYLE_ZH['expression'][style['expression']]}",
-            f"气势：{STYLE_ZH['energy'][style['energy']]}",
-            f"密度：{STYLE_ZH['density'][style['density']]}",
-        ]
-    )
+    available = available_controls(record)
+    controls = available if controls is None else tuple(controls)
+    if 'form' not in controls or not set(controls) <= set(available):
+        raise ValueError('Controls must be supervised and always include form')
+    names = dict(emotion='情感', imagery='意象', diction='辞藻', expression='表达', energy='气势', density='密度')
+    lines = [f'诗体：{FORM_NAMES[form]}']
+    for d in STYLE_DIMS:
+        if d not in controls: continue
+        value = _join_labels(style[d], STYLE_ZH[d]) if d in ('emotion', 'imagery') else STYLE_ZH[d][style[d]]
+        lines.append(f'{names[d]}：{value}')
+    return '\n'.join(lines)
 
 
-def build_reconstruction_prompt(record: Mapping[str, Any]) -> str:
+def build_reconstruction_prompt(record: Mapping[str, Any], controls=None) -> str:
     """Build B0 self-reconstruction instruction.
 
     The target poem is NOT included in the prompt; it is the supervised answer.
     Author/title/metadata are also excluded to prevent identity shortcuts.
     """
-    controls = build_control_summary(record)
+    controls = build_control_summary(record, controls)
     return (
         "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，"
         "生成一首符合要求的古典诗。\n\n"
@@ -121,13 +153,20 @@ def build_reconstruction_prompt(record: Mapping[str, Any]) -> str:
     )
 
 
-def record_to_example(record: Mapping[str, Any]) -> TrainingExample:
+def record_to_example(record: Mapping[str, Any], *, controls=None, source=None, sampling_weight=1.0, provenance=None) -> TrainingExample:
+    available = available_controls(record)
+    active = available if controls is None else tuple(controls)
+    source = source or record.get('dataset_stage', 'gold')
     return TrainingExample(
         id=str(record["id"]),
         form=str(record["form"]),
         style=dict(record["style"]),
         target_text=str(record["text"]),
-        prompt_text=build_reconstruction_prompt(record),
+        prompt_text=build_reconstruction_prompt(record, active),
+        available_controls=available, active_controls=active, source=source,
+        supervision_type=deepcopy(record.get('supervision', {d: 'human_gold' for d in available})),
+        sampling_weight=sampling_weight,
+        provenance=deepcopy(provenance if provenance is not None else record.get('annotation', {})),
     )
 
 
@@ -145,19 +184,30 @@ class PoetryTrainingDataset(Sequence[TrainingExample]):
         *,
         schema_path: Path | str = DEFAULT_SCHEMA,
         validate: bool = True,
+        stage: str = 'gold',
+        training: bool = False,
+        control_dropout: float = 0.,
+        seed: int = 0,
     ) -> None:
         self.path = Path(path)
         self.schema_path = Path(schema_path)
+        if stage not in ('gold', 'partial-silver', 'form-only'): raise ValueError('Unsupported training data stage')
+        self.stage = stage
+        self.training = training
+        self.control_dropout = control_dropout
+        self.seed = seed
+        self.epoch = 0
+        if not math.isfinite(control_dropout) or not 0 <= control_dropout <= 1: raise ValueError('Invalid control dropout')
 
         if validate:
             schema = load_schema(self.schema_path)
-            report = validate_jsonl(self.path, schema, stage="gold")
+            report = validate_jsonl(self.path, schema, stage=stage)
             if not report.ok:
                 preview = "; ".join(
                     f"line {x.line} {x.field}: {x.message}" for x in report.issues[:5]
                 )
                 raise ValueError(
-                    f"Dataset is not Gold-ready: {report.invalid_records}/{report.records} invalid records. "
+                    f"Dataset is not {'Gold' if stage == 'gold' else stage}-ready: {report.invalid_records}/{report.records} invalid records. "
                     f"{preview}"
                 )
 
@@ -167,11 +217,17 @@ class PoetryTrainingDataset(Sequence[TrainingExample]):
         return len(self._records)
 
     def __getitem__(self, index: int) -> TrainingExample:
-        return record_to_example(self._records[index])
+        record = self._records[index]
+        controls = dropout_controls(record, self.control_dropout, self.seed, self.epoch, self.training)
+        return record_to_example(record, controls=controls, source=self.stage,
+                                 provenance={'source_file': str(self.path), 'annotation': deepcopy(record.get('annotation', {}))})
+
+    def set_epoch(self, epoch: int) -> None:
+        self.epoch = epoch
 
     def __iter__(self) -> Iterator[TrainingExample]:
-        for record in self._records:
-            yield record_to_example(record)
+        for i in range(len(self)):
+            yield self[i]
 
 
 def inspect_dataset(path: Path | str, limit: int = 3) -> List[Dict[str, str]]:

@@ -1,0 +1,406 @@
+[
+  {
+    "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+    "target_controls": {
+      "form": "qilv7",
+      "emotion": [
+        "joyful",
+        "serene"
+      ],
+      "imagery": [
+        "landscape",
+        "flora",
+        "season_weather",
+        "fauna"
+      ],
+      "diction": "refined",
+      "expression": "balanced",
+      "energy": "gentle",
+      "density": "dense"
+    },
+    "reference_poem": "百越城池枕海圻\n永嘉山水復相依\n懸蘿弱篠垂清淺\n宿雨朝暾和翠微\n鳥訝山經傳不盡\n花隨月令數仍稀\n幸陪謝客題詩句\n誰與王孫此地歸",
+    "B0-A": {
+      "generation": "領得溪風不放迴\n傍窗緣砌遍庭栽\n須招野客爲鄰住\n看引山禽入郭來\n幽院獨驚秋氣早\n小門深向綠陰開\n誰憐翠色兼寒影\n靜落茶甌與酒杯",
+      "form_compliance": true,
+      "imagery_prediction": [
+        "human_culture",
+        "landscape",
+        "season_weather",
+        "travel"
+      ],
+      "imagery_matched": [
+        "landscape",
+        "season_weather"
+      ],
+      "imagery_missing": [
+        "fauna",
+        "flora"
+      ],
+      "imagery_extra": [
+        "human_culture",
+        "travel"
+      ],
+      "imagery_F1": 0.5,
+      "density_prediction": "dense",
+      "density_match": true,
+      "exact_training_text_matches": [
+        "tang-4e7818af-b432-424d-b011-21180f6e9053"
+      ]
+    },
+    "B0-B": {
+      "generation": "家在閩山西復西\n其中歲歲有鶯啼\n如今不在鶯啼處\n鶯在舊時啼處啼",
+      "form_compliance": false,
+      "imagery_prediction": [],
+      "imagery_matched": [],
+      "imagery_missing": [
+        "fauna",
+        "flora",
+        "landscape",
+        "season_weather"
+      ],
+      "imagery_extra": [],
+      "imagery_F1": 0.0,
+      "density_prediction": null,
+      "density_match": false,
+      "exact_training_text_matches": [
+        "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4"
+      ]
+    }
+  },
+  {
+    "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+    "target_controls": {
+      "form": "qijue7",
+      "emotion": [
+        "melancholic"
+      ],
+      "imagery": [
+        "frontier",
+        "landscape",
+        "season_weather",
+        "human_culture"
+      ],
+      "diction": "refined",
+      "expression": "balanced",
+      "energy": "balanced",
+      "density": "dense"
+    },
+    "reference_poem": "昔年曾逐漢征東\n三授兵符百戰中\n力保山河嗟下世\n秋風牢落故營空",
+    "B0-A": {
+      "generation": "破虜功成百戰場\n天書新拜漢中郎\n映門旌斾春風起\n對客弦歌白日長",
+      "form_compliance": true,
+      "imagery_prediction": [
+        "celestial",
+        "frontier",
+        "human_culture",
+        "season_weather"
+      ],
+      "imagery_matched": [
+        "frontier",
+        "human_culture",
+        "season_weather"
+      ],
+      "imagery_missing": [
+        "landscape"
+      ],
+      "imagery_extra": [
+        "celestial"
+      ],
+      "imagery_F1": 0.75,
+      "density_prediction": "dense",
+      "density_match": true,
+      "exact_training_text_matches": []
+    },
+    "B0-B": {
+      "generation": "家在閩山西復西\n其中歲歲有鴈啼\n如今不在鵲飛處\n唯有空巢春寂寂",
+      "form_compliance": true,
+      "imagery_prediction": [
+        "fauna",
+        "landscape",
+        "season_weather"
+      ],
+      "imagery_matched": [
+        "landscape",
+        "season_weather"
+      ],
+      "imagery_missing": [
+        "frontier",
+        "human_culture"
+      ],
+      "imagery_extra": [
+        "fauna"
+      ],
+      "imagery_F1": 0.5714285714285714,
+      "density_prediction": "medium",
+      "density_match": false,
+      "exact_training_text_matches": []
+    }
+  },
+  {
+    "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+    "target_controls": {
+      "form": "qilv7",
+      "emotion": [
+        "serene",
+        "joyful"
+      ],
+      "imagery": [
+        "human_culture",
+        "flora",
+        "landscape",
+        "fauna"
+      ],
+      "diction": "refined",
+      "expression": "balanced",
+      "energy": "gentle",
+      "density": "dense"
+    },
+    "reference_poem": "清邃林亭指畫開\n幽巖別派像天台\n坐牽蕉葉題詩句\n醉觸藤花落酒杯\n白鳥不歸山裏去\n紅鱗多自鏡中來\n終年此地爲吟伴\n早起尋君薄暮迴",
+    "B0-A": {
+      "generation": "領得溪風不放迴\n傍窗緣砌遍庭栽\n須招野客爲鄰住\n看引山禽入郭來\n幽院獨驚秋氣早\n小門深向綠陰開\n誰憐翠色兼寒影\n靜落茶甌與酒杯",
+      "form_compliance": true,
+      "imagery_prediction": [
+        "human_culture",
+        "landscape",
+        "season_weather",
+        "travel"
+      ],
+      "imagery_matched": [
+        "human_culture",
+        "landscape"
+      ],
+      "imagery_missing": [
+        "fauna",
+        "flora"
+      ],
+      "imagery_extra": [
+        "season_weather",
+        "travel"
+      ],
+      "imagery_F1": 0.5,
+      "density_prediction": "dense",
+      "density_match": true,
+      "exact_training_text_matches": [
+        "tang-4e7818af-b432-424d-b011-21180f6e9053"
+      ]
+    },
+    "B0-B": {
+      "generation": "家在閩山西復西\n其中歲歲有鶯啼\n如今不在鶯啼處\n鶯在舊時啼處啼",
+      "form_compliance": false,
+      "imagery_prediction": [],
+      "imagery_matched": [],
+      "imagery_missing": [
+        "fauna",
+        "flora",
+        "human_culture",
+        "landscape"
+      ],
+      "imagery_extra": [],
+      "imagery_F1": 0.0,
+      "density_prediction": null,
+      "density_match": false,
+      "exact_training_text_matches": [
+        "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4"
+      ]
+    }
+  },
+  {
+    "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+    "target_controls": {
+      "form": "qilv7",
+      "emotion": [
+        "melancholic"
+      ],
+      "imagery": [
+        "flora",
+        "season_weather",
+        "human_culture",
+        "celestial"
+      ],
+      "diction": "ornate",
+      "expression": "implicit",
+      "energy": "gentle",
+      "density": "medium"
+    },
+    "reference_poem": "帶露含煙處處垂\n綻黃搖綠嫩參差\n長堤未見風飄絮\n廣陌初憐日映絲\n斜傍畫筵偷舞態\n低臨粧閣學愁眉\n離亭不放到春暮\n折盡拂簷千萬枝",
+    "B0-A": {
+      "generation": "恰當歲日紛紛落\n天寶瑤花助物華\n自古最先標瑞牒\n有誰輕擬比楊花\n密飄粉署光同冷\n靜壓青松勢欲斜\n豈但小臣添興詠\n狂歌醉舞一家家",
+      "form_compliance": true,
+      "imagery_prediction": [
+        "flora",
+        "human_culture"
+      ],
+      "imagery_matched": [
+        "flora",
+        "human_culture"
+      ],
+      "imagery_missing": [
+        "celestial",
+        "season_weather"
+      ],
+      "imagery_extra": [],
+      "imagery_F1": 0.6666666666666666,
+      "density_prediction": "sparse",
+      "density_match": false,
+      "exact_training_text_matches": [
+        "tang-a0e56e1e-22a7-4afa-8f2b-9da47aff3e0e"
+      ]
+    },
+    "B0-B": {
+      "generation": "家在閩山西復西\n其中歲歲有鶯啼\n如今不在鶯啼處\n鶯在舊時啼處啼",
+      "form_compliance": false,
+      "imagery_prediction": [],
+      "imagery_matched": [],
+      "imagery_missing": [
+        "celestial",
+        "flora",
+        "human_culture",
+        "season_weather"
+      ],
+      "imagery_extra": [],
+      "imagery_F1": 0.0,
+      "density_prediction": null,
+      "density_match": false,
+      "exact_training_text_matches": [
+        "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4"
+      ]
+    }
+  },
+  {
+    "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+    "target_controls": {
+      "form": "qijue7",
+      "emotion": [
+        "melancholic"
+      ],
+      "imagery": [
+        "landscape",
+        "flora",
+        "travel"
+      ],
+      "diction": "plain",
+      "expression": "direct",
+      "energy": "balanced",
+      "density": "medium"
+    },
+    "reference_poem": "處處看山不可行\n野花相向笑無成\n長嫌爲客過州縣\n漸被時人識姓名",
+    "B0-A": {
+      "generation": "木葉紛紛湘水濱\n此中何事往頻頻\n臨風自笑歸時晚\n更送浮雲逐故人",
+      "form_compliance": true,
+      "imagery_prediction": [
+        "celestial",
+        "flora",
+        "season_weather",
+        "travel"
+      ],
+      "imagery_matched": [
+        "flora",
+        "travel"
+      ],
+      "imagery_missing": [
+        "landscape"
+      ],
+      "imagery_extra": [
+        "celestial",
+        "season_weather"
+      ],
+      "imagery_F1": 0.5714285714285714,
+      "density_prediction": "medium",
+      "density_match": true,
+      "exact_training_text_matches": [
+        "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03"
+      ]
+    },
+    "B0-B": {
+      "generation": "家在閩山西復西\n其中歲歲有鶯啼\n如今不在鶯啼處\n鶯在舊時啼處啼",
+      "form_compliance": true,
+      "imagery_prediction": [
+        "fauna",
+        "landscape"
+      ],
+      "imagery_matched": [
+        "landscape"
+      ],
+      "imagery_missing": [
+        "flora",
+        "travel"
+      ],
+      "imagery_extra": [
+        "fauna"
+      ],
+      "imagery_F1": 0.4,
+      "density_prediction": "sparse",
+      "density_match": false,
+      "exact_training_text_matches": [
+        "tang-c591cbbd-4b6d-4284-a265-d29ffb1db9b4"
+      ]
+    }
+  },
+  {
+    "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+    "target_controls": {
+      "form": "qijue7",
+      "emotion": [
+        "heroic"
+      ],
+      "imagery": [
+        "human_culture",
+        "landscape",
+        "travel",
+        "celestial"
+      ],
+      "diction": "refined",
+      "expression": "direct",
+      "energy": "vigorous",
+      "density": "sparse"
+    },
+    "reference_poem": "九重天子人中貴\n五等諸侯閫外尊\n爭似布衣雲水客\n不將名字挂乾坤",
+    "B0-A": {
+      "generation": "木葉紛紛湘水濱\n此中何事往頻頻\n臨風自笑歸時晚\n更送浮雲逐故人",
+      "form_compliance": true,
+      "imagery_prediction": [
+        "celestial",
+        "flora",
+        "season_weather",
+        "travel"
+      ],
+      "imagery_matched": [
+        "celestial",
+        "travel"
+      ],
+      "imagery_missing": [
+        "human_culture",
+        "landscape"
+      ],
+      "imagery_extra": [
+        "flora",
+        "season_weather"
+      ],
+      "imagery_F1": 0.5,
+      "density_prediction": "medium",
+      "density_match": false,
+      "exact_training_text_matches": [
+        "tang-3dc2c19f-a20a-4405-b4e7-5a1b2f75cf03"
+      ]
+    },
+    "B0-B": {
+      "generation": "破虜功成百戰場\n天書新拜漢中郎\n映門旌斾春風起\n對客弦歌白日長\n階下鬬雞花乍發\n營南試馬柳初黃\n由來吳楚多同調\n感激逢君共異鄉",
+      "form_compliance": false,
+      "imagery_prediction": [],
+      "imagery_matched": [],
+      "imagery_missing": [
+        "celestial",
+        "human_culture",
+        "landscape",
+        "travel"
+      ],
+      "imagery_extra": [],
+      "imagery_F1": 0.0,
+      "density_prediction": null,
+      "density_match": false,
+      "exact_training_text_matches": [
+        "tang-7887d2d9-3655-45b1-a556-349d95304058"
+      ]
+    }
+  }
+]

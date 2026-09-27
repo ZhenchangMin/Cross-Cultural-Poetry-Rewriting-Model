@@ -1,0 +1,217 @@
+{
+  "eval_loss": 3.746083368098617,
+  "eval_token_accuracy": 0.33222591362126247,
+  "supervised_tokens": 301,
+  "generation": {
+    "records": 6,
+    "form_compliance": 0.6666666666666666,
+    "imagery_micro_precision": 0.6,
+    "imagery_micro_recall": 0.391304347826087,
+    "imagery_micro_F1": 0.47368421052631576,
+    "density_accuracy": 0.16666666666666666,
+    "rule_metrics_are_proxies": true,
+    "semantic_style_scores": null,
+    "samples": [
+      {
+        "id": "tang-0a84422b-f228-4263-8d6f-281b1606d605",
+        "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言律诗\n情感：欢愉明朗、清宁平和\n意象：山水自然、植物、时令气候、动物\n辞藻：典雅\n表达：情景交融\n气势：舒缓\n密度：密集\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+        "target": "百越城池枕海圻\n永嘉山水復相依\n懸蘿弱篠垂清淺\n宿雨朝暾和翠微\n鳥訝山經傳不盡\n花隨月令數仍稀\n幸陪謝客題詩句\n誰與王孫此地歸",
+        "output": "東風吹雪散春開\n萬樹千枝一色來\n玉蕊自從天上去\n金光何處夜還回\n雲深未見仙人宅\n月冷空聞帝子臺\n莫怪相逢不相識\n此中曾有上皇來",
+        "requested_style": {
+          "emotion": [
+            "joyful",
+            "serene"
+          ],
+          "imagery": [
+            "landscape",
+            "flora",
+            "season_weather",
+            "fauna"
+          ],
+          "diction": "refined",
+          "expression": "balanced",
+          "energy": "gentle",
+          "density": "dense"
+        },
+        "metrics": {
+          "nonempty": true,
+          "form_compliance": true,
+          "character_exact_match": false,
+          "character_lcs_recall": 0.05357142857142857,
+          "repeated_line_fraction": 0.0
+        },
+        "imagery_rule_prediction": [
+          "season_weather",
+          "human_culture",
+          "celestial",
+          "flora"
+        ],
+        "density_rule_prediction": "medium"
+      },
+      {
+        "id": "tang-599f85c6-76cb-4af5-bc51-67b9c36b2ab4",
+        "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n情感：感伤惆怅\n意象：边塞军旅、山水自然、时令气候、人文文化\n辞藻：典雅\n表达：情景交融\n气势：平稳\n密度：密集\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+        "target": "昔年曾逐漢征東\n三授兵符百戰中\n力保山河嗟下世\n秋風牢落故營空",
+        "output": "東風吹雪暗江濱\n萬里春光入望中\n獨倚危樓無處望\n一聲鶯語落花紅",
+        "requested_style": {
+          "emotion": [
+            "melancholic"
+          ],
+          "imagery": [
+            "frontier",
+            "landscape",
+            "season_weather",
+            "human_culture"
+          ],
+          "diction": "refined",
+          "expression": "balanced",
+          "energy": "balanced",
+          "density": "dense"
+        },
+        "metrics": {
+          "nonempty": true,
+          "form_compliance": true,
+          "character_exact_match": false,
+          "character_lcs_recall": 0.10714285714285714,
+          "repeated_line_fraction": 0.0
+        },
+        "imagery_rule_prediction": [
+          "season_weather",
+          "landscape",
+          "flora",
+          "fauna"
+        ],
+        "density_rule_prediction": "dense"
+      },
+      {
+        "id": "tang-805df95b-c30d-4773-ac47-68f6574f6d81",
+        "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言律诗\n情感：清宁平和、欢愉明朗\n意象：人文文化、植物、山水自然、动物\n辞藻：典雅\n表达：情景交融\n气势：舒缓\n密度：密集\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+        "target": "清邃林亭指畫開\n幽巖別派像天台\n坐牽蕉葉題詩句\n醉觸藤花落酒杯\n白鳥不歸山裏去\n紅鱗多自鏡中來\n終年此地爲吟伴\n早起尋君薄暮迴",
+        "output": "東風吹落舊年花\n春色明朝又滿家\n萬里相思無計寄\n一園新綠有情説\n鶯啼欲報清明節\n燕語如傾別後話\n莫怪今朝淚滿巾\n此時獨倚危樓望\n千里江南煙雨斜",
+        "requested_style": {
+          "emotion": [
+            "serene",
+            "joyful"
+          ],
+          "imagery": [
+            "human_culture",
+            "flora",
+            "landscape",
+            "fauna"
+          ],
+          "diction": "refined",
+          "expression": "balanced",
+          "energy": "gentle",
+          "density": "dense"
+        },
+        "metrics": {
+          "nonempty": true,
+          "form_compliance": false,
+          "character_exact_match": false,
+          "character_lcs_recall": 0.05357142857142857,
+          "repeated_line_fraction": 0.0
+        },
+        "imagery_rule_prediction": [],
+        "density_rule_prediction": null
+      },
+      {
+        "id": "tang-95477829-6273-4f85-a0b8-d5bf3c07e507",
+        "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言律诗\n情感：感伤惆怅\n意象：植物、时令气候、人文文化、天象\n辞藻：绮丽\n表达：含蓄\n气势：舒缓\n密度：适中\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+        "target": "帶露含煙處處垂\n綻黃搖綠嫩參差\n長堤未見風飄絮\n廣陌初憐日映絲\n斜傍畫筵偷舞態\n低臨粧閣學愁眉\n離亭不放到春暮\n折盡拂簷千萬枝",
+        "output": "東風吹落舊年花\n萬點春光滿院斜\n誰道春來無處所\n一枝開在最高樓",
+        "requested_style": {
+          "emotion": [
+            "melancholic"
+          ],
+          "imagery": [
+            "flora",
+            "season_weather",
+            "human_culture",
+            "celestial"
+          ],
+          "diction": "ornate",
+          "expression": "implicit",
+          "energy": "gentle",
+          "density": "medium"
+        },
+        "metrics": {
+          "nonempty": true,
+          "form_compliance": false,
+          "character_exact_match": false,
+          "character_lcs_recall": 0.07142857142857142,
+          "repeated_line_fraction": 0.0
+        },
+        "imagery_rule_prediction": [],
+        "density_rule_prediction": null
+      },
+      {
+        "id": "tang-c8f4ef3d-dfd7-4d77-8d4c-df0e8575eeef",
+        "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n情感：感伤惆怅\n意象：山水自然、植物、行旅\n辞藻：质朴\n表达：直抒\n气势：平稳\n密度：适中\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+        "target": "處處看山不可行\n野花相向笑無成\n長嫌爲客過州縣\n漸被時人識姓名",
+        "output": "江上春來似景陽\n天街煙樹倚晴光\n年年送客横汾路\n別後孤舟一夢長",
+        "requested_style": {
+          "emotion": [
+            "melancholic"
+          ],
+          "imagery": [
+            "landscape",
+            "flora",
+            "travel"
+          ],
+          "diction": "plain",
+          "expression": "direct",
+          "energy": "balanced",
+          "density": "medium"
+        },
+        "metrics": {
+          "nonempty": true,
+          "form_compliance": true,
+          "character_exact_match": false,
+          "character_lcs_recall": 0.03571428571428571,
+          "repeated_line_fraction": 0.0
+        },
+        "imagery_rule_prediction": [
+          "travel",
+          "season_weather",
+          "landscape",
+          "flora"
+        ],
+        "density_rule_prediction": "dense"
+      },
+      {
+        "id": "tang-fe589d8b-6a1f-4a8f-9a91-89c870603419",
+        "prompt": "你是一名中国古典诗歌生成模型。请严格依据给定诗体和风格控制，生成一首符合要求的古典诗。\n\n【控制条件】\n诗体：七言绝句\n情感：豪迈昂扬\n意象：人文文化、山水自然、行旅、天象\n辞藻：典雅\n表达：直抒\n气势：强烈顿挫\n密度：疏朗\n\n【输出要求】\n只输出诗歌正文，不输出作者、标题、解释或额外说明。",
+        "target": "九重天子人中貴\n五等諸侯閫外尊\n爭似布衣雲水客\n不將名字挂乾坤",
+        "output": "東風吹雪散春開\n萬里山河一望來\n欲向雲中尋舊跡\n不知何處是蓬萊",
+        "requested_style": {
+          "emotion": [
+            "heroic"
+          ],
+          "imagery": [
+            "human_culture",
+            "landscape",
+            "travel",
+            "celestial"
+          ],
+          "diction": "refined",
+          "expression": "direct",
+          "energy": "vigorous",
+          "density": "sparse"
+        },
+        "metrics": {
+          "nonempty": true,
+          "form_compliance": true,
+          "character_exact_match": false,
+          "character_lcs_recall": 0.07142857142857142,
+          "repeated_line_fraction": 0.0
+        },
+        "imagery_rule_prediction": [
+          "season_weather",
+          "landscape",
+          "celestial"
+        ],
+        "density_rule_prediction": "dense"
+      }
+    ]
+  }
+}

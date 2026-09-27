@@ -1,0 +1,10 @@
+{
+  "arm": "B",
+  "started_utc": "2026-09-26T09:28:27.950414+00:00",
+  "finished_utc": "2026-09-26T09:41:05.309108+00:00",
+  "wall_clock_seconds": 800.4796365620023,
+  "success": true,
+  "scope": "complete runner including import/load/evaluation/checkpoint saving",
+  "peak_allocated_bytes": 3844323328,
+  "peak_reserved_bytes": 4752146432
+}

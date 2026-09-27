@@ -1,0 +1,81 @@
+{
+  "metrics": {
+    "eval_loss": {
+      "B0-A": 6.3725955018965506,
+      "B0-B": 3.812666489040337,
+      "delta_B_minus_A": -2.5599290128562138
+    },
+    "eval_token_accuracy": {
+      "B0-A": 0.26578073089701,
+      "B0-B": 0.31893687707641194,
+      "delta_B_minus_A": 0.05315614617940195
+    },
+    "form_compliance": {
+      "B0-A": 1.0,
+      "B0-B": 0.3333333333333333,
+      "delta_B_minus_A": -0.6666666666666667
+    },
+    "imagery_micro_precision": {
+      "B0-A": 0.5909090909090909,
+      "B0-B": 0.6,
+      "delta_B_minus_A": 0.009090909090909038
+    },
+    "imagery_micro_recall": {
+      "B0-A": 0.5652173913043478,
+      "B0-B": 0.13043478260869565,
+      "delta_B_minus_A": -0.4347826086956521
+    },
+    "imagery_micro_F1": {
+      "B0-A": 0.5777777777777777,
+      "B0-B": 0.21428571428571427,
+      "delta_B_minus_A": -0.3634920634920634
+    },
+    "density_accuracy": {
+      "B0-A": 0.6666666666666666,
+      "B0-B": 0.0,
+      "delta_B_minus_A": -0.6666666666666666
+    },
+    "peak_vram_gib": {
+      "B0-A": 3.5803050994873047,
+      "B0-B": 3.5803050994873047,
+      "delta_B_minus_A": 0.0
+    },
+    "wall_clock_seconds": {
+      "B0-A": 830.4215198429993,
+      "B0-B": 800.4796365620023,
+      "delta_B_minus_A": -29.94188328099699
+    },
+    "training_seconds": {
+      "B0-A": 368.7245122229724,
+      "B0-B": 373.2474121079904,
+      "delta_B_minus_A": 4.522899885017978
+    },
+    "processed_tokens": {
+      "B0-A": 139171,
+      "B0-B": 132213,
+      "delta_B_minus_A": -6958
+    }
+  },
+  "sampling": {
+    "B0-A": {
+      "counts": {
+        "gold": 800
+      },
+      "ratios": {
+        "gold": 1.0
+      },
+      "matches_plan": true
+    },
+    "B0-B": {
+      "counts": {
+        "gold": 232,
+        "partial-silver": 568
+      },
+      "ratios": {
+        "gold": 0.29,
+        "partial-silver": 0.71
+      },
+      "matches_plan": true
+    }
+  }
+}

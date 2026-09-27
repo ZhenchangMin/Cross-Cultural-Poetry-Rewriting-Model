@@ -1,0 +1,7 @@
+{
+  "optimizer_steps": 100,
+  "source_exposures": {
+    "gold": 800
+  },
+  "formal_pilot": true
+}
